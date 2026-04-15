@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2e2c"/>
+      <stop offset="50%" stop-color="#0d5c56"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a240"/>
+      <stop offset="100%" stop-color="#e0b84e"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="40%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(10,46,44,0.65)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#vignette)"/>
+
+  <!-- Decorative circle top-right -->
+  <circle cx="1050" cy="120" r="180" fill="none" stroke="rgba(13,148,136,0.2)" stroke-width="2"/>
+  <circle cx="1050" cy="120" r="120" fill="none" stroke="rgba(201,162,64,0.15)" stroke-width="2"/>
+
+  <!-- Decorative circle bottom-left -->
+  <circle cx="150" cy="520" r="140" fill="none" stroke="rgba(13,148,136,0.15)" stroke-width="2"/>
+
+  <!-- Gold accent bar -->
+  <rect x="80" y="260" width="56" height="4" rx="2" fill="url(#gold)"/>
+
+  <!-- Business name -->
+  <text x="80" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="52" font-weight="800" fill="#ffffff">AJ Virtual Solutions</text>
+
+  <!-- Tagline -->
+  <text x="80" y="255" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="400" fill="#a8d5d1">AI Automation Specialist · Bookkeeper · Admin Assistant</text>
+
+  <!-- Description -->
+  <text x="80" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="20" fill="#a8d5d1">Helping businesses run smarter — through automation,</text>
+  <text x="80" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="20" fill="#a8d5d1">accurate books, and seamless administrative support.</text>
+
+  <!-- Service pills -->
+  <rect x="80" y="390" width="180" height="40" rx="20" fill="rgba(201,162,64,0.15)" stroke="#c9a240" stroke-width="1.5"/>
+  <text x="170" y="415" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="600" fill="#c9a240" text-anchor="middle">AI Automation</text>
+
+  <rect x="278" y="390" width="160" height="40" rx="20" fill="rgba(201,162,64,0.15)" stroke="#c9a240" stroke-width="1.5"/>
+  <text x="358" y="415" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="600" fill="#c9a240" text-anchor="middle">Bookkeeping</text>
+
+  <rect x="456" y="390" width="180" height="40" rx="20" fill="rgba(201,162,64,0.15)" stroke="#c9a240" stroke-width="1.5"/>
+  <text x="546" y="415" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="600" fill="#c9a240" text-anchor="middle">Admin Support</text>
+
+  <!-- Bottom domain -->
+  <text x="80" y="570" font-family="Segoe UI, system-ui, sans-serif" font-size="18" fill="rgba(168,213,209,0.6)">ajvirtualsolutions.com</text>
+</svg>
