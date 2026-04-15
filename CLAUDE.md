@@ -58,9 +58,10 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
 2. **Hero** — Logo image, name, three-part title, tagline, CTA button
 3. **About** — Bio, skills badges, professional summary
 4. **Services** — 3 service cards (AI Automation, Bookkeeping, Admin Support)
-5. **Projects** — 3 placeholder project cards (screenshots go in `assets/projects/`)
-6. **Contact** — Form + mailto / LinkedIn / GitHub links
-7. **Footer** — Copyright, social icons
+5. **Projects** — 3 project cards (4/3 aspect ratio, object-fit: contain, third card centered on row 2)
+6. **Pricing** — Cost comparison table, 3 AI build cards, 3 retainer tier cards, demo CTA
+7. **Contact** — Form + mailto / LinkedIn / GitHub links
+8. **Footer** — Copyright, social icons
 
 ---
 
@@ -97,6 +98,17 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
 - [x] Finalize SEO meta tags — full OG + Twitter Card tags added; `assets/images/og-image.svg` created (1200×630)
 
 **Note:** OG/Twitter image tags updated to absolute Vercel URLs (`https://ajvirtualsolutionsph.vercel.app/assets/images/og-image.svg`). Update again if a custom domain is added.
+
+### ✅ Phase 3.5 — Layout & Pricing Enhancements (Complete)
+- [x] Widened global max-width from 1100px → 1400px (nav, sections, footer) for better page utilization
+- [x] Project cards updated: aspect ratio 16/9 → 4/3, `object-fit: cover` → `contain` so full SVG artwork is visible
+- [x] Third project card centered on its own row (2-column grid with `grid-column: 1 / -1` + `justify-self: center`)
+- [x] Added full **Pricing & Packages** section with:
+  - Cost comparison table (US/UK local vs Filipino VA vs AI build) with vertical divider line and uniform row spacing
+  - 3 AI automation build cards (Admin & Lead Gen, Marketing Agent, Video Automation) with price ranges
+  - 3 retainer tier cards (3-month 30%, 6-month 25%, 12-month 20%) — 6-month marked "Popular"
+  - "Book a Free Demo Call" CTA linking to Contact
+- [x] "Pricing" added to nav
 
 ### ✅ Phase 4 — Deployment (Complete)
 - [x] `git init` and push to GitHub repo → https://github.com/ajvirtualsolutionsph/ajvirtualsolutionsph
