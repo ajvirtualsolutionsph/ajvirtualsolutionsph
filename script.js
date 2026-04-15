@@ -110,20 +110,22 @@
     });
   });
 
-  /* ---------- Contact form ---------- */
+  /* ---------- Demo booking form ---------- */
   const form       = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
 
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const name    = form.name.value.trim();
-      const email   = form.email.value.trim();
-      const message = form.message.value.trim();
+      const name                 = form.name.value.trim();
+      const email                = form.email.value.trim();
+      const message              = form.message.value.trim();
+      const serviceInterest      = form.serviceInterest.value.trim();
+      const preferredContactTime = form.preferredContactTime.value.trim();
 
       if (!name || !email || !message) {
-        showStatus('Please fill in all fields.', 'error');
+        showStatus('Please fill in your name, email, and message.', 'error');
         return;
       }
 
@@ -132,9 +134,31 @@
         return;
       }
 
-      // Placeholder — replace with a real form backend (Formspree, Netlify Forms, etc.)
-      showStatus('Thanks for reaching out! I\'ll be in touch soon.', 'success');
-      form.reset();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      try {
+        const response = await fetch('/api/submit-demo', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message, serviceInterest, preferredContactTime })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          showStatus("Thanks! I'll be in touch shortly to confirm your demo time.", 'success');
+          form.reset();
+        } else {
+          showStatus(data.error || 'Something went wrong. Please try again.', 'error');
+        }
+      } catch (err) {
+        showStatus('Network error. Please check your connection and try again.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Book My Free Demo Call';
+      }
     });
   }
 
