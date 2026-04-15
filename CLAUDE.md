@@ -98,10 +98,10 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
 
 **Note:** OG/Twitter image tags use relative paths for now. After deployment, update `og:image` and `twitter:image` to absolute URLs (e.g. `https://ajvirtualsolutions.com/assets/images/og-image.svg`).
 
-### 🔲 Phase 4 — Deployment (Next)
-- [ ] `git init` and push to GitHub repo
-- [ ] Import repo in Vercel → verify auto-deploy works
-- [ ] Purchase custom domain on Namecheap
+### ✅ Phase 4 — Deployment (Complete)
+- [x] `git init` and push to GitHub repo → https://github.com/ajvirtualsolutionsph/ajvirtualsolutionsph
+- [x] Import repo in Vercel → auto-deploy verified → https://ajvirtualsolutionsph.vercel.app
+- [ ] Purchase custom domain on Namecheap (optional — site is live on Vercel URL)
 - [ ] Configure Namecheap DNS → point to Vercel
 - [ ] Add custom domain in Vercel project settings
 - [ ] Confirm site is live on custom domain with HTTPS
