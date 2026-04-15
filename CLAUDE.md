@@ -19,6 +19,8 @@ portfolio/
 ├── index.html                                   # Single-page app, all sections
 ├── styles.css
 ├── script.js
+├── api/
+│   └── submit-demo.js                           # Vercel serverless function → Notion API
 ├── assets/
 │   ├── images/
 │   │   ├── logo.png                             # Brand logo (used in nav + hero)
@@ -118,8 +120,19 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
 - [ ] Add custom domain in Vercel project settings
 - [ ] Confirm site is live on custom domain with HTTPS
 
+### ✅ Phase 4.5 — Notion Demo Booking Integration (Complete)
+- [x] Upgraded contact form into a demo booking form with 2 new fields: Service Interest (dropdown) and Preferred Contact Time (optional text)
+- [x] Created `api/submit-demo.js` — Vercel serverless function that proxies form submissions to Notion API
+- [x] Notion database "Demo Booking Leads" stores: Name, Email, Service Interest, Preferred Contact Time, Message, Submitted At
+- [x] Secrets stored in Vercel environment variables (`NOTION_API_TOKEN`, `NOTION_DATABASE_ID`) — never in code
+- [x] Form handler in `script.js` updated to async fetch `/api/submit-demo` with button disable guard
+
+**Notion setup:**
+- Integration name: AJVS Website
+- Database: Demo Booking Leads (ID: `34336c4814bf806eb6a9f0e483991571`)
+- Notion API version pinned: `2022-06-28`
+
 ### 🔲 Phase 5 — Post-Launch (Optional)
-- [ ] Connect contact form to a real backend (Formspree or Netlify Forms)
 - [ ] Add Google Analytics or Plausible for traffic tracking
 - [ ] Dark/light mode toggle
 - [ ] Project filtering by category
