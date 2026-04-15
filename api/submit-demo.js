@@ -80,7 +80,7 @@ export default async function handler(req, res) {
     if (!notionResponse.ok) {
       const errorData = await notionResponse.json();
       console.error('Notion API error:', errorData);
-      return res.status(502).json({ error: 'Failed to save submission. Please try again.' });
+      return res.status(502).json({ error: errorData.message || JSON.stringify(errorData) });
     }
 
     return res.status(200).json({ success: true, message: 'Submission received!' });
