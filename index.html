@@ -3,19 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AJ Virtual Solutions — AI Automation Specialist, Bookkeeper, and Admin Assistant. Professional virtual services tailored to your business needs." />
-  <meta property="og:title" content="AJ Virtual Solutions" />
+  <title>AJ Virtual Solutions | AI Automation, Bookkeeping &amp; Admin Support</title>
+  <meta name="description" content="AJ Virtual Solutions — AI Automation Specialist, Bookkeeper &amp; Virtual Admin based in the Philippines. Custom N8N &amp; Make workflows, QuickBooks bookkeeping, and executive admin support for global businesses." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="AJ Javier" />
+  <meta name="theme-color" content="#0a2e2c" />
+  <link rel="canonical" href="https://ajvirtualsolutionsph.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AJ Virtual Solutions | AI Automation, Bookkeeping &amp; Admin Support" />
   <meta property="og:description" content="AI Automation Specialist · Bookkeeper · Admin Assistant. Helping businesses run smarter through automation, accurate books, and seamless admin support." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ajvirtualsolutionsph.vercel.app/" />
   <meta property="og:image" content="https://ajvirtualsolutionsph.vercel.app/assets/images/og-image.svg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AJ Virtual Solutions" />
+  <meta name="twitter:title" content="AJ Virtual Solutions | AI Automation, Bookkeeping &amp; Admin Support" />
   <meta name="twitter:description" content="AI Automation Specialist · Bookkeeper · Admin Assistant." />
   <meta name="twitter:image" content="https://ajvirtualsolutionsph.vercel.app/assets/images/og-image.svg" />
+
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
-  <title>AJ Virtual Solutions</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "AJ Javier",
+      "jobTitle": "AI Automation Specialist",
+      "description": "Virtual Professional specializing in AI automation, bookkeeping, and admin support.",
+      "url": "https://ajvirtualsolutionsph.vercel.app/",
+      "email": "aj.virtualsolutionsph@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/andrei-james-javier/",
+        "https://github.com/ajvirtualsolutionsph"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "AJ Virtual Solutions",
+      "description": "AI automation workflows, bookkeeping, and virtual admin support for global businesses.",
+      "url": "https://ajvirtualsolutionsph.vercel.app/",
+      "email": "aj.virtualsolutionsph@gmail.com",
+      "founder": { "@type": "Person", "name": "AJ Javier" },
+      "areaServed": "Worldwide",
+      "serviceType": ["AI Automation", "Bookkeeping", "Admin Support"],
+      "sameAs": [
+        "https://www.linkedin.com/in/andrei-james-javier/",
+        "https://github.com/ajvirtualsolutionsph"
+      ]
+    }
+  ]
+  </script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -47,16 +91,48 @@
   <!-- ========== HERO ========== -->
   <section id="hero">
     <div class="hero-content">
-      <img src="assets/images/logo.png" alt="AJ Virtual Solutions" class="hero-logo" width="160" height="160" fetchpriority="high" />
+
+      <!-- Logo card with pulse rings + orbiting dots -->
+      <div class="logo-wrap">
+        <div class="pulse"></div>
+        <div class="pulse pulse2"></div>
+        <div class="logo-card">
+          <span class="logo-letters">AJ Virtual Solutions</span>
+        </div>
+        <div class="orb"></div>
+        <div class="orb orb2"></div>
+      </div>
+
       <h1 class="hero-heading">Hi, I'm <span class="accent">AJ</span></h1>
-      <p class="hero-titles">
-        AI Automation Specialist&nbsp;&nbsp;·&nbsp;&nbsp;Bookkeeper&nbsp;&nbsp;·&nbsp;&nbsp;Admin Assistant
-      </p>
+
+      <!-- Skill tags -->
+      <div class="hero-tags">
+        <span class="hero-tag">AI Automation</span>
+        <span class="hero-tag">Bookkeeping</span>
+        <span class="hero-tag">Admin Support</span>
+      </div>
+
+      <!-- Typewriter role line -->
+      <div class="role-line">
+        <span id="role-text"></span>
+        <span class="cursor"></span>
+      </div>
+
       <p class="hero-tagline">
         Helping businesses run smarter — through automation, accurate books,
         and seamless administrative support.
       </p>
+
       <a href="#projects" class="btn btn-primary">View My Work</a>
+
+      <!-- Slide dots synced to typewriter -->
+      <div class="dots-row" id="dots-row">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
     </div>
     <div class="hero-overlay"></div>
   </section>
@@ -71,11 +147,11 @@
         </div>
         <div class="about-bio">
           <p>
-            I am Andrei James Javier, a Virtual Professional based in the Philippines with a background
+            I am AJ Javier, a Virtual Professional based in the Philippines with a background
             in finance, compliance, and administrative operations — available across international time zones.
           </p>
           <p>
-            I specialize in <strong>AI automation</strong>, building custom workflows using N8N and Zapier
+            I specialize in <strong>AI automation</strong>, building custom workflows using N8N, Make, and Claude Code
             to reduce manual intervention and drive operational efficiency. I also provide <strong>lead
             generation</strong> support through targeted outreach strategies that convert cold market data
             into qualified prospects.

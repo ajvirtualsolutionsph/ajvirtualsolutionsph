@@ -14,6 +14,77 @@
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Hero: typewriter + dots ---------- */
+  const roles = [
+    'AI Automation Specialist',
+    'Bookkeeper',
+    'Admin Assistant',
+    'Virtual Professional'
+  ];
+  let roleIndex = 0, charIndex = 0, deleting = false;
+  const roleEl = document.getElementById('role-text');
+
+  function updateDot(index) {
+    document.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('active', i === index);
+    });
+  }
+
+  function type() {
+    if (!roleEl) return;
+    const word = roles[roleIndex];
+    if (!deleting) {
+      roleEl.textContent = word.slice(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === word.length) {
+        deleting = true;
+        setTimeout(type, 1600);
+        return;
+      }
+    } else {
+      roleEl.textContent = word.slice(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        updateDot(roleIndex);
+        setTimeout(type, 300);
+        return;
+      }
+    }
+    setTimeout(type, deleting ? 55 : 90);
+  }
+
+  if (roleEl) type();
+
+  /* ---------- Hero: floating particles ---------- */
+  const heroSection = document.getElementById('hero');
+  const particleData = [
+    { left: '10%', delay: '0s',   dur: '7s',   dx: '30px',  color: '#c9a240' },
+    { left: '25%', delay: '1.2s', dur: '5.5s', dx: '-20px', color: '#c9a240' },
+    { left: '40%', delay: '2.5s', dur: '8s',   dx: '15px',  color: '#c9a240' },
+    { left: '60%', delay: '0.5s', dur: '6.5s', dx: '-35px', color: '#c9a240' },
+    { left: '75%', delay: '1.8s', dur: '5s',   dx: '25px',  color: '#c9a240' },
+    { left: '88%', delay: '3.2s', dur: '7.5s', dx: '-10px', color: '#c9a240' },
+    { left: '50%', delay: '4s',   dur: '6s',   dx: '40px',  color: '#0d9488' },
+    { left: '15%', delay: '2s',   dur: '9s',   dx: '-25px', color: '#0d9488' },
+  ];
+  if (heroSection) {
+    particleData.forEach(p => {
+      const el = document.createElement('div');
+      el.className = 'particle';
+      el.style.cssText = [
+        `left:${p.left}`,
+        `animation-delay:${p.delay}`,
+        `animation-duration:${p.dur}`,
+        `--dx:${p.dx}`,
+        `background:${p.color}`,
+        'bottom:-10px',
+      ].join(';');
+      heroSection.insertBefore(el, heroSection.firstChild);
+    });
+  }
+
   /* ---------- Hamburger menu ---------- */
   const header   = document.getElementById('site-header');
   const hamburger = document.getElementById('hamburger');
