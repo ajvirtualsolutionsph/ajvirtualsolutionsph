@@ -643,6 +643,10 @@ section {
   background: var(--color-bg);
 }
 
+#pricing .section-inner {
+  padding-bottom: var(--space-md);
+}
+
 .pricing-intro {
   text-align: center;
   color: var(--color-text-muted);
@@ -927,23 +931,6 @@ section {
 }
 
 /* --- CTA --- */
-.pricing-cta {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-lg);
-  padding: var(--space-2xl);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-}
-
-.pricing-cta p {
-  color: var(--color-text-muted);
-  font-size: var(--font-size-lg);
-  max-width: 520px;
-}
 
 /* ============================================================
    CONTACT
@@ -952,11 +939,25 @@ section {
   background: var(--color-bg);
 }
 
+#contact .section-inner {
+  padding-top: var(--space-md);
+}
+
+#contact .section-title {
+  margin-bottom: var(--space-md);
+}
+
+.contact-tagline {
+  text-align: center;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-xs);
+}
+
 .contact-intro {
   text-align: center;
   color: var(--color-text-muted);
-  margin-top: calc(-1 * var(--space-xl));
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
 }
 
 .contact-layout {
