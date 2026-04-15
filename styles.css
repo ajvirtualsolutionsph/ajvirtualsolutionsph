@@ -379,7 +379,7 @@ section {
   animation: float 4s ease-in-out infinite;
 }
 .logo-letters {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-sans);
   font-size: 18px;
   font-weight: 700;
   color: var(--color-accent);
