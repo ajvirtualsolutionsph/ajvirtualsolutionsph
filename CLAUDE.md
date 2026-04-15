@@ -96,7 +96,7 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
 - [x] Add favicon — `assets/images/favicon.svg` (dark teal + gold "AJ" initials, SVG format)
 - [x] Finalize SEO meta tags — full OG + Twitter Card tags added; `assets/images/og-image.svg` created (1200×630)
 
-**Note:** OG/Twitter image tags use relative paths for now. After deployment, update `og:image` and `twitter:image` to absolute URLs (e.g. `https://ajvirtualsolutions.com/assets/images/og-image.svg`).
+**Note:** OG/Twitter image tags updated to absolute Vercel URLs (`https://ajvirtualsolutionsph.vercel.app/assets/images/og-image.svg`). Update again if a custom domain is added.
 
 ### ✅ Phase 4 — Deployment (Complete)
 - [x] `git init` and push to GitHub repo → https://github.com/ajvirtualsolutionsph/ajvirtualsolutionsph
