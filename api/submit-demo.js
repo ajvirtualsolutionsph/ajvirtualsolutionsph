@@ -36,30 +36,34 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Server configuration error.' });
   }
 
+  const properties = {
+    Name: {
+      title: [{ text: { content: name } }]
+    },
+    Email: {
+      email: email
+    },
+    Message: {
+      rich_text: [{ text: { content: message } }]
+    },
+    'Preferred Contact Time': {
+      rich_text: preferredContactTime
+        ? [{ text: { content: preferredContactTime } }]
+        : []
+    },
+    'Submitted At': {
+      date: { start: new Date().toISOString() }
+    }
+  };
+
+  // Only include Service Interest if a value was selected — Notion rejects null selects
+  if (serviceInterest) {
+    properties['Service Interest'] = { select: { name: serviceInterest } };
+  }
+
   const notionPayload = {
     parent: { database_id: NOTION_DATABASE_ID },
-    properties: {
-      Name: {
-        title: [{ text: { content: name } }]
-      },
-      Email: {
-        email: email
-      },
-      Message: {
-        rich_text: [{ text: { content: message } }]
-      },
-      'Service Interest': {
-        select: serviceInterest ? { name: serviceInterest } : null
-      },
-      'Preferred Contact Time': {
-        rich_text: preferredContactTime
-          ? [{ text: { content: preferredContactTime } }]
-          : []
-      },
-      'Submitted At': {
-        date: { start: new Date().toISOString() }
-      }
-    }
+    properties
   };
 
   try {
