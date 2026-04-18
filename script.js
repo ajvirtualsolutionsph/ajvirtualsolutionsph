@@ -259,7 +259,8 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('scroll-visible');
-          animObserver.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove('scroll-visible');
         }
       });
     }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
