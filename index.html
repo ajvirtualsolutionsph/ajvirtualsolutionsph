@@ -144,10 +144,10 @@
     <div class="section-inner">
       <h2 class="section-title">About <span class="accent">Me</span></h2>
       <div class="about-grid">
-        <div class="about-photo">
+        <div class="about-photo" data-animate="scale">
           <img src="assets/images/profile.png" alt="AJ — AI Automation Specialist, Bookkeeper, Admin Assistant" class="profile-img" width="220" height="220" />
         </div>
-        <div class="about-bio">
+        <div class="about-bio" data-animate="up" data-delay="1">
           <p>
             I am AJ Javier, a Virtual Professional based in the Philippines with a background
             in finance, compliance, and administrative operations — available across international time zones.
@@ -169,7 +169,7 @@
             focus on growth.
           </p>
         </div>
-        <div class="about-skills">
+        <div class="about-skills" data-animate="up" data-delay="2">
           <h3>Core Skills</h3>
           <ul class="skills-list">
             <li class="skill-tag">AI &amp; Automation</li>
@@ -195,17 +195,17 @@
     <div class="section-inner">
       <h2 class="section-title">What I <span class="accent">Offer</span></h2>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card" data-animate="up" data-delay="1">
           <div class="service-icon">&#x2699;&#xFE0F;</div>
           <h3>AI Automation</h3>
           <p>Eliminate repetitive tasks with intelligent workflows built on Make, Zapier, and custom AI integrations — freeing your team to focus on what matters.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-animate="up" data-delay="2">
           <div class="service-icon">&#x1F4CA;</div>
           <h3>Bookkeeping</h3>
           <p>Accurate, timely financial record-keeping using QuickBooks and Xero. Bank reconciliations, expense tracking, invoicing, and month-end close support.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-animate="up" data-delay="3">
           <div class="service-icon">&#x1F4CB;</div>
           <h3>Admin Support</h3>
           <p>Expert inbox and calendar management, data entry, research, travel coordination, and day-to-day administrative tasks handled with care and precision.</p>
@@ -218,9 +218,9 @@
   <section id="projects">
     <div class="section-inner">
       <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
-      <div class="projects-grid">
+      <div class="projects-grid projects-3d-wrap">
 
-        <article class="project-card">
+        <article class="project-card" data-animate="left">
           <div class="project-img-wrap">
             <img src="assets/projects/ai_executive_assistant_project_card.svg" alt="AI-Powered Executive Assistant project" loading="lazy" class="project-img" width="400" height="225" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
             <div class="project-img-placeholder">Project Preview</div>
@@ -235,7 +235,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-animate="up" data-delay="1">
           <div class="project-img-wrap">
             <img src="assets/projects/bookkeeping_automation_project_card.svg" alt="Intelligent Bookkeeping Assistant project" loading="lazy" class="project-img" width="400" height="225" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
             <div class="project-img-placeholder">Project Preview</div>
@@ -250,7 +250,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-animate="right" data-delay="2">
           <div class="project-img-wrap">
             <img src="assets/projects/ai_lead_generation_pipeline_project_card.svg" alt="AI Lead Generation Pipeline project" loading="lazy" class="project-img" width="400" height="225" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
             <div class="project-img-placeholder">Project Preview</div>
@@ -275,7 +275,7 @@
       <h2 class="section-title">Demo <span class="accent">Videos</span></h2>
       <div class="demos-grid">
 
-        <div class="demo-card">
+        <div class="demo-card" data-animate="up" data-delay="1">
           <div class="demo-video-wrap">
             <iframe
               src="https://www.loom.com/embed/6e509128842d40d38dedd41c43f3b37b"
@@ -287,7 +287,7 @@
           <p class="demo-title">AI Executive Assistant Demo</p>
         </div>
 
-        <div class="demo-card">
+        <div class="demo-card" data-animate="up" data-delay="2">
           <div class="demo-video-wrap">
             <iframe
               src="https://www.loom.com/embed/8b20fd29593f4783b3d8de2698acc58c"
@@ -313,7 +313,7 @@
       </p>
 
       <!-- Cost comparison banner -->
-      <div class="pricing-comparison">
+      <div class="pricing-comparison" data-animate="up">
         <div class="comparison-col comparison-bad">
           <p class="comparison-label">What US &amp; UK businesses spend yearly</p>
           <ul>
@@ -339,7 +339,7 @@
       <h3 class="pricing-sub-heading">AI Automation Builds <span class="accent">— One-Time Payment</span></h3>
       <div class="pricing-grid">
 
-        <div class="pricing-card">
+        <div class="pricing-card" data-animate="scale" data-delay="1">
           <div class="pricing-icon">&#x1F916;</div>
           <h4>AI Admin &amp; Lead Generation Assistant</h4>
           <p class="pricing-desc">Automates inbox management, lead research, outreach sequencing, and prospect qualification — 24/7 with no sick days or turnover.</p>
@@ -350,7 +350,7 @@
           <p class="pricing-vs">vs. $12,600/yr Filipino VA · $58,500/yr local hire</p>
         </div>
 
-        <div class="pricing-card">
+        <div class="pricing-card" data-animate="scale" data-delay="2">
           <div class="pricing-icon">&#x1F4E3;</div>
           <h4>AI Marketing Agent</h4>
           <p class="pricing-desc">Generates content, manages campaign workflows, schedules posts, and tracks engagement — freeing you from the daily marketing grind.</p>
@@ -361,7 +361,7 @@
           <p class="pricing-vs">vs. $16,200/yr Filipino VA · $90,000/yr local hire</p>
         </div>
 
-        <div class="pricing-card">
+        <div class="pricing-card" data-animate="scale" data-delay="3">
           <div class="pricing-icon">&#x1F3AC;</div>
           <h4>AI Video Automation</h4>
           <p class="pricing-desc">Automates video editing pipelines, caption generation, thumbnail creation, and publishing workflows — consistent output at scale.</p>
@@ -379,14 +379,14 @@
       <p class="pricing-retainer-note">Keep your automation running at peak performance with updates, optimizations, and priority support. The longer you commit, the more you save.</p>
       <div class="retainer-grid">
 
-        <div class="retainer-card">
+        <div class="retainer-card" data-animate="up" data-delay="1">
           <div class="retainer-badge">3 Months</div>
           <p class="retainer-rate">30% of build / mo</p>
           <p class="retainer-example">e.g. Admin &amp; Lead Gen ≈ <strong>$1,134/mo</strong></p>
           <p class="retainer-desc">Flexible short-term commitment. Great for post-launch fine-tuning.</p>
         </div>
 
-        <div class="retainer-card retainer-featured">
+        <div class="retainer-card retainer-featured" data-animate="up" data-delay="2">
           <div class="retainer-badge">6 Months</div>
           <p class="retainer-rate">25% of build / mo</p>
           <p class="retainer-example">e.g. Admin &amp; Lead Gen ≈ <strong>$945/mo</strong></p>
@@ -394,7 +394,7 @@
           <span class="retainer-popular-tag">Popular</span>
         </div>
 
-        <div class="retainer-card">
+        <div class="retainer-card" data-animate="up" data-delay="3">
           <div class="retainer-badge">12 Months</div>
           <p class="retainer-rate">20% of build / mo</p>
           <p class="retainer-example">e.g. Admin &amp; Lead Gen ≈ <strong>$756/mo</strong></p>
@@ -414,7 +414,7 @@
       <p class="contact-intro">Tell me about your business and I'll reach out to schedule a free 20-minute Zoom walkthrough.</p>
 
       <div class="contact-layout">
-        <form class="contact-form" id="contact-form" novalidate>
+        <form class="contact-form" id="contact-form" novalidate data-animate="up">
           <div class="form-group">
             <label for="name">Name <span aria-hidden="true">*</span></label>
             <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -445,7 +445,7 @@
           <p class="form-status" id="form-status" aria-live="polite"></p>
         </form>
 
-        <div class="contact-links">
+        <div class="contact-links" data-animate="up" data-delay="1">
           <h3>Or reach me directly</h3>
           <a href="mailto:aj.virtualsolutionsph@gmail.com" class="contact-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>

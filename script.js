@@ -257,4 +257,43 @@
     }
   }, { passive: true });
 
+  /* ---------- Scroll animations ---------- */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function initScrollAnimations() {
+    if (prefersReducedMotion) return;
+    if (!('IntersectionObserver' in window)) return;
+
+    const animObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('scroll-visible');
+          animObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('[data-animate]').forEach(el => {
+      el.classList.add('scroll-hidden');
+      animObserver.observe(el);
+    });
+  }
+
+  function initProjectsTilt() {
+    if (prefersReducedMotion) return;
+    const grid = document.querySelector('.projects-3d-wrap');
+    if (!grid) return;
+
+    window.addEventListener('scroll', () => {
+      const rect = grid.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const progress = Math.max(0, Math.min(1, 1 - rect.top / vh));
+      const angle = 18 * (1 - progress);
+      grid.style.transform = `perspective(1000px) rotateX(${angle}deg)`;
+    }, { passive: true });
+  }
+
+  initScrollAnimations();
+  initProjectsTilt();
+
 })();
