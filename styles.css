@@ -1436,9 +1436,9 @@ section {
   .bento-cell:nth-child(5) { grid-column: span 3; }
 }
 
-/* Overlay — fixed center, fades out as user scrolls */
+/* Overlay — absolute inside sticky container, fades out as user scrolls */
 .showcase-overlay {
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);

@@ -310,7 +310,6 @@
         const os = 1 - op;
         showcaseOverlay.style.opacity   = os;
         showcaseOverlay.style.transform = `translate(-50%, -50%) scale(${Math.max(0.01, os)})`;
-        showcaseOverlay.style.position  = p >= 0.6 ? 'absolute' : 'fixed';
       }
     }
 
