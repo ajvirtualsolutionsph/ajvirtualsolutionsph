@@ -143,6 +143,19 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
 - [x] Google Search Console: site verified, indexed, sitemap.xml submitted
 - [x] `sitemap.xml` created and deployed
 
+### ✅ Phase 4.9 — Scroll Animations & Bento Gallery (Complete)
+- [x] Scroll-triggered entrance animations added to all sections (About, Services, Projects, Demos, Pricing, Contact) using IntersectionObserver + `data-animate` / `data-delay` attributes
+- [x] Section `<h2>` titles all animate in (`data-animate="up"`) ahead of their cards
+- [x] Animation direction variants: `up`, `left`, `right`, `scale` — 60px offset, 0.75s cubic-bezier easing
+- [x] `prefers-reduced-motion` respected: all animations skipped for users who prefer it
+- [x] 3D perspective tilt on Projects grid: starts at 18° rotateX, flattens to 0° as section fills viewport
+- [x] Bento gallery scroll section added between Hero and About:
+  - 300vh scroll container, sticky 100vh bento grid, 5 Unsplash AI/tech images
+  - Images scale from 0.5→1 and translateY from -35%→0% as user scrolls
+  - Centered text overlay ("Smarter workflows. Better outcomes.") fades + scales to 0 over first 50% of scroll
+  - On mobile: cells 2+3 hidden, 3-cell layout fills screen
+- [x] Bug fixes: `select` element styled, `label-optional` class added, Loom iframes get `loading="lazy"`, `#showcase` excluded from nav IntersectionObserver, 3 scroll listeners consolidated into 1
+
 ### 🔲 Phase 5 — Post-Launch (Optional)
 - [ ] Add Google Analytics or Plausible for traffic tracking
 - [ ] Dark/light mode toggle
