@@ -1354,18 +1354,18 @@ section {
   will-change: opacity, transform;
 }
 
-[data-animate="up"].scroll-hidden    { transform: translateY(36px); }
-[data-animate="left"].scroll-hidden  { transform: translateX(-48px); }
-[data-animate="right"].scroll-hidden { transform: translateX(48px); }
-[data-animate="scale"].scroll-hidden { transform: scale(0.88); }
+[data-animate="up"].scroll-hidden    { transform: translateY(60px); }
+[data-animate="left"].scroll-hidden  { transform: translateX(-64px); }
+[data-animate="right"].scroll-hidden { transform: translateX(64px); }
+[data-animate="scale"].scroll-hidden { transform: scale(0.84); }
 
 /* Visible state */
 .scroll-visible {
   opacity: 1 !important;
   transform: none !important;
   transition:
-    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Stagger delays */
