@@ -143,22 +143,6 @@ section {
   background: linear-gradient(135deg, #e0b84e, #c9a240);
 }
 
-.btn-outline {
-  background: transparent;
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-}
-
-.btn-outline:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-  transform: translateY(-2px);
-}
-
-.btn-sm {
-  padding: 0.45rem 1.1rem;
-  font-size: var(--font-size-sm);
-}
 
 .btn-full {
   width: 100%;
@@ -500,9 +484,7 @@ section {
     font-size: calc(var(--font-size-3xl) * 1.3);
   }
 
-  .hero-logo {
-    width: 200px;
-  }
+
 }
 
 /* ============================================================
@@ -794,11 +776,6 @@ section {
   font-size: 0.75rem;
 }
 
-.project-links {
-  display: flex;
-  gap: var(--space-sm);
-  margin-top: var(--space-xs);
-}
 
 @media (min-width: 768px) {
   .projects-grid {

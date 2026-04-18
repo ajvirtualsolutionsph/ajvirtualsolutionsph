@@ -156,6 +156,14 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
   - On mobile: cells 2+3 hidden, 3-cell layout fills screen
 - [x] Bug fixes: `select` element styled, `label-optional` class added, Loom iframes get `loading="lazy"`, `#showcase` excluded from nav IntersectionObserver, 3 scroll listeners consolidated into 1
 
+### ✅ Phase 4.10 — Bug Fixes & Code Audit (Complete)
+- [x] Fixed showcase overlay (`position: fixed` → `position: absolute`) bleeding over hero section on page load
+- [x] Removed JS line toggling overlay position during scroll (root cause of hero overlap bug)
+- [x] Scroll animations now replay on scroll-up: removed `unobserve()`, toggle `scroll-visible` on both enter and leave
+- [x] Removed unused CSS classes: `.btn-outline`, `.btn-outline:hover`, `.btn-sm`, `.hero-logo` (media), `.project-links`
+- [x] Deleted orphaned asset: `assets/projects/project-3.png` (not referenced anywhere)
+- [x] Updated `sitemap.xml` lastmod date to 2026-04-18
+
 ### 🔲 Phase 5 — Post-Launch (Optional)
 - [ ] Add Google Analytics or Plausible for traffic tracking
 - [ ] Dark/light mode toggle
