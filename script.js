@@ -279,6 +279,46 @@
     });
   }
 
+  function initShowcaseAnimation() {
+    const section = document.getElementById('showcase');
+    const cells   = document.querySelectorAll('.bento-cell');
+    const overlay = document.getElementById('showcase-overlay');
+    if (!section || !cells.length || !overlay) return;
+
+    if (prefersReducedMotion) {
+      cells.forEach(c => { c.style.transform = 'none'; });
+      return;
+    }
+
+    window.addEventListener('scroll', () => {
+      const rect        = section.getBoundingClientRect();
+      const totalScroll = section.offsetHeight - window.innerHeight;
+      const p           = Math.max(0, Math.min(1, -rect.top / totalScroll));
+
+      // Hide overlay when section is fully out of view
+      if (rect.bottom < 0 || rect.top > window.innerHeight) {
+        overlay.style.display = 'none';
+        return;
+      }
+      overlay.style.display = '';
+
+      // Cells: translateY -35%→0%, scale 0.5→1  (remapped progress 0.1–0.9)
+      const cp    = Math.max(0, Math.min(1, (p - 0.1) / 0.8));
+      const scale = 0.5 + cp * 0.5;
+      const ty    = -35 + cp * 35;
+      cells.forEach(cell => {
+        cell.style.transform = `translateY(${ty}%) scale(${scale})`;
+      });
+
+      // Overlay: scale+opacity 1→0 over first 50% of scroll
+      const op = Math.max(0, Math.min(1, p / 0.5));
+      const os = 1 - op;
+      overlay.style.opacity   = os;
+      overlay.style.transform = `translate(-50%, -50%) scale(${Math.max(0.01, os)})`;
+      overlay.style.position  = p >= 0.6 ? 'absolute' : 'fixed';
+    }, { passive: true });
+  }
+
   function initProjectsTilt() {
     if (prefersReducedMotion) return;
     const grid = document.querySelector('.projects-3d-wrap');
@@ -295,5 +335,6 @@
 
   initScrollAnimations();
   initProjectsTilt();
+  initShowcaseAnimation();
 
 })();

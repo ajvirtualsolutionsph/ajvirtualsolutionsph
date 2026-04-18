@@ -1345,6 +1345,100 @@ section {
 }
 
 /* ============================================================
+   SHOWCASE — BENTO GALLERY SCROLL
+   ============================================================ */
+
+#showcase {
+  height: 300vh;
+  position: relative;
+}
+
+.showcase-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Bento grid — 8-col, 4-row, matching default variant */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr 0.5fr 0.5fr 1fr;
+  gap: 0.6rem;
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem;
+}
+
+.bento-cell {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.55);
+  will-change: transform;
+}
+
+.bento-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Mobile: cell 1 spans full width, cells 2+3 hidden */
+.bento-cell:first-child  { grid-column: span 8; grid-row: span 3; transform-origin: top right; }
+.bento-cell:nth-child(2) { grid-column: span 2; grid-row: span 2; display: none; }
+.bento-cell:nth-child(3) { grid-column: span 2; grid-row: span 2; display: none; transform-origin: bottom right; }
+.bento-cell:nth-child(4) { grid-column: span 4; transform-origin: top right; }
+.bento-cell:nth-child(5) { grid-column: span 4; }
+
+@media (min-width: 768px) {
+  .bento-cell:first-child  { grid-column: span 6; }
+  .bento-cell:nth-child(2) { display: block; }
+  .bento-cell:nth-child(3) { display: block; }
+  .bento-cell:nth-child(4) { grid-column: span 3; }
+  .bento-cell:nth-child(5) { grid-column: span 3; }
+}
+
+/* Overlay — fixed center, fades out as user scrolls */
+.showcase-overlay {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  width: 90%;
+  max-width: 620px;
+}
+
+.showcase-eyebrow {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.showcase-heading {
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.75);
+  margin-bottom: var(--space-xl);
+}
+
+.showcase-cta {
+  pointer-events: auto;
+  display: inline-block;
+}
+
+/* ============================================================
    SCROLL ANIMATIONS
    ============================================================ */
 
