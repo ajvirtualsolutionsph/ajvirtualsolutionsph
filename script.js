@@ -325,4 +325,24 @@
 
   initScrollAnimations();
 
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      // Close all
+      document.querySelectorAll('.faq-question').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.closest('.faq-item').classList.remove('faq-open');
+      });
+
+      // Open clicked (unless it was already open)
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        item.classList.add('faq-open');
+      }
+    });
+  });
+
 })();
