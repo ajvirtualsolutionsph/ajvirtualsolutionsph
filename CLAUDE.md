@@ -178,6 +178,18 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
 - [x] Services card copy enriched: "n8n", "Make (Integromat)", "AI-powered workflows" added naturally
 - [x] `sitemap.xml` lastmod updated to 2026-04-28
 
+### ✅ Post-Launch Audit (Complete — 2026-04-29)
+- [x] FAQ: fixed duplicate `data-delay="6"` on items 6 & 7 — last item corrected to `data-delay="7"`
+- [x] `#demos` section: added `background: var(--color-surface)` — was bleeding visually into Pricing section (both defaulted to `--color-bg`)
+- [x] Removed orphaned `.contact-intro` CSS rule (leftover from Phase 4.13 Calendly redesign)
+- [x] Contact tagline: "20-minute" → "30-minute" to match Calendly `/30min` link
+- [x] Service Interest dropdown labels aligned with Pricing card names (were mismatched)
+- [x] AI build pricing raised: `$1,500–$2,000` → `$2,000–$2,500` across all cards, comparison table, and JSON-LD
+- [x] Retainer examples recalculated off $2,500 base: 30%=$750/mo, 25%=$625/mo, 20%=$500/mo
+- [x] `og-image.png` generated (1200×630) from SVG source — `og:image` and `twitter:image` tags updated to PNG for LinkedIn/Slack/iMessage compatibility
+
+**Open:** Custom domain pending purchase — update canonical, og:url, JSON-LD, and sitemap when ready.
+
 ### 🔲 Phase 5 — Post-Launch (Optional)
 - [ ] Add Google Analytics or Plausible for traffic tracking
 - [ ] Dark/light mode toggle
