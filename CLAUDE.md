@@ -56,14 +56,17 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
 
 ## Page Sections
 
-1. **Navigation** — Fixed header, logo, smooth scroll, active link, mobile hamburger
-2. **Hero** — Animated logo card ("AJ Virtual Solutions"), typewriter role cycling, skill tag pills, floating particles, dots indicator, tagline, CTA button
-3. **About** — Bio (name: AJ Javier), skills badges, professional summary
-4. **Services** — 3 service cards (AI Automation, Bookkeeping, Admin Support)
-5. **Projects** — 3 project cards (4/3 aspect ratio, object-fit: contain, third card centered on row 2)
-6. **Pricing** — Cost comparison table, 3 AI build cards, 3 retainer tier cards, demo CTA
-7. **Contact** — Form + mailto / LinkedIn / GitHub links
-8. **Footer** — Copyright, social icons
+1. **Navigation** — Fixed header, logo, smooth scroll, active link, mobile hamburger, gold "Book a Call" CTA button (desktop), FAQ nav link
+2. **Hero** — Animated logo card ("AJ Virtual Solutions"), typewriter role cycling, skill tag pills, floating particles, dots indicator, tagline, urgency badge, CTA button
+3. **Showcase** — Bento gallery sticky scroll section (5 Unsplash images, 175vh container)
+4. **About** — Bio (name: AJ Javier), skills badges, professional summary
+5. **Services** — 3 service cards (AI Automation, Bookkeeping, Admin Support)
+6. **Projects** — 3 project cards (4/3 aspect ratio, object-fit: contain, third card centered on row 2)
+7. **Demo Videos** — 2 embedded Loom videos
+8. **Pricing** — Cost comparison table, availability banner, 3 AI build cards, 3 retainer tier cards (6-month has lock-in note)
+9. **FAQ** — 7-question accordion section (JS toggle, animated max-height)
+10. **Contact** — Calendly instant-book button (primary), form (secondary), mailto / LinkedIn / GitHub links
+11. **Footer** — Copyright, social icons
 
 ---
 
@@ -163,6 +166,17 @@ Single-page layout with anchor-based navigation. All sections live in `index.htm
 - [x] Removed unused CSS classes: `.btn-outline`, `.btn-outline:hover`, `.btn-sm`, `.hero-logo` (media), `.project-links`
 - [x] Deleted orphaned asset: `assets/projects/project-3.png` (not referenced anywhere)
 - [x] Updated `sitemap.xml` lastmod date to 2026-04-18
+
+### ✅ Phase 4.13 — Conversion & Discoverability Improvements (Complete — 2026-04-29)
+- [x] Hero: pulsing urgency badge — "Only 3 client slots open this month"
+- [x] Pricing: limited availability banner above AI build cards; "Lock in current rates before next price revision" note on 6-month retainer
+- [x] Nav: gold "Book a Call" button (desktop) → Calendly; "FAQ" link added
+- [x] Contact: Calendly instant-booking button as primary CTA (`https://calendly.com/aj-virtualsolutionsph/30min`); form kept as secondary with styled divider
+- [x] FAQ section added between Pricing and Contact — 7-question accordion (one-at-a-time JS toggle, `max-height` CSS animation)
+- [x] SEO: title, description, keywords meta tags updated with intent keywords (n8n, Make Integromat, AI-powered workflows, bookkeeping Philippines)
+- [x] JSON-LD ProfessionalService schema updated: `hasOfferCatalog` with 3 services + prices, `priceRange: "$$"`
+- [x] Services card copy enriched: "n8n", "Make (Integromat)", "AI-powered workflows" added naturally
+- [x] `sitemap.xml` lastmod updated to 2026-04-28
 
 ### 🔲 Phase 5 — Post-Launch (Optional)
 - [ ] Add Google Analytics or Plausible for traffic tracking
