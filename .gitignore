@@ -21,6 +21,5 @@ node_modules/
 # Claude Code
 .claude/
 
-# Loose files not part of the site
-ChatGPT Image*.png
-*.pdf
+# Source/reference materials — not deployed
+_source/
