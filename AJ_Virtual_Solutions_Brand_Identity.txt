@@ -1,0 +1,100 @@
+BRAND IDENTITY GUIDE
+AJ Virtual Solutions
+AI Automation · Bookkeeping · Admin Support
+
+Source: https://ajvirtualsolutionsph.vercel.app/
+Last updated: May 2026  ·  Version 1.1
+Owner: AJ Javier
+?? This is a living document. Edit any value below to update your brand standards.
+
+
+1. Brand Overview
+The big picture — who the brand is and what it stands for. Edit any cell to refine.
+
+Brand NameAJ Virtual SolutionsFounder / OwnerAJ Javier (Andrei James Javier)TaglineAI Automation · Bookkeeping · Admin SupportMission StatementHelping businesses run smarter — through automation, accurate books, and seamless administrative support.Value PropositionCustom AI automation builds (n8n, Make, Claude AI) that replace recurring manual work — up to 95% cheaper than local hires, paid once, run forever.Industry / NicheAI Automation · Virtual Assistance · BookkeepingLocationPhilippines (serves clients worldwide)Target AudienceSmall & medium businesses, solopreneurs, and agencies in the US & UK with repetitive manual processesBrand PersonalityProfessional · Trustworthy · Tech-forward · Approachable · EfficientBrand PromisePay once. Run forever. Improve systems, reduce overhead, focus on growth.
+2. Logo
+The visual signature of the brand. Always preserve clear space and approved color use.
+Logo Details
+Primary Logo File/assets/images/logo.pngLogo URLhttps://ajvirtualsolutionsph.vercel.app/assets/images/logo.pngLogo TypeCombination Mark (icon + wordmark: "AJ Virtual Solutions")File Format(s)PNG (web)  ·  Recommended: also export SVG for scalingAlt TextAJ Virtual Solutions logoOpen Graph Image/assets/images/og-image.png  (1200 × 630 px)FaviconRecommended: 32×32 px and 16×16 px PNG; 180×180 apple-touch-iconLogo Usage Rules
+• Always maintain clear space around the logo equal to the height of the "A" in AJ
+• Minimum width: 120 px on screen, 1 inch in print
+• Use the full-color logo on light backgrounds; use a white version on dark/teal backgrounds
+• Never stretch, skew, recolor outside approved palette, or add drop shadows
+• Never place the logo over busy imagery without an overlay or container
+
+3. Color Palette
+Hex values pulled from the live site theme. Update any value to evolve the palette.
+Primary Colors
+SwatchHex ValueName & Usage #0A2E2CDeep Teal (Primary)
+Main brand color — backgrounds, headings, navigation. Sourced from <meta theme-color>. #14B8A6Accent Teal
+CTAs, links, interactive elements, highlights, hover states. #D4A574Warm Gold
+Premium / popular badges, special offer highlights, decorative accents.Neutral Colors
+SwatchHex ValueName & Usage #FFFFFFPure White
+Page backgrounds, card surfaces, logo reverse. #F9FAFBOff White / Surface
+Section backgrounds, card fills, subtle separation. #E5E7EBBorder Gray
+Dividers, card borders, input outlines. #6B7280Muted Text
+Subtitles, captions, helper text. #1F2937Body Text
+Primary paragraph and body text on light backgrounds.Status / Semantic Colors
+SwatchHex ValueName & Usage #10B981Success Green
+Live project badges, success messages, confirmations. #F59E0BWarning Amber
+"In Progress" badges, limited availability notices. #EF4444Alert Red
+Urgency indicators ("Only 3 client slots open"), errors.
+4. Typography
+Edit font names or sizes here to update the entire brand voice in writing.
+Font Families
+Primary Font (Headings)"Space Grotesk", system-ui, sans-serifSecondary Font (Body)"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serifMonospace (Code/Stats)"JetBrains Mono", "SF Mono", Monaco, Consolas, monospaceWeb SourceGoogle Fonts — fonts.googleapis.com (Space Grotesk + Inter + JetBrains Mono)Pairing RationaleSpace Grotesk gives headlines distinctive tech-forward personality; Inter keeps body copy neutral and highly readable for pricing tables, FAQs, and long-form content.Fallback StrategySystem UI stack ensures fast first paint while web fonts loadType Scale
+ElementSizeWeightUse CaseHero Headline (H1)48–64 px700 BoldSpace Grotesk — main titles ("Hi, I'm AJ")Section Heading (H2)32–40 px700 BoldSpace Grotesk — section titlesSubheading (H3)20–24 px600 SemiboldSpace Grotesk — card titles, project namesBody Large18 px400 RegularInter — lead paragraphs, key descriptionsBody16 px400 RegularInter — standard paragraph textSmall / Caption13–14 px400 RegularInter — helper text, captions, footnotesButton / CTA16 px600 SemiboldInter — buttons, navigation linksNumbers / Codevaries500 MediumJetBrains Mono — pricing, stats, code snippetsText Style Rules
+• Use Space Grotesk for ALL headings (H1–H3) — never use it for body copy, it gets fatigueing at small sizes
+• Use Inter for body, navigation, buttons, forms, and any UI element under 18px
+• Headings use tight line-height (1.1–1.2) for impact
+• Body text uses comfortable line-height (1.5–1.6) for readability
+• Letter spacing: -0.02em on large headings (Space Grotesk); normal on body (Inter)
+• Limit line length to 65–75 characters for body copy
+• Use sentence case for buttons and short labels; title case for navigation
+• Pricing and stats can optionally use JetBrains Mono for technical credibility ("$2,000" / "95%")
+
+5. Iconography & Imagery
+Icon Style
+Icon SourceNative emoji + custom SVG project cardsService Icons?? AI Automation  ·  ?? Bookkeeping  ·  ?? Admin SupportPricing Icons?? AI Admin  ·  ?? Marketing  ·  ?? Video AutomationUI Icons?? Calendar / Booking  ·  ? Limited availability  ·  ?? Lock-in offers  ·  ?? UrgencyStyle DirectionMix of emoji (warm, friendly) and clean line illustrations (technical credibility)Imagery Style
+• Profile photography: professional, approachable, slightly desaturated
+• Stock imagery: tech-forward (AI visualizations, code, data dashboards) — sourced from Unsplash
+• Project cards: custom SVG illustrations with consistent color palette
+• Color treatment: imagery should harmonize with the deep teal primary
+• Avoid: cliché handshakes, generic stock people, overly corporate visuals
+Project Card Visuals
+AI Executive Assistant/assets/projects/ai_executive_assistant_project_card.svgBookkeeping Automation/assets/projects/bookkeeping_automation_project_card.svgAI Lead Generation/assets/projects/ai_lead_generation_pipeline_project_card.svg
+6. Voice & Tone
+Brand Voice
+Overall VoiceConfident · Practical · Direct · WarmWe areClear, results-focused, transparent about pricing and timelinesWe are notSalesy, jargon-heavy, vague, overly formalTone Examples (from the live site)
+• Hero: "Hi, I'm AJ" — first-person, friendly, direct
+• Mission: "Helping businesses run smarter" — outcome-focused
+• Pricing: "Pay once. Run forever." — short, punchy, memorable
+• Urgency: "Only 3 client slots open this month" — honest scarcity
+• FAQ: Answers questions in plain English, no fluff
+Writing Guidelines
+• Lead with the benefit, not the feature
+• Use specific numbers ("95% cheaper", "2–4 weeks", "$2,000–$2,500") instead of vague claims
+• Write in second person ("you", "your team") to feel personal
+• Keep sentences under 20 words when possible
+• Use em-dashes — sparingly — for emphasis or asides
+
+7. UI & Layout System
+Spacing Scale
+Base Unit4px (0.25rem)Spacing Scale4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 pxSection Padding80–120 px vertical on desktop; 48–64 px on mobileContainer Max Width1200 px (centered)Grid Gutter24–32 pxBorder & Radius
+Border Radius (sm)6px — buttons, inputs, badgesBorder Radius (md)12px — cards, modalsBorder Radius (lg)16–24px — feature sections, large containersBorder Width1px — default; 2px — focus / active statesShadows / Elevation
+Card (resting)0 1px 3px rgba(0,0,0,0.08)Card (hover)0 8px 24px rgba(10,46,44,0.12)Modal / Popover0 16px 48px rgba(0,0,0,0.18)Buttons
+PrimaryBackground: #0A2E2C  ·  Text: #FFFFFF  ·  Hover: lighten 8%SecondaryBackground: transparent  ·  Border: #0A2E2C  ·  Text: #0A2E2CCTA AccentBackground: #14B8A6  ·  Text: #FFFFFF  ·  Used for booking/contactPadding12px 24px (small) · 16px 32px (large)
+8. Contact & Digital Presence
+Websitehttps://ajvirtualsolutionsph.vercel.app/Emailaj.virtualsolutionsph@gmail.comLinkedInhttps://www.linkedin.com/in/andrei-james-javier/GitHubhttps://github.com/ajvirtualsolutionsphBookinghttps://calendly.com/aj-virtualsolutionsph/30minSEO TitleAJ Virtual Solutions | AI Automation & Bookkeeping for Small BusinessesMeta DescriptionHire AJ Javier — AI Automation Specialist based in the Philippines. Custom n8n & Make workflow automation, QuickBooks bookkeeping, and virtual admin support.KeywordsAI automation specialist, n8n automation, Make Integromat, bookkeeping Philippines, virtual assistant automation
+9. Services & Pricing Reference
+For consistency across proposals, social posts, and contracts.
+AI Admin & Lead Gen$2,000 – $2,500 one-time buildAI Marketing Agent$2,000 – $2,500 one-time buildAI Video Automation$2,000 – $2,500 one-time build3-Month Retainer30% of build / month6-Month Retainer25% of build / month  (Most Popular)12-Month Retainer20% of build / month  (Best Value)Delivery Timeline2–4 weeks per buildCapacityMax 4 new builds per monthPost-Delivery Support14 days included free
+10. How to Use This Document
+• Every value in this guide lives inside a table cell — click any cell and type to edit
+• To update a color: change the hex code in the Hex Value column. Tip: also recolor the swatch cell via Table Tools ? Shading
+• To swap a font: replace the font name in Section 4 — these are reference values for your developer or designer
+• To add a new section: copy any H1 heading and table block, then customize
+• Share this file with collaborators or convert to PDF for client onboarding decks
+
+
+End of Brand Identity Guide  ·  AJ Virtual Solutions

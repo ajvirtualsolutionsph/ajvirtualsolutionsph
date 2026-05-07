@@ -56,10 +56,11 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 - Created `project_session_status.md` memory file, removed wrongly-named `project_dialer_status.md`
 - Updated MEMORY.md and CLAUDE.md to reference correct session status file
 - Switched site fonts to Space Grotesk (headings) + Inter (body) via Google Fonts — added `@import`, `--font-heading` CSS variable, and `h1–h6` font rule in `styles.css`; added preconnect hints to `index.html`
+- Exported `AJ_Virtual_Solutions_Brand_Identity.docx` to `.txt` — Claude can now read it; confirmed font choices align with brand guide Section 4
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review live font change at `https://ajvirtualsolutionsph.vercel.app/` after this push
+- Visually review live font change at `https://ajvirtualsolutionsph.vercel.app/`
 - Purchase and configure custom domain (update canonical, og:url, JSON-LD, sitemap.xml)
 - Verify Notion form integration is live and receiving submissions
 
