@@ -49,27 +49,24 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 
 ### ✅ Done
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Rewrote `index.html` to position AJ as an AI Automation Specialist above everything else
-- Reframed bookkeeping and admin support as AI automation use cases, not standalone manual services
-- Updated page title, meta description, OG tags, Twitter card, and JSON-LD to be AI-automation-first
-- Replaced hero skill tags (Bookkeeping · Admin Support → n8n & Make Workflows · Claude AI Builds)
-- Rewrote hero tagline to lead with AI-powered systems
-- Updated showcase overlay to "Your business, running on autopilot."
-- Rewrote About bio: AI Automation Specialist first, finance/admin background reframed as "I know which processes hurt teams, so I build AI to eliminate them"
-- Renamed skills section to "Automation Stack" with AI-first tools (n8n, Make, Claude AI, Agent Design, etc.)
-- Renamed all 3 service cards to AI builds: AI Admin & Lead Engine · AI Bookkeeping Agent · AI Marketing System
-- Updated pricing intro copy to AI-first framing
-- Added new FAQ: "Do you offer manual bookkeeping or VA services?" → No, 100% automation-focused
-- Updated contact form dropdown to AI build options
-- Updated typewriter roles in `script.js`: removed Bookkeeper/Admin Assistant, added Workflow Architect · Your AI Ops Partner · n8n & Make Expert
-- Previewed site on localhost:3000 (Python http.server)
+- Added `assets/projects/CRM template.png` as the main featured project with full-width image card and gold accent border
+- Split featured project into two sections: standalone image card (top) + project info and "What We Built" detail block (below)
+- Added "What We Built & What It's Made Of" section using restaurant analogy — Dining Room (Frontend), Kitchen (Backend), Pantry (Database & Auth) — with tech details for each
+- Added hosting strip showing Vercel (frontend) + Render (backend)
+- Removed the bento/showcase scroll animation section entirely — hero now flows straight into About
+- Cleaned up all showcase/bento CSS and JS (scroll handler simplified)
+- Rewrote About bio: Claude AI as primary tool, n8n/Make as supporting stack
+- Added gold callout block: "Stop renting tools. Start owning systems." — subscription vs. one-time build value prop
+- Updated Automation Stack skills to reflect actual current tech stack: Claude Code, React + Vite, Node.js, Python, JavaScript, TailwindCSS, Supabase, Vercel, Render, GitHub, Google API, Notion API, QuickBooks API
+- Added `retainer-deprecated` styling to old 3 retainer cards (40% opacity, line-through on rate/badge)
+- Added new flat-rate retainer card: $400/month, cancel anytime, with 3 included items (weekly call, 5 major revisions, update coverage)
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review the AI-rewritten site live at `https://ajvirtualsolutionsph.vercel.app/` after deploy
+- Visually review the full updated site live at `https://ajvirtualsolutionsph.vercel.app/` after deploy
 - Purchase and configure custom domain (update canonical, og:url, JSON-LD, sitemap.xml)
 - Verify Notion form integration is live and receiving submissions
-- Consider adding a 4th service card for AI Video Automation to match the pricing section
+- Consider adding more project cards as new builds are completed
 
 ## Deployment
 

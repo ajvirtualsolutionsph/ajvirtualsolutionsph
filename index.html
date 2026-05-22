@@ -155,36 +155,6 @@
     <div class="hero-overlay"></div>
   </section>
 
-  <!-- ========== SHOWCASE (bento gallery scroll) ========== -->
-  <section id="showcase">
-    <div class="showcase-sticky">
-
-      <div class="bento-grid">
-        <div class="bento-cell">
-          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" alt="AI automation visualization" loading="lazy" />
-        </div>
-        <div class="bento-cell">
-          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="AI technology" loading="lazy" />
-        </div>
-        <div class="bento-cell">
-          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80" alt="Code and development" loading="lazy" />
-        </div>
-        <div class="bento-cell">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Data analytics dashboard" loading="lazy" />
-        </div>
-        <div class="bento-cell">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Business automation" loading="lazy" />
-        </div>
-      </div>
-
-      <div class="showcase-overlay" id="showcase-overlay">
-        <p class="showcase-eyebrow">AI Automation &nbsp;·&nbsp; Custom Builds &nbsp;·&nbsp; Real Results</p>
-        <h2 class="showcase-heading">Your business,<br><span class="accent">running on autopilot.</span></h2>
-        <a href="#projects" class="btn btn-primary showcase-cta">See My Work</a>
-      </div>
-
-    </div>
-  </section>
 
   <!-- ========== ABOUT ========== -->
   <section id="about">
@@ -197,40 +167,45 @@
         <div class="about-bio" data-animate="up" data-delay="1">
           <p>
             I am AJ Javier — an AI Automation Specialist based in the Philippines, building custom
-            AI workflows for small businesses worldwide across international time zones.
+            AI systems for small businesses worldwide across international time zones.
           </p>
           <p>
-            My background is in finance, compliance, and operations. That means I know exactly
-            which processes drain teams the most — inbox overload, manual lead follow-up, repetitive
-            bookkeeping, content scheduling. I don't do those tasks manually. I <strong>build AI systems
-            that do them for you</strong>, continuously, at scale, without turnover.
+            My primary tool is <strong>Claude AI</strong> — Anthropic's most capable model — which I use
+            to build intelligent agents that read, reason, and act on your business data. I back that
+            with <strong>n8n and Make (Integromat)</strong> to wire everything together: your inbox,
+            CRM, calendar, financials, and any other tool in your stack.
           </p>
           <p>
-            I specialize in <strong>n8n, Make (Integromat), and Claude AI</strong> — designing
-            multi-step automation pipelines that connect your tools, act on data, and execute tasks
-            that used to need a person. Every build is custom, delivered in 2–4 weeks, and yours to
-            keep forever.
+            My background is in finance, compliance, and operations. That means I know exactly which
+            processes drain teams the most — and I build AI to eliminate them at the root.
           </p>
-          <p>
-            My goal is simple: replace your most expensive, time-consuming manual processes with
-            AI that never sleeps, never calls in sick, and scales with your business.
-          </p>
+
+          <div class="about-callout" data-animate="up" data-delay="2">
+            <p class="about-callout-heading">Stop renting tools. Start owning systems.</p>
+            <p class="about-callout-body">
+              Most businesses pay $50–$300/month per SaaS tool — QuickBooks, HubSpot, a CRM, a
+              scheduling app — forever. I build you a custom AI system that does the same job,
+              tailored to how your business actually works. <strong>One-time cost. No subscriptions.
+              Yours to keep forever.</strong>
+            </p>
+          </div>
         </div>
-        <div class="about-skills" data-animate="up" data-delay="2">
+        <div class="about-skills" data-animate="up" data-delay="3">
           <h3>Automation Stack</h3>
           <ul class="skills-list">
-            <li class="skill-tag">n8n</li>
-            <li class="skill-tag">Make (Integromat)</li>
-            <li class="skill-tag">Claude AI</li>
-            <li class="skill-tag">AI Agent Design</li>
-            <li class="skill-tag">Workflow Architecture</li>
-            <li class="skill-tag">Lead Generation AI</li>
-            <li class="skill-tag">Bookkeeping Automation</li>
-            <li class="skill-tag">Marketing Automation</li>
-            <li class="skill-tag">Zapier</li>
+            <li class="skill-tag skill-tag-primary">Claude Code</li>
+            <li class="skill-tag">React + Vite</li>
+            <li class="skill-tag">Node.js</li>
+            <li class="skill-tag">Python</li>
+            <li class="skill-tag">JavaScript</li>
+            <li class="skill-tag">TailwindCSS</li>
+            <li class="skill-tag">Supabase</li>
+            <li class="skill-tag">Vercel</li>
+            <li class="skill-tag">Render</li>
+            <li class="skill-tag">GitHub</li>
+            <li class="skill-tag">Google API</li>
             <li class="skill-tag">Notion API</li>
             <li class="skill-tag">QuickBooks API</li>
-            <li class="skill-tag">Google Workspace</li>
           </ul>
         </div>
       </div>
@@ -265,53 +240,100 @@
   <section id="projects">
     <div class="section-inner">
       <h2 class="section-title" data-animate="up">Featured <span class="accent">Projects</span></h2>
-      <div class="projects-grid projects-3d-wrap">
 
-        <article class="project-card" data-animate="left">
-          <div class="project-img-wrap">
-            <img src="assets/projects/ai_executive_assistant_project_card.svg" alt="AI-Powered Executive Assistant project" loading="lazy" class="project-img" width="400" height="225" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
-            <div class="project-img-placeholder">Project Preview</div>
-          </div>
-          <div class="project-body">
-            <span class="project-status live">Live</span>
-            <h3 class="project-title">AI-Powered Executive Assistant</h3>
-            <p class="project-desc">Designed a Notion + Claude AI system that manages inbox triage, drafts email responses, schedules follow-ups, and maintains a structured task dashboard — all with minimal manual input.</p>
-            <ul class="project-tags">
-              <li>Claude AI</li><li>Notion</li><li>N8N</li>
-            </ul>
-          </div>
-        </article>
+      <!-- Featured image card -->
+      <span class="project-status live featured-status-badge" data-animate="up">Live</span>
+      <div class="featured-img-card" data-animate="up">
+        <img src="assets/projects/CRM template.png" alt="AI-Powered CRM Dashboard for AJ Virtual Solutions" loading="lazy" class="featured-img" />
+      </div>
 
-        <article class="project-card" data-animate="up" data-delay="1">
-          <div class="project-img-wrap">
-            <img src="assets/projects/bookkeeping_automation_project_card.svg" alt="Intelligent Bookkeeping Assistant project" loading="lazy" class="project-img" width="400" height="225" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
-            <div class="project-img-placeholder">Project Preview</div>
-          </div>
-          <div class="project-body">
-            <span class="project-status in-progress">In Progress</span>
-            <h3 class="project-title">Intelligent Bookkeeping Assistant</h3>
-            <p class="project-desc">Developed a workflow where Claude AI reads financial documents, categorizes transactions, flags anomalies, and drafts reconciliation summaries — integrated directly with QuickBooks Online.</p>
-            <ul class="project-tags">
-              <li>Claude AI</li><li>QuickBooks</li><li>Zapier</li>
-            </ul>
-          </div>
-        </article>
+      <!-- Project info + What We Built -->
+      <div class="featured-details" data-animate="up">
 
-        <article class="project-card" data-animate="right" data-delay="2">
-          <div class="project-img-wrap">
-            <img src="assets/projects/ai_lead_generation_pipeline_project_card.svg" alt="AI Lead Generation Pipeline project" loading="lazy" class="project-img" width="400" height="225" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
-            <div class="project-img-placeholder">Project Preview</div>
-          </div>
-          <div class="project-body">
-            <span class="project-status in-progress">In Progress</span>
-            <h3 class="project-title">AI Lead Generation Pipeline</h3>
-            <p class="project-desc">Built an automated outreach system using N8N and Claude AI to research prospects, craft personalized messages, and qualify leads — reducing manual prospecting time significantly.</p>
-            <ul class="project-tags">
-              <li>N8N</li><li>Claude AI</li><li>Lead Generation</li>
-            </ul>
-          </div>
-        </article>
+        <div class="featured-intro">
+          <h3 class="featured-project-title">AI-Powered CRM Dashboard</h3>
+          <p class="featured-project-desc">Built a fully branded CRM system for AJ Virtual Solutions — featuring a live lead pipeline, revenue tracking, appointment scheduling, and quick-action AI automation triggers. Designed so the entire client lifecycle runs from a single dashboard with zero manual data entry.</p>
+          <ul class="project-tags">
+            <li>React + Vite</li><li>Node.js</li><li>Supabase</li><li>AI Automation</li>
+          </ul>
+        </div>
 
+        <div class="built-section">
+          <p class="built-eyebrow">What We Built &amp; What It's Made Of</p>
+          <p class="built-analogy">Think of this project like a restaurant — a dining room, a kitchen, and a pantry.</p>
+
+          <div class="built-grid">
+
+            <div class="built-card" data-animate="up" data-delay="1">
+              <div class="built-card-header">
+                <span class="built-card-icon">&#x1F37D;&#xFE0F;</span>
+                <div>
+                  <p class="built-card-title">The Dining Room</p>
+                  <p class="built-card-sub">Frontend — what you see &amp; click</p>
+                </div>
+              </div>
+              <ul class="built-list">
+                <li><strong>React + Vite</strong> — builds the screens and makes them feel fast</li>
+                <li><strong>TailwindCSS</strong> — colors, spacing, and styling</li>
+                <li><strong>React Router</strong> — controls which page shows on each click</li>
+                <li><strong>Lucide</strong> — icons throughout the app</li>
+              </ul>
+            </div>
+
+            <div class="built-card" data-animate="up" data-delay="2">
+              <div class="built-card-header">
+                <span class="built-card-icon">&#x1F373;</span>
+                <div>
+                  <p class="built-card-title">The Kitchen</p>
+                  <p class="built-card-sub">Backend — runs behind the scenes</p>
+                </div>
+              </div>
+              <ul class="built-list">
+                <li><strong>Node.js + Express</strong> — the server; takes requests and sends answers back</li>
+                <li><strong>Zod</strong> — validates incoming data before acting on it</li>
+                <li><strong>Helmet + Rate Limiter</strong> — security guards that block bad actors</li>
+              </ul>
+            </div>
+
+            <div class="built-card" data-animate="up" data-delay="3">
+              <div class="built-card-header">
+                <span class="built-card-icon">&#x1F9FA;</span>
+                <div>
+                  <p class="built-card-title">The Pantry</p>
+                  <p class="built-card-sub">Database &amp; Auth — where data lives</p>
+                </div>
+              </div>
+              <ul class="built-list">
+                <li><strong>Supabase</strong> — hosted database that also handles login &amp; passwords</li>
+                <li><strong>RLS (Row-Level Security)</strong> — each user sees only their own data, enforced at the database level</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Hosting strip -->
+          <div class="hosting-strip" data-animate="up">
+            <p class="hosting-label">Where It Lives</p>
+            <div class="hosting-nodes">
+              <div class="hosting-node">
+                <span class="hosting-icon">&#x25B2;</span>
+                <div>
+                  <span class="hosting-name">Vercel</span>
+                  <span class="hosting-role">Frontend — publicly accessible</span>
+                </div>
+              </div>
+              <div class="hosting-divider" aria-hidden="true"></div>
+              <div class="hosting-node">
+                <span class="hosting-icon">&#x2699;&#xFE0F;</span>
+                <div>
+                  <span class="hosting-name">Render</span>
+                  <span class="hosting-role">Backend — runs 24/7 in the cloud</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -427,31 +449,43 @@
       </div>
 
       <!-- Retainer packages -->
-      <h3 class="pricing-sub-heading">Ongoing Support <span class="accent">— Monthly Retainers</span></h3>
-      <p class="pricing-retainer-note">Keep your automation running at peak performance with updates, optimizations, and priority support. The longer you commit, the more you save.</p>
+      <h3 class="pricing-sub-heading">Ongoing Support <span class="accent">— Monthly Retainer</span></h3>
+      <p class="pricing-retainer-note">Keep your build running at peak performance. One flat monthly rate — no long-term commitment required.</p>
       <div class="retainer-grid">
 
-        <div class="retainer-card" data-animate="up" data-delay="1">
+        <div class="retainer-card retainer-deprecated" data-animate="up" data-delay="1">
           <div class="retainer-badge">3 Months</div>
           <p class="retainer-rate">30% of build / mo</p>
           <p class="retainer-example">e.g. Admin &amp; Lead Gen ≈ <strong>$750/mo</strong></p>
           <p class="retainer-desc">Flexible short-term commitment. Great for post-launch fine-tuning.</p>
         </div>
 
-        <div class="retainer-card retainer-featured" data-animate="up" data-delay="2">
+        <div class="retainer-card retainer-deprecated" data-animate="up" data-delay="2">
           <div class="retainer-badge">6 Months</div>
           <p class="retainer-rate">25% of build / mo</p>
           <p class="retainer-example">e.g. Admin &amp; Lead Gen ≈ <strong>$625/mo</strong></p>
           <p class="retainer-desc">Most popular. Consistent savings with ongoing improvement cycles.</p>
-          <p class="retainer-lock-in">&#x1F512; Lock in current rates before next price revision</p>
-          <span class="retainer-popular-tag">Popular</span>
         </div>
 
-        <div class="retainer-card" data-animate="up" data-delay="3">
+        <div class="retainer-card retainer-deprecated" data-animate="up" data-delay="3">
           <div class="retainer-badge">12 Months</div>
           <p class="retainer-rate">20% of build / mo</p>
           <p class="retainer-example">e.g. Admin &amp; Lead Gen ≈ <strong>$500/mo</strong></p>
           <p class="retainer-desc">Best value. Full-year partnership with maximum cost efficiency.</p>
+        </div>
+
+        <div class="retainer-card retainer-new" data-animate="up" data-delay="4">
+          <span class="retainer-new-tag">Current Offer</span>
+          <div class="retainer-price-wrap">
+            <span class="retainer-new-price">$400</span>
+            <span class="retainer-new-period">/ month</span>
+          </div>
+          <p class="retainer-cancel-note">Cancel anytime — no lock-in required.</p>
+          <ul class="retainer-includes">
+            <li>Weekly call with the owner and automation specialist</li>
+            <li>Up to 5 major revisions on the current build — additional revisions may require extra payment</li>
+            <li>Update coverage as the build improves over time</li>
+          </ul>
         </div>
 
       </div>

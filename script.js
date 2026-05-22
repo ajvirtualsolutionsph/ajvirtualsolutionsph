@@ -133,7 +133,7 @@
   });
 
   /* ---------- Active nav link via IntersectionObserver ---------- */
-  const sections   = document.querySelectorAll('section[id]:not(#showcase)');
+  const sections   = document.querySelectorAll('section[id]');
   const navLinkEls = document.querySelectorAll('.nav-link');
 
   function setActive(id) {
@@ -271,16 +271,7 @@
     });
   }
 
-  /* ---------- Single consolidated scroll handler ---------- */
-  const showcaseSection = document.getElementById('showcase');
-  const showcaseCells   = document.querySelectorAll('.bento-cell');
-  const showcaseOverlay = document.getElementById('showcase-overlay');
-  const projectsGrid    = document.querySelector('.projects-3d-wrap');
-
-  if (showcaseSection && prefersReducedMotion) {
-    showcaseCells.forEach(c => { c.style.transform = 'none'; });
-  }
-
+  /* ---------- Scroll handler ---------- */
   window.addEventListener('scroll', () => {
     const sy = window.scrollY;
 
@@ -288,39 +279,6 @@
     header.style.background = sy > 10
       ? 'rgba(10, 46, 44, 0.97)'
       : 'rgba(10, 46, 44, 0.92)';
-
-    if (prefersReducedMotion) return;
-
-    // Showcase bento animation
-    if (showcaseSection && showcaseCells.length && showcaseOverlay) {
-      const rect        = showcaseSection.getBoundingClientRect();
-      const totalScroll = showcaseSection.offsetHeight - window.innerHeight;
-      const p           = Math.max(0, Math.min(1, -rect.top / totalScroll));
-
-      if (rect.bottom < 0 || rect.top > window.innerHeight) {
-        showcaseOverlay.style.display = 'none';
-      } else {
-        showcaseOverlay.style.display = '';
-        const cp    = Math.max(0, Math.min(1, (p - 0.1) / 0.8));
-        const scale = 0.5 + cp * 0.5;
-        const ty    = -35 + cp * 35;
-        showcaseCells.forEach(cell => {
-          cell.style.transform = `translateY(${ty}%) scale(${scale})`;
-        });
-        const op = Math.max(0, Math.min(1, p / 0.5));
-        const os = 1 - op;
-        showcaseOverlay.style.opacity   = os;
-        showcaseOverlay.style.transform = `translate(-50%, -50%) scale(${Math.max(0.01, os)})`;
-      }
-    }
-
-    // Projects 3D tilt
-    if (projectsGrid) {
-      const rect     = projectsGrid.getBoundingClientRect();
-      const progress = Math.max(0, Math.min(1, 1 - rect.top / window.innerHeight));
-      const angle    = 18 * (1 - progress);
-      projectsGrid.style.transform = `perspective(1000px) rotateX(${angle}deg)`;
-    }
   }, { passive: true });
 
   initScrollAnimations();
