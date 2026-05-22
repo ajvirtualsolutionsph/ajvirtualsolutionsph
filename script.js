@@ -17,9 +17,9 @@
   /* ---------- Hero: typewriter + dots ---------- */
   const roles = [
     'AI Automation Specialist',
-    'Bookkeeper',
-    'Admin Assistant',
-    'Virtual Professional'
+    'Workflow Architect',
+    'Your AI Ops Partner',
+    'n8n & Make Expert'
   ];
   let roleIndex = 0, charIndex = 0, deleting = false;
   const roleEl = document.getElementById('role-text');

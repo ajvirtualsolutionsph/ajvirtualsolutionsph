@@ -49,20 +49,27 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 
 ### ✅ Done
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Post-launch audit complete
-- OG image fixed (PNG), pricing updated, content/style corrections applied
-- Configured 123 end-of-session workflow in CLAUDE.md
-- Added `### ✅ Done` and `### 🔲 Next Session` tracking sections to CLAUDE.md
-- Created `project_session_status.md` memory file, removed wrongly-named `project_dialer_status.md`
-- Updated MEMORY.md and CLAUDE.md to reference correct session status file
-- Switched site fonts to Space Grotesk (headings) + Inter (body) via Google Fonts — added `@import`, `--font-heading` CSS variable, and `h1–h6` font rule in `styles.css`; added preconnect hints to `index.html`
-- Exported `AJ_Virtual_Solutions_Brand_Identity.docx` to `.txt` — Claude can now read it; confirmed font choices align with brand guide Section 4
+- Rewrote `index.html` to position AJ as an AI Automation Specialist above everything else
+- Reframed bookkeeping and admin support as AI automation use cases, not standalone manual services
+- Updated page title, meta description, OG tags, Twitter card, and JSON-LD to be AI-automation-first
+- Replaced hero skill tags (Bookkeeping · Admin Support → n8n & Make Workflows · Claude AI Builds)
+- Rewrote hero tagline to lead with AI-powered systems
+- Updated showcase overlay to "Your business, running on autopilot."
+- Rewrote About bio: AI Automation Specialist first, finance/admin background reframed as "I know which processes hurt teams, so I build AI to eliminate them"
+- Renamed skills section to "Automation Stack" with AI-first tools (n8n, Make, Claude AI, Agent Design, etc.)
+- Renamed all 3 service cards to AI builds: AI Admin & Lead Engine · AI Bookkeeping Agent · AI Marketing System
+- Updated pricing intro copy to AI-first framing
+- Added new FAQ: "Do you offer manual bookkeeping or VA services?" → No, 100% automation-focused
+- Updated contact form dropdown to AI build options
+- Updated typewriter roles in `script.js`: removed Bookkeeper/Admin Assistant, added Workflow Architect · Your AI Ops Partner · n8n & Make Expert
+- Previewed site on localhost:3000 (Python http.server)
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review live font change at `https://ajvirtualsolutionsph.vercel.app/`
+- Visually review the AI-rewritten site live at `https://ajvirtualsolutionsph.vercel.app/` after deploy
 - Purchase and configure custom domain (update canonical, og:url, JSON-LD, sitemap.xml)
 - Verify Notion form integration is live and receiving submissions
+- Consider adding a 4th service card for AI Video Automation to match the pricing section
 
 ## Deployment
 
