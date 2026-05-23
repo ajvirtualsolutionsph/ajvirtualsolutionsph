@@ -60,10 +60,11 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 - Updated Automation Stack skills to reflect actual current tech stack: Claude Code, React + Vite, Node.js, Python, JavaScript, TailwindCSS, Supabase, Vercel, Render, GitHub, Google API, Notion API, QuickBooks API
 - Added `retainer-deprecated` styling to old 3 retainer cards (40% opacity, line-through on rate/badge)
 - Added new flat-rate retainer card: $400/month, cancel anytime, with 3 included items (weekly call, 5 major revisions, update coverage)
+- Fixed broken CRM image: renamed `CRM template.png` → `crm-template.png` (space in filename caused broken image on live site) and updated `index.html` reference
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review the full updated site live at `https://ajvirtualsolutionsph.vercel.app/` after deploy
+- Visually review the full updated site live at `https://ajvirtualsolutionsph.vercel.app/` — confirm CRM image now loads correctly
 - Purchase and configure custom domain (update canonical, og:url, JSON-LD, sitemap.xml)
 - Verify Notion form integration is live and receiving submissions
 - Consider adding more project cards as new builds are completed
