@@ -49,25 +49,21 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 
 ### ✅ Done
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Added `assets/projects/CRM template.png` as the main featured project with full-width image card and gold accent border
-- Split featured project into two sections: standalone image card (top) + project info and "What We Built" detail block (below)
-- Added "What We Built & What It's Made Of" section using restaurant analogy — Dining Room (Frontend), Kitchen (Backend), Pantry (Database & Auth) — with tech details for each
-- Added hosting strip showing Vercel (frontend) + Render (backend)
-- Removed the bento/showcase scroll animation section entirely — hero now flows straight into About
-- Cleaned up all showcase/bento CSS and JS (scroll handler simplified)
-- Rewrote About bio: Claude AI as primary tool, n8n/Make as supporting stack
-- Added gold callout block: "Stop renting tools. Start owning systems." — subscription vs. one-time build value prop
-- Updated Automation Stack skills to reflect actual current tech stack: Claude Code, React + Vite, Node.js, Python, JavaScript, TailwindCSS, Supabase, Vercel, Render, GitHub, Google API, Notion API, QuickBooks API
-- Added `retainer-deprecated` styling to old 3 retainer cards (40% opacity, line-through on rate/badge)
-- Added new flat-rate retainer card: $400/month, cancel anytime, with 3 included items (weekly call, 5 major revisions, update coverage)
-- Fixed broken CRM image: renamed `CRM template.png` → `crm-template.png` (space in filename caused broken image on live site) and updated `index.html` reference
+- Updated featured project section based on `CRM_PROMO.md` — retitled to "All-in-One Business CRM Platform"
+- Rewrote project description to highlight GoHighLevel/HubSpot/Zoho replacement, 31+ feature stages, and full feature scope (Gmail, Stripe, e-sign, Google Calendar, financial dashboard)
+- Added gold stats row: "31+ Feature Stages · Production-Ready · White-Label Ready"
+- Updated project tags: added Stripe, Claude AI, TailwindCSS; updated "React" to "React 18 + Vite"
+- Added 8-item CRM feature highlights grid (Lead Pipeline, Gmail + Social Inbox, Invoices & Stripe, Calendar, Client Portal, Reporting, AI Outreach, Multi-Role Access)
+- Updated Kitchen built-card: added Stripe and Claude AI entries
+- Updated Pantry built-card: added JWT Authentication and Sentry entries
+- Added `.crm-stats-row`, `.crm-stat`, `.crm-features-grid`, `.crm-feature-item` CSS in `styles.css`
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review the full updated site live at `https://ajvirtualsolutionsph.vercel.app/` — confirm CRM image now loads correctly
+- Visually review the updated featured project section live at `https://ajvirtualsolutionsph.vercel.app/` — confirm feature grid and stats row render correctly
 - Purchase and configure custom domain (update canonical, og:url, JSON-LD, sitemap.xml)
 - Verify Notion form integration is live and receiving submissions
-- Consider adding more project cards as new builds are completed
+- Consider adding a second project card (e.g. a completed automation build) to grow the Projects section
 
 ## Deployment
 

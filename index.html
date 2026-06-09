@@ -251,11 +251,53 @@
       <div class="featured-details" data-animate="up">
 
         <div class="featured-intro">
-          <h3 class="featured-project-title">AI-Powered CRM Dashboard</h3>
-          <p class="featured-project-desc">Built a fully branded CRM system for AJ Virtual Solutions — featuring a live lead pipeline, revenue tracking, appointment scheduling, and quick-action AI automation triggers. Designed so the entire client lifecycle runs from a single dashboard with zero manual data entry.</p>
+          <h3 class="featured-project-title">All-in-One Business CRM Platform</h3>
+          <p class="featured-project-desc">A fully custom-built business management platform that replaces expensive SaaS tools like GoHighLevel, HubSpot, and Zoho — at a fraction of the cost. Over 31 feature stages shipped and running live in production: AI-scored lead pipeline, Gmail inbox integration, AI cold email drafting, invoice generation with Stripe payments, Google Calendar two-way sync, client portal with e-signing, and a full financial dashboard. Every stage of the client lifecycle — from first contact to paid invoice — runs from one dashboard.</p>
+          <div class="crm-stats-row">
+            <span class="crm-stat">31+ Feature Stages</span>
+            <span class="crm-stat-divider">·</span>
+            <span class="crm-stat">Production-Ready</span>
+            <span class="crm-stat-divider">·</span>
+            <span class="crm-stat">White-Label Ready</span>
+          </div>
           <ul class="project-tags">
-            <li>React + Vite</li><li>Node.js</li><li>Supabase</li><li>AI Automation</li>
+            <li>React 18 + Vite</li><li>Node.js</li><li>Supabase</li><li>Stripe</li><li>Claude AI</li><li>TailwindCSS</li>
           </ul>
+        </div>
+
+        <div class="crm-features-grid">
+          <div class="crm-feature-item">
+            <span class="crm-feature-icon">&#x1F4CB;</span>
+            <span class="crm-feature-label">Lead &amp; Client Pipeline</span>
+          </div>
+          <div class="crm-feature-item">
+            <span class="crm-feature-icon">&#x2709;&#xFE0F;</span>
+            <span class="crm-feature-label">Gmail + Social Inbox</span>
+          </div>
+          <div class="crm-feature-item">
+            <span class="crm-feature-icon">&#x1F4B3;</span>
+            <span class="crm-feature-label">Invoices &amp; Stripe Payments</span>
+          </div>
+          <div class="crm-feature-item">
+            <span class="crm-feature-icon">&#x1F4C5;</span>
+            <span class="crm-feature-label">Calendar &amp; Booking Page</span>
+          </div>
+          <div class="crm-feature-item">
+            <span class="crm-feature-icon">&#x1F465;</span>
+            <span class="crm-feature-label">Client Portal &amp; E-Sign</span>
+          </div>
+          <div class="crm-feature-item">
+            <span class="crm-feature-icon">&#x1F4CA;</span>
+            <span class="crm-feature-label">Revenue &amp; Reporting</span>
+          </div>
+          <div class="crm-feature-item">
+            <span class="crm-feature-icon">&#x1F916;</span>
+            <span class="crm-feature-label">AI Scoring &amp; Outreach</span>
+          </div>
+          <div class="crm-feature-item">
+            <span class="crm-feature-icon">&#x1F512;</span>
+            <span class="crm-feature-label">Multi-Role Access Control</span>
+          </div>
         </div>
 
         <div class="built-section">
@@ -290,6 +332,8 @@
               </div>
               <ul class="built-list">
                 <li><strong>Node.js + Express</strong> — the server; takes requests and sends answers back</li>
+                <li><strong>Stripe</strong> — handles online invoice payments securely</li>
+                <li><strong>Claude AI</strong> — powers lead scoring and AI cold email drafting</li>
                 <li><strong>Zod</strong> — validates incoming data before acting on it</li>
                 <li><strong>Helmet + Rate Limiter</strong> — security guards that block bad actors</li>
               </ul>
@@ -304,8 +348,10 @@
                 </div>
               </div>
               <ul class="built-list">
-                <li><strong>Supabase</strong> — hosted database that also handles login &amp; passwords</li>
+                <li><strong>Supabase (PostgreSQL)</strong> — hosted database that also handles login &amp; passwords</li>
+                <li><strong>JWT Authentication</strong> — secure session tokens with multi-factor auth for admin roles</li>
                 <li><strong>RLS (Row-Level Security)</strong> — each user sees only their own data, enforced at the database level</li>
+                <li><strong>Sentry</strong> — live error monitoring in production</li>
               </ul>
             </div>
 
