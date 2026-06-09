@@ -37,7 +37,7 @@ Single-page, anchor nav. `script.js` handles smooth scroll, active nav, hamburge
 
 ## Page Sections
 
-Nav → Hero → Showcase (bento) → About → Services → Projects → Demo Videos → Pricing → FAQ → Contact → Footer
+Nav → Hero → Cost Comparison → Features (CRM) → Demo Videos → Pricing → FAQ → Contact → Footer
 
 ## Current State
 
@@ -49,19 +49,25 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 
 ### ✅ Done
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Expanded featured CRM project section to use 100% of `CRM_PROMO.md` content (up from ~20%)
-- Added 7-card capability deep-dive grid covering all CRM feature categories: Lead & Client Management, Communication & Outreach, Sales & Finance, Scheduling & Tasks, Client-Facing Tools, Reporting & Intelligence, Platform & Security — every sub-bullet included
-- Added "Who Is This For?" section with 10 business-type pill tiles (agencies, freelancers, real estate, clinics, home services, e-commerce, law firms, etc.)
-- Added "Custom Features on Request" gold callout block using existing `.about-callout` pattern
-- Added responsive CSS: 2-col at 768px, 3-col capabilities + 5-col audience at 1024px; Platform & Security card spans full row
-- Added new CSS classes: `.crm-section-eyebrow`, `.crm-capabilities-section/grid`, `.crm-cap-header/icon/title`, `.crm-cap-card--wide`, `.crm-cap-list--columns`, `.crm-audience-section/block/lead/grid`
+- Pivoted site from general AI automation portfolio to focused CRM product/service marketing page
+- Rewrote `index.html` top to bottom: removed About and Services sections; replaced VA salary comparison with SaaS subscription cost comparison
+- Added new `#comparison` section (right after hero) with a big GoHighLevel-vs-$1,500 visual callout and a 5-row comparison table (GoHighLevel, HubSpot Pro, Zoho Pro, Pipedrive vs AJ's CRM) including honest fine print on hosting costs
+- Updated nav to: Features · Who It's For · Pricing · FAQ · Contact
+- Rewrote hero copy and tags to CRM focus (personal brand kept); updated typewriter roles in `script.js`
+- Renamed `#projects` → `#features` ("What You Get"); removed "What We Built / restaurant analogy" tech stack section; kept 7 capability cards and audience pills intact
+- Rewrote `#pricing` to two clean cards: $1,500 one-time CRM build (gold-bordered, featured) + $500/month support retainer (weekly call, ongoing builds, maintenance)
+- Replaced all 8 FAQ questions with CRM-specific objections (build time, hosting costs, GoHighLevel comparison, data security, white-labeling, etc.)
+- Updated contact form select dropdown to CRM-relevant options
+- Updated meta title, description, keywords, OG tags, and JSON-LD structured data to CRM focus
+- Added CSS for comparison callout, comparison table, 2-column pricing grid, pricing includes list, retainer card overrides
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review the expanded featured project section live at `https://ajvirtualsolutionsph.vercel.app/` — confirm all 7 capability cards, audience pills, and custom features callout render correctly across mobile and desktop
-- Purchase and configure custom domain (update canonical, og:url, JSON-LD, sitemap.xml)
-- Verify Notion form integration is live and receiving submissions
-- Consider adding a second project card to grow the Projects section
+- Visually review live site at `https://ajvirtualsolutionsph.vercel.app/` — verify all new sections (comparison, features, pricing) render correctly on mobile and desktop; check table horizontal scroll on narrow screens
+- Add a CRM-specific demo video (current demos are AI Executive Assistant + AI Landing Page — not the CRM itself)
+- Purchase and configure custom domain (update `canonical`, `og:url`, JSON-LD, `sitemap.xml`)
+- Verify Notion form integration still receives submissions after contact form select options changed
+- Consider adding a social proof section (testimonials or client logos) above the pricing section
 
 ## Deployment
 

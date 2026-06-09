@@ -16,10 +16,10 @@
 
   /* ---------- Hero: typewriter + dots ---------- */
   const roles = [
-    'AI Automation Specialist',
-    'Workflow Architect',
-    'Your AI Ops Partner',
-    'n8n & Make Expert'
+    'Custom CRM Builder',
+    'No Monthly Fees. Ever.',
+    'Your Business, Your System.',
+    'Built in 2–4 Weeks'
   ];
   let roleIndex = 0, charIndex = 0, deleting = false;
   const roleEl = document.getElementById('role-text');
