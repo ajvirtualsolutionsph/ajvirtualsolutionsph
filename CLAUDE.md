@@ -49,21 +49,19 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 
 ### ✅ Done
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Updated featured project section based on `CRM_PROMO.md` — retitled to "All-in-One Business CRM Platform"
-- Rewrote project description to highlight GoHighLevel/HubSpot/Zoho replacement, 31+ feature stages, and full feature scope (Gmail, Stripe, e-sign, Google Calendar, financial dashboard)
-- Added gold stats row: "31+ Feature Stages · Production-Ready · White-Label Ready"
-- Updated project tags: added Stripe, Claude AI, TailwindCSS; updated "React" to "React 18 + Vite"
-- Added 8-item CRM feature highlights grid (Lead Pipeline, Gmail + Social Inbox, Invoices & Stripe, Calendar, Client Portal, Reporting, AI Outreach, Multi-Role Access)
-- Updated Kitchen built-card: added Stripe and Claude AI entries
-- Updated Pantry built-card: added JWT Authentication and Sentry entries
-- Added `.crm-stats-row`, `.crm-stat`, `.crm-features-grid`, `.crm-feature-item` CSS in `styles.css`
+- Expanded featured CRM project section to use 100% of `CRM_PROMO.md` content (up from ~20%)
+- Added 7-card capability deep-dive grid covering all CRM feature categories: Lead & Client Management, Communication & Outreach, Sales & Finance, Scheduling & Tasks, Client-Facing Tools, Reporting & Intelligence, Platform & Security — every sub-bullet included
+- Added "Who Is This For?" section with 10 business-type pill tiles (agencies, freelancers, real estate, clinics, home services, e-commerce, law firms, etc.)
+- Added "Custom Features on Request" gold callout block using existing `.about-callout` pattern
+- Added responsive CSS: 2-col at 768px, 3-col capabilities + 5-col audience at 1024px; Platform & Security card spans full row
+- Added new CSS classes: `.crm-section-eyebrow`, `.crm-capabilities-section/grid`, `.crm-cap-header/icon/title`, `.crm-cap-card--wide`, `.crm-cap-list--columns`, `.crm-audience-section/block/lead/grid`
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review the updated featured project section live at `https://ajvirtualsolutionsph.vercel.app/` — confirm feature grid and stats row render correctly
+- Visually review the expanded featured project section live at `https://ajvirtualsolutionsph.vercel.app/` — confirm all 7 capability cards, audience pills, and custom features callout render correctly across mobile and desktop
 - Purchase and configure custom domain (update canonical, og:url, JSON-LD, sitemap.xml)
 - Verify Notion form integration is live and receiving submissions
-- Consider adding a second project card (e.g. a completed automation build) to grow the Projects section
+- Consider adding a second project card to grow the Projects section
 
 ## Deployment
 
