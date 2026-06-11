@@ -303,4 +303,28 @@
     });
   });
 
+  // Screenshot lightbox
+  const lightbox = document.getElementById('crm-lightbox');
+  const lightboxImg = document.getElementById('crm-lightbox-img');
+  const lightboxClose = document.getElementById('crm-lightbox-close');
+
+  document.querySelectorAll('.crm-screenshot-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
 })();

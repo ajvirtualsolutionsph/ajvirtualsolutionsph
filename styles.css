@@ -832,46 +832,37 @@ section {
 /* ---- CRM Screenshot Gallery ---- */
 .crm-screenshots-section {
   margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
 }
 
-.crm-screenshots-strip {
-  display: flex;
+.crm-screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
 }
 
-.crm-screenshots-strip::-webkit-scrollbar {
-  height: 6px;
-}
-.crm-screenshots-strip::-webkit-scrollbar-track {
-  background: var(--surface);
-  border-radius: 3px;
-}
-.crm-screenshots-strip::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  border-radius: 3px;
+@media (min-width: 900px) {
+  .crm-screenshots-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .crm-screenshot-card {
-  flex: 0 0 auto;
-  width: clamp(260px, 45vw, 520px);
-  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid rgba(13, 148, 136, 0.2);
   background: var(--surface);
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
 
 .crm-screenshot-card:hover {
   border-color: var(--primary);
   transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.15);
 }
 
 .crm-screenshot-card img {
@@ -883,12 +874,50 @@ section {
 
 .crm-screenshot-label {
   padding: 0.5rem 0.75rem 0.65rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.07em;
+  text-align: center;
 }
+
+/* Lightbox */
+.crm-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.crm-lightbox.open {
+  display: flex;
+}
+
+.crm-lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.crm-lightbox-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.8;
+}
+.crm-lightbox-close:hover { opacity: 1; }
 
 .crm-capabilities-grid {
   display: grid;

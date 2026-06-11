@@ -250,7 +250,30 @@
       <!-- Featured image card -->
       <span class="project-status live featured-status-badge" data-animate="up">Live &amp; Production-Ready</span>
       <div class="featured-img-card" data-animate="up">
-        <img src="assets/projects/crm-template.png" alt="AI-Powered CRM Dashboard — AJ Virtual Solutions" loading="lazy" class="featured-img" />
+        <img src="assets/images/crm-screen-dashboard.png" alt="AI-Powered CRM Dashboard — AJ Virtual Solutions" loading="lazy" class="featured-img" />
+      </div>
+
+      <!-- Screenshot Gallery -->
+      <div class="crm-screenshots-section" data-animate="up">
+        <p class="crm-section-eyebrow">A Closer Look</p>
+        <div class="crm-screenshots-grid">
+          <div class="crm-screenshot-card">
+            <img src="assets/images/crm-screen-leads.png" alt="CRM Leads — kanban pipeline with AI scoring" loading="lazy" />
+            <span class="crm-screenshot-label">Leads Pipeline</span>
+          </div>
+          <div class="crm-screenshot-card">
+            <img src="assets/images/crm-screen-calendar.png" alt="CRM Calendar — meetings, appointments, and tasks" loading="lazy" />
+            <span class="crm-screenshot-label">Calendar</span>
+          </div>
+          <div class="crm-screenshot-card">
+            <img src="assets/images/crm-screen-tasks.png" alt="CRM Tasks — task management with priorities and status" loading="lazy" />
+            <span class="crm-screenshot-label">Tasks</span>
+          </div>
+          <div class="crm-screenshot-card">
+            <img src="assets/images/crm-screen-financial.png" alt="CRM Financial — income, expenses, and invoice tracking" loading="lazy" />
+            <span class="crm-screenshot-label">Financial</span>
+          </div>
+        </div>
       </div>
 
       <!-- CRM intro + details -->
@@ -409,33 +432,6 @@
               </ul>
             </div>
 
-          </div>
-        </div>
-
-        <!-- ── Screenshot Gallery ── -->
-        <div class="crm-screenshots-section" data-animate="up">
-          <p class="crm-section-eyebrow">A Closer Look</p>
-          <div class="crm-screenshots-strip">
-            <div class="crm-screenshot-card">
-              <img src="assets/images/crm-screen-dashboard.png" alt="CRM Dashboard — overview of tasks, leads, and pipeline" loading="lazy" />
-              <span class="crm-screenshot-label">Dashboard</span>
-            </div>
-            <div class="crm-screenshot-card">
-              <img src="assets/images/crm-screen-leads.png" alt="CRM Leads — kanban pipeline with AI scoring" loading="lazy" />
-              <span class="crm-screenshot-label">Leads Pipeline</span>
-            </div>
-            <div class="crm-screenshot-card">
-              <img src="assets/images/crm-screen-calendar.png" alt="CRM Calendar — meetings, appointments, and tasks" loading="lazy" />
-              <span class="crm-screenshot-label">Calendar</span>
-            </div>
-            <div class="crm-screenshot-card">
-              <img src="assets/images/crm-screen-tasks.png" alt="CRM Tasks — task management with priorities and status" loading="lazy" />
-              <span class="crm-screenshot-label">Tasks</span>
-            </div>
-            <div class="crm-screenshot-card">
-              <img src="assets/images/crm-screen-financial.png" alt="CRM Financial — income, expenses, and invoice tracking" loading="lazy" />
-              <span class="crm-screenshot-label">Financial</span>
-            </div>
           </div>
         </div>
 
@@ -749,6 +745,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Screenshot lightbox -->
+  <div class="crm-lightbox" id="crm-lightbox" role="dialog" aria-modal="true">
+    <button class="crm-lightbox-close" id="crm-lightbox-close" aria-label="Close">&times;</button>
+    <img id="crm-lightbox-img" src="" alt="" />
+  </div>
 
   <script src="script.js" defer></script>
 </body>
