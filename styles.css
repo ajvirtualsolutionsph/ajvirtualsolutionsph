@@ -829,6 +829,67 @@ section {
   flex-direction: column;
 }
 
+/* ---- CRM Screenshot Gallery ---- */
+.crm-screenshots-section {
+  margin-top: var(--space-xl);
+}
+
+.crm-screenshots-strip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.crm-screenshots-strip::-webkit-scrollbar {
+  height: 6px;
+}
+.crm-screenshots-strip::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-radius: 3px;
+}
+.crm-screenshots-strip::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+.crm-screenshot-card {
+  flex: 0 0 auto;
+  width: clamp(260px, 45vw, 520px);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(13, 148, 136, 0.2);
+  background: var(--surface);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.crm-screenshot-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.crm-screenshot-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.crm-screenshot-label {
+  padding: 0.5rem 0.75rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
 .crm-capabilities-grid {
   display: grid;
   gap: var(--space-md);
