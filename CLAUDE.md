@@ -50,20 +50,20 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 ### ✅ Done
 <!-- Updated automatically by the 123 workflow at end of each session -->
 - Pivoted site from general AI automation portfolio to focused CRM product/service marketing page
-- Rewrote `index.html` top to bottom: removed About and Services sections; replaced VA salary comparison with SaaS subscription cost comparison
-- Added new `#comparison` section (right after hero) with a big GoHighLevel-vs-$1,500 visual callout and a 5-row comparison table (GoHighLevel, HubSpot Pro, Zoho Pro, Pipedrive vs AJ's CRM) including honest fine print on hosting costs
-- Updated nav to: Features · Who It's For · Pricing · FAQ · Contact
+- Rewrote `index.html` top to bottom: removed original About and Services sections; replaced VA salary comparison with SaaS subscription cost comparison
+- Added `#comparison` section with GoHighLevel-vs-$1,500 visual callout and 5-row comparison table (GoHighLevel, HubSpot Pro, Zoho Pro, Pipedrive vs AJ's CRM) with honest hosting cost disclosure
+- Updated nav to: About · Features · Who It's For · Pricing · FAQ · Contact
 - Rewrote hero copy and tags to CRM focus (personal brand kept); updated typewriter roles in `script.js`
-- Renamed `#projects` → `#features` ("What You Get"); removed "What We Built / restaurant analogy" tech stack section; kept 7 capability cards and audience pills intact
-- Rewrote `#pricing` to two clean cards: $1,500 one-time CRM build (gold-bordered, featured) + $500/month support retainer (weekly call, ongoing builds, maintenance)
-- Replaced all 8 FAQ questions with CRM-specific objections (build time, hosting costs, GoHighLevel comparison, data security, white-labeling, etc.)
+- Renamed `#projects` → `#features` ("What You Get"); kept 7 capability cards and audience pills intact
+- Rewrote `#pricing` to two cards: $1,500 one-time CRM build (gold-bordered) + $500/month support retainer
+- Replaced all 8 FAQ questions with CRM-specific objections
 - Updated contact form select dropdown to CRM-relevant options
 - Updated meta title, description, keywords, OG tags, and JSON-LD structured data to CRM focus
-- Added CSS for comparison callout, comparison table, 2-column pricing grid, pricing includes list, retainer card overrides
+- Added `#about` section between Hero and Features: two-column layout (profile photo + bio), 3 stat pills (No Fees / 2–4 wks / Your Data), "Work With Me" CTA; added About nav link
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review live site at `https://ajvirtualsolutionsph.vercel.app/` — verify all new sections (comparison, features, pricing) render correctly on mobile and desktop; check table horizontal scroll on narrow screens
+- Visually review live site at `https://ajvirtualsolutionsph.vercel.app/` — verify About section renders correctly on mobile and desktop; check comparison table horizontal scroll on narrow screens
 - Add a CRM-specific demo video (current demos are AI Executive Assistant + AI Landing Page — not the CRM itself)
 - Purchase and configure custom domain (update `canonical`, `og:url`, JSON-LD, `sitemap.xml`)
 - Verify Notion form integration still receives submissions after contact form select options changed
