@@ -59,7 +59,8 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 - Replaced all 8 FAQ questions with CRM-specific objections
 - Updated contact form select dropdown to CRM-relevant options
 - Updated meta title, description, keywords, OG tags, and JSON-LD structured data to CRM focus
-- Added `#about` section between Hero and Features: two-column layout (profile photo + bio), 3 stat pills (No Fees / 2–4 wks / Your Data), "Work With Me" CTA; added About nav link
+- Added `#about` section between Hero and Features: two-column layout (profile photo + bio), 3 stat pills (No Fees / 2–4 wks / Full Ownership), "Work With Me" CTA; added About nav link
+- Changed About stat label from "Your Data" to "Full Ownership" — previous wording implied data mining
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
