@@ -1467,11 +1467,18 @@ section {
   flex-grow: 1;
 }
 
+.pricing-price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
 .pricing-price {
   display: flex;
   align-items: baseline;
   gap: var(--space-sm);
-  margin-top: var(--space-sm);
 }
 
 .price-range {
@@ -1481,11 +1488,30 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  white-space: nowrap;
+}
+
+.price-mo {
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .price-note {
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
+}
+
+.pricing-free-badge {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.2rem 0.75rem;
+  background: rgba(201, 162, 64, 0.15);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  width: fit-content;
 }
 
 .pricing-vs {
