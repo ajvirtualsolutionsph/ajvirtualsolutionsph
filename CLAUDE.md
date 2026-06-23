@@ -51,21 +51,28 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 <!-- Updated automatically by the 123 workflow at end of each session -->
 - Pivoted site from general AI automation portfolio to focused CRM product/service marketing page
 - Rewrote `index.html` top to bottom: removed original About and Services sections; replaced VA salary comparison with SaaS subscription cost comparison
-- Added `#comparison` section with GoHighLevel-vs-$1,500 visual callout and 5-row comparison table (GoHighLevel, HubSpot Pro, Zoho Pro, Pipedrive vs AJ's CRM) with honest hosting cost disclosure
 - Updated nav to: About · Features · Who It's For · Pricing · FAQ · Contact
 - Rewrote hero copy and tags to CRM focus (personal brand kept); updated typewriter roles in `script.js`
 - Renamed `#projects` → `#features` ("What You Get"); kept 7 capability cards and audience pills intact
-- Rewrote `#pricing` to two cards: $1,500 one-time CRM build (gold-bordered) + $500/month support retainer
-- Replaced all 8 FAQ questions with CRM-specific objections
-- Updated contact form select dropdown to CRM-relevant options
+- Replaced all 8 FAQ questions with CRM-specific objections; updated contact form select dropdown
 - Updated meta title, description, keywords, OG tags, and JSON-LD structured data to CRM focus
-- Added `#about` section between Hero and Features: two-column layout (profile photo + bio), 3 stat pills (No Fees / 2–4 wks / Full Ownership), "Work With Me" CTA; added About nav link
-- Changed About stat label from "Your Data" to "Full Ownership" — previous wording implied data mining
+- Added `#about` section between Hero and Features: two-column layout (profile photo + bio), 3 stat pills, "Work With Me" CTA; added About nav link
+- Changed About stat label from "Your Data" to "Full Ownership"
+- Synced `#comparison` and `#pricing` sections with `CRM_PRICING_COMPARISON.md`:
+  - Updated pricing model to $1,500 one-time + $149/mo (hosting + support + updates), Month 1 FREE
+  - Rewrote hero callout: GoHighLevel now shows $297/mo → $10,692 Y3 vs AJ $3,145 Y1 → $6,721 Y3
+  - Section heading changed to "Less Than GoHighLevel. Done For You."
+  - Updated all 4 competitor rows with correct per-seat pricing (HubSpot $15/seat, Zoho $23/seat, Pipedrive $39/seat)
+  - Renamed table column "You Own It?" → "Hidden Fees?"; updated all values
+  - Replaced fine print with per-seat footnote from MD
+  - Removed $500/mo Support Retainer card from `#pricing`; pricing card now shows $149/mo + Month 1 FREE
+  - Added `.pricing-grid-one` CSS class in `styles.css` for centered single-card layout
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review live site at `https://ajvirtualsolutionsph.vercel.app/` — verify About section renders correctly on mobile and desktop; check comparison table horizontal scroll on narrow screens
+- Visually review live site at `https://ajvirtualsolutionsph.vercel.app/` — verify comparison section and pricing card render correctly on mobile and desktop; check table horizontal scroll on narrow screens
 - Add a CRM-specific demo video (current demos are AI Executive Assistant + AI Landing Page — not the CRM itself)
+- Review `CRM_PROMO.md` (opened this session but not yet used) — assess if promo copy should be incorporated into the site
 - Purchase and configure custom domain (update `canonical`, `og:url`, JSON-LD, `sitemap.xml`)
 - Verify Notion form integration still receives submissions after contact form select options changed
 - Consider adding a social proof section (testimonials or client logos) above the pricing section

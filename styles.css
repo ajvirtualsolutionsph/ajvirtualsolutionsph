@@ -2193,6 +2193,15 @@ section {
   }
 }
 
+.pricing-grid-one {
+  display: grid;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .pricing-card-featured {
   border-color: var(--color-accent);
   box-shadow: var(--shadow-glow);
