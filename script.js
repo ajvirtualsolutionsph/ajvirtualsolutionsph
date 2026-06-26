@@ -189,11 +189,9 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const name                 = form.name.value.trim();
-      const email                = form.email.value.trim();
-      const message              = form.message.value.trim();
-      const serviceInterest      = form.serviceInterest.value.trim();
-      const preferredContactTime = form.preferredContactTime.value.trim();
+      const name    = form.name.value.trim();
+      const email   = form.email.value.trim();
+      const message = form.message.value.trim();
 
       if (!name || !email || !message) {
         showStatus('Please fill in your name, email, and message.', 'error');
@@ -213,7 +211,7 @@
         const response = await fetch('/api/submit-demo', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, message, serviceInterest, preferredContactTime })
+          body: JSON.stringify({ name, email, message })
         });
 
         const data = await response.json();
@@ -302,6 +300,62 @@
       }
     });
   });
+
+  /* ---------- Feature tabs ---------- */
+  const tabBtns = document.querySelectorAll('.crm-tab-btn');
+  const tabPanels = document.querySelectorAll('.crm-tab-panel');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+
+      tabBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      tabPanels.forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      const panel = document.querySelector(`.crm-tab-panel[data-panel="${target}"]`);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  /* ---------- ROI Calculator ---------- */
+  const roiInput = document.getElementById('roi-monthly');
+  const roiBreakeven = document.getElementById('roi-breakeven');
+  const roiSavings = document.getElementById('roi-savings');
+  const roiCurrentDisplay = document.getElementById('roi-current-display');
+
+  function updateROI() {
+    if (!roiInput || !roiBreakeven || !roiSavings) return;
+    const monthly = parseFloat(roiInput.value) || 0;
+    const setup = 1500;
+    const ajMonthly = 149;
+    const monthlySavings = monthly - ajMonthly;
+
+    if (roiCurrentDisplay) roiCurrentDisplay.textContent = monthly.toFixed(0);
+
+    if (monthlySavings <= 0) {
+      roiBreakeven.textContent = 'N/A';
+      roiSavings.textContent = '$0';
+      return;
+    }
+
+    const breakeven = setup / monthlySavings;
+    const threeYrCurrent = monthly * 36;
+    const threeYrAJ = setup + (ajMonthly * 36);
+    const savings = threeYrCurrent - threeYrAJ;
+
+    roiBreakeven.textContent = breakeven.toFixed(1) + ' months';
+    roiSavings.textContent = '$' + Math.round(savings).toLocaleString();
+  }
+
+  if (roiInput) {
+    roiInput.addEventListener('input', updateROI);
+    updateROI();
+  }
 
   // Screenshot lightbox
   const lightbox = document.getElementById('crm-lightbox');
