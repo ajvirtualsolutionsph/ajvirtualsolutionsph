@@ -2642,6 +2642,73 @@ section {
 }
 
 /* ============================================================
+   HERO SAVINGS CALLOUT (replaces mockup image)
+   ============================================================ */
+.hero-savings-callout {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg) var(--space-xl);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+.hero-savings-bad,
+.hero-savings-good {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.hero-savings-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+.hero-savings-amount {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-savings-period {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.hero-savings-strikethrough {
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: #f87171;
+}
+
+.hero-savings-note {
+  font-size: 0.7rem;
+  opacity: 0.55;
+  text-align: center;
+}
+
+.hero-savings-vs {
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0.5;
+  flex-shrink: 0;
+  padding: 0 var(--space-sm);
+}
+
+/* ============================================================
    HERO MOCKUP (replaces logo-card animation)
    ============================================================ */
 .hero-mockup {
@@ -3007,6 +3074,11 @@ section {
   .sp-grid {
     grid-template-columns: 1fr 1fr;
     align-items: start;
+  }
+  .sp-grid--single {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+    margin-inline: auto;
   }
 }
 
