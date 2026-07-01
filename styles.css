@@ -1637,6 +1637,121 @@ section {
   align-self: flex-start;
 }
 
+/* ── Two-card pricing grid ── */
+.pricing-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  max-width: 860px;
+  margin: 0 auto var(--space-xl);
+}
+
+@media (min-width: 720px) {
+  .pricing-cards-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Shared card base */
+.pricing-card-standard,
+.pricing-card-promo {
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Standard card — muted, secondary */
+.pricing-card-standard {
+  background: var(--glass-bg);
+  border: 1px solid var(--color-border);
+}
+
+/* Promo card — featured, gold accent */
+.pricing-card-promo {
+  background: rgba(201, 162, 64, 0.05);
+  border: 2px solid rgba(201, 162, 64, 0.4);
+  box-shadow: 0 0 40px rgba(201, 162, 64, 0.08);
+}
+.pricing-card-promo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+}
+
+/* Card label pill */
+.pricing-card-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg);
+  border: 1px solid var(--color-border-md);
+  color: var(--color-text-muted);
+  width: fit-content;
+}
+
+.promo-label {
+  background: rgba(201, 162, 64, 0.12);
+  border-color: rgba(201, 162, 64, 0.35);
+  color: var(--color-accent);
+}
+
+/* "Limited Time Promo" top badge */
+.promo-badge-top {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  background: var(--gradient-accent);
+  color: #0a2e2c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+}
+
+/* Strikethrough old price */
+.promo-was {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Promo perk rows */
+.promo-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(201, 162, 64, 0.06);
+  border: 1px solid rgba(201, 162, 64, 0.2);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.promo-perk {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+.promo-perk strong { color: var(--color-accent-lt); }
+.promo-perk-icon { font-size: 1rem; flex-shrink: 0; }
+
+.promo-prices { align-items: flex-start; }
+
 .pricing-availability-banner {
   text-align: center;
   background: rgba(201, 162, 64, 0.07);
