@@ -326,8 +326,8 @@
   function updateROI() {
     if (!roiInput || !roiBreakeven || !roiSavings) return;
     const monthly = parseFloat(roiInput.value) || 0;
-    const setup = 1500;
-    const ajMonthly = 149;
+    const setup = 750;
+    const ajMonthly = 250;
     const monthlySavings = monthly - ajMonthly;
 
     if (roiCurrentDisplay) roiCurrentDisplay.textContent = monthly.toFixed(0);
