@@ -60,14 +60,14 @@
   /* ---------- Hero: floating particles ---------- */
   const heroSection = document.getElementById('hero');
   const particleData = [
-    { left: '10%', delay: '0s',   dur: '7s',   dx: '30px',  color: '#c9a240' },
-    { left: '25%', delay: '1.2s', dur: '5.5s', dx: '-20px', color: '#c9a240' },
-    { left: '40%', delay: '2.5s', dur: '8s',   dx: '15px',  color: '#c9a240' },
-    { left: '60%', delay: '0.5s', dur: '6.5s', dx: '-35px', color: '#c9a240' },
-    { left: '75%', delay: '1.8s', dur: '5s',   dx: '25px',  color: '#c9a240' },
-    { left: '88%', delay: '3.2s', dur: '7.5s', dx: '-10px', color: '#c9a240' },
+    { left: '8%',  delay: '0s',   dur: '7s',   dx: '30px',  color: '#c9a240' },
+    { left: '22%', delay: '1.2s', dur: '5.5s', dx: '-20px', color: '#c9a240' },
+    { left: '38%', delay: '2.5s', dur: '8s',   dx: '15px',  color: '#c9a240' },
+    { left: '58%', delay: '0.5s', dur: '6.5s', dx: '-35px', color: '#c9a240' },
+    { left: '72%', delay: '1.8s', dur: '5s',   dx: '25px',  color: '#c9a240' },
+    { left: '86%', delay: '3.2s', dur: '7.5s', dx: '-10px', color: '#c9a240' },
     { left: '50%', delay: '4s',   dur: '6s',   dx: '40px',  color: '#0d9488' },
-    { left: '15%', delay: '2s',   dur: '9s',   dx: '-25px', color: '#0d9488' },
+    { left: '14%', delay: '2s',   dur: '9s',   dx: '-25px', color: '#0d9488' },
   ];
   if (heroSection) {
     particleData.forEach(p => {
@@ -81,7 +81,7 @@
         `background:${p.color}`,
         'bottom:-10px',
       ].join(';');
-      heroSection.insertBefore(el, heroSection.firstChild);
+      heroSection.appendChild(el);
     });
   }
 
@@ -271,12 +271,7 @@
 
   /* ---------- Scroll handler ---------- */
   window.addEventListener('scroll', () => {
-    const sy = window.scrollY;
-
-    // Nav shadow
-    header.style.background = sy > 10
-      ? 'rgba(10, 46, 44, 0.97)'
-      : 'rgba(10, 46, 44, 0.92)';
+    header.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
 
   initScrollAnimations();

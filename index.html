@@ -92,8 +92,8 @@
       </button>
 
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
         <li><a href="#pricing" class="nav-link">Pricing</a></li>
         <li><a href="#faq" class="nav-link">FAQ</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -104,123 +104,140 @@
 
   <!-- ========== HERO ========== -->
   <section id="hero">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow--teal" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow--gold" aria-hidden="true"></div>
+
     <div class="hero-content">
 
-      <!-- Savings callout -->
-      <div class="hero-savings-callout">
-        <div class="hero-savings-bad">
-          <span class="hero-savings-label">Other CRMs</span>
-          <span class="hero-savings-amount hero-savings-strikethrough">$297–$497<span class="hero-savings-period">/mo</span></span>
-          <span class="hero-savings-note">forever · you own nothing</span>
-        </div>
-        <div class="hero-savings-vs">vs.</div>
-        <div class="hero-savings-good">
-          <span class="hero-savings-label">AJ's Custom CRM</span>
-          <span class="hero-savings-amount accent">$1,500<span class="hero-savings-period"> once</span></span>
-          <span class="hero-savings-note">then $149/mo · you own it forever</span>
-        </div>
+      <!-- Eyebrow badge -->
+      <div class="hero-badge" data-animate="up">
+        <span class="hero-badge-dot"></span>
+        <span>&#x1F534; Only 3 CRM build slots open this month</span>
       </div>
 
-      <h1 class="hero-heading">Your own CRM.<br /><span class="accent">No $300/mo subscriptions.</span><br />Built in 2 weeks.</h1>
+      <!-- Savings comparison pill -->
+      <div class="hero-vs-pill" data-animate="up">
+        <span class="hero-vs-bad">GoHighLevel $297<span>/mo</span></span>
+        <span class="hero-vs-sep">vs</span>
+        <span class="hero-vs-good">AJ's CRM $149<span>/mo</span> + $1,500 once</span>
+      </div>
+
+      <h1 class="hero-heading" data-animate="up">
+        Your own CRM.<br />
+        <span class="accent">No $300/mo subscriptions.</span><br />
+        Built in 2 weeks.
+      </h1>
 
       <!-- Typewriter role line -->
-      <div class="role-line">
+      <div class="role-line" data-animate="up">
         <span id="role-text"></span>
         <span class="cursor"></span>
       </div>
 
-      <p class="hero-tagline">
+      <p class="hero-tagline" data-animate="up">
         Hi, I'm <strong>AJ</strong> — I build custom CRMs that replace GoHighLevel and HubSpot
         for a one-time payment of $1,500. Your data, your rules. Built once, owned forever.
       </p>
 
-      <!-- Skill tags -->
-      <div class="hero-tags">
-        <span class="hero-tag">Custom CRM Development</span>
-        <span class="hero-tag">No Monthly Fees</span>
-        <span class="hero-tag">Built in 2–4 Weeks</span>
+      <div class="hero-cta-group" data-animate="up">
+        <a href="#contact" class="btn btn-primary">&#x1F4C5; Book a Free Demo Call</a>
+        <a href="#features" class="btn btn-ghost">See What's Included ↓</a>
       </div>
-
-      <div class="urgency-badge">&#x1F534; Only 3 CRM build slots open this month</div>
-      <a href="#features" class="btn btn-primary">See What's Included</a>
 
       <!-- Trust bar -->
-      <div class="hero-trust-bar">
+      <div class="hero-trust-bar" data-animate="up">
         <div class="trust-item">
           <span class="trust-num">$0</span>
-          <span class="trust-label">monthly fees</span>
+          <span class="trust-label">Monthly Fees</span>
         </div>
-        <span class="trust-sep">·</span>
+        <span class="trust-sep"></span>
         <div class="trust-item">
           <span class="trust-num">2–4 wks</span>
-          <span class="trust-label">build time</span>
+          <span class="trust-label">Build Time</span>
         </div>
-        <span class="trust-sep">·</span>
+        <span class="trust-sep"></span>
         <div class="trust-item">
           <span class="trust-num">31+</span>
-          <span class="trust-label">features shipped</span>
+          <span class="trust-label">Features Shipped</span>
         </div>
-      </div>
-
-      <!-- Slide dots synced to typewriter -->
-      <div class="dots-row" id="dots-row">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+        <span class="trust-sep"></span>
+        <div class="trust-item">
+          <span class="trust-num">100%</span>
+          <span class="trust-label">Code Ownership</span>
+        </div>
       </div>
 
     </div>
-    <div class="hero-overlay"></div>
   </section>
 
 
-  <!-- ========== ABOUT ========== -->
-  <section id="about">
-    <div class="section-inner">
-      <div class="about-grid">
-        <div class="about-photo-wrap" data-animate="left">
-          <img src="assets/images/profile.png" alt="AJ Javier — Founder of AJ Virtual Solutions" class="about-photo" width="320" height="320" />
-        </div>
-        <div class="about-text" data-animate="right">
-          <h2 class="section-title" style="text-align:left;margin-bottom:1rem;">About <span class="accent">Me</span></h2>
-          <p>I'm <strong>AJ Javier</strong>, a Filipino AI Automation Specialist and founder of AJ Virtual Solutions. I help small business owners stop overpaying for generic SaaS tools and start owning their software instead.</p>
-          <p>After seeing clients waste thousands of dollars every year on GoHighLevel and HubSpot subscriptions that never quite fit their workflow, I started building fully custom CRMs — tailored to each business, hosted on their own infrastructure, and paid for <em>once</em>.</p>
-          <p>No lock-in. No monthly ransom. Just software that works exactly the way you do.</p>
-          <div class="about-stats">
-            <div class="about-stat">
-              <span class="about-stat-number accent">$0</span>
-              <span class="about-stat-label">Monthly Fees</span>
-            </div>
-            <div class="about-stat">
-              <span class="about-stat-number accent">2–4 wks</span>
-              <span class="about-stat-label">Build Time</span>
-            </div>
-            <div class="about-stat">
-              <span class="about-stat-number accent">100%</span>
-              <span class="about-stat-label">Full Ownership</span>
-            </div>
-          </div>
-          <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;display:inline-block;">Work With Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FEATURES (What You Get) ========== -->
+  <!-- ========== FEATURES ========== -->
   <section id="features">
     <div class="section-inner">
-      <h2 class="section-title" data-animate="up">What You <span class="accent">Get</span></h2>
 
-      <!-- Featured image card -->
-      <span class="project-status live featured-status-badge" data-animate="up">Live &amp; Production-Ready</span>
+      <div class="section-header" data-animate="up">
+        <span class="eyebrow">What's Included</span>
+        <h2 class="section-title">Everything Your Business <span class="accent">Needs</span></h2>
+        <p class="section-subtitle">A fully custom-built CRM comparable to GoHighLevel and HubSpot — built once, owned forever. 31+ feature stages, production-ready.</p>
+      </div>
+
+      <!-- Featured screenshot -->
+      <span class="project-status live featured-status-badge" data-animate="up">&#x2713; Live &amp; Production-Ready</span>
       <div class="featured-img-card" data-animate="up">
         <img src="assets/images/crm-screen-dashboard.png" alt="AI-Powered CRM Dashboard — AJ Virtual Solutions" loading="lazy" class="featured-img" />
       </div>
 
+      <!-- Numbered feature cards -->
+      <div class="features-num-grid" data-animate="up">
+
+        <div class="feature-num-card">
+          <span class="feature-num">01</span>
+          <span class="feature-card-icon">&#x1F4CB;</span>
+          <h3 class="feature-card-title">Lead &amp; Client Pipeline</h3>
+          <p class="feature-card-desc">Full Kanban board with drag-and-drop stages, AI-powered lead scoring, automated overdue alerts, and lost-reason analytics.</p>
+        </div>
+
+        <div class="feature-num-card">
+          <span class="feature-num">02</span>
+          <span class="feature-card-icon">&#x2709;&#xFE0F;</span>
+          <h3 class="feature-card-title">Gmail + Social Inbox</h3>
+          <p class="feature-card-desc">Built-in email inbox with Gmail sync — send, receive, reply. Plus Facebook & Instagram Messenger inbox, AI cold email drafting, and open tracking.</p>
+        </div>
+
+        <div class="feature-num-card">
+          <span class="feature-num">03</span>
+          <span class="feature-card-icon">&#x1F4B3;</span>
+          <h3 class="feature-card-title">Invoices &amp; Stripe Payments</h3>
+          <p class="feature-card-desc">Professional invoices with sequential numbering, branded templates, online payment via Stripe, time tracking, bills, and a full financial dashboard.</p>
+        </div>
+
+        <div class="feature-num-card">
+          <span class="feature-num">04</span>
+          <span class="feature-card-icon">&#x1F4C5;</span>
+          <h3 class="feature-card-title">Calendar &amp; Booking</h3>
+          <p class="feature-card-desc">Calendar with Google two-way sync, event reminders, conflict detection, and a public booking page — clients schedule directly without logging in.</p>
+        </div>
+
+        <div class="feature-num-card">
+          <span class="feature-num">05</span>
+          <span class="feature-card-icon">&#x1F465;</span>
+          <h3 class="feature-card-title">Client Portal &amp; E-Sign</h3>
+          <p class="feature-card-desc">Clients view invoices, approve estimates, pay online, and e-sign documents — all from a branded portal without needing an account.</p>
+        </div>
+
+        <div class="feature-num-card">
+          <span class="feature-num">06</span>
+          <span class="feature-card-icon">&#x1F916;</span>
+          <h3 class="feature-card-title">AI Scoring &amp; Reporting</h3>
+          <p class="feature-card-desc">AI lead scoring, AI-drafted outreach emails, reporting across leads, revenue, tasks and campaigns, Zapier/webhook integrations, and Sentry monitoring.</p>
+        </div>
+
+      </div>
+
       <!-- Screenshot Gallery -->
       <div class="crm-screenshots-section" data-animate="up">
-        <p class="crm-section-eyebrow">A Closer Look</p>
+        <span class="eyebrow" style="display:block;text-align:center;margin-bottom:1.5rem;">A Closer Look</span>
         <div class="crm-screenshots-grid">
           <div class="crm-screenshot-card">
             <img src="assets/images/crm-screen-leads.png" alt="CRM Leads — kanban pipeline with AI scoring" loading="lazy" />
@@ -241,259 +258,270 @@
         </div>
       </div>
 
-      <!-- CRM intro + details -->
-      <div class="featured-details" data-animate="up">
-
-        <div class="featured-intro">
-          <h3 class="featured-project-title">All-in-One Business CRM Platform</h3>
-          <p class="featured-project-desc">A fully custom-built business management platform comparable to GoHighLevel and HubSpot — built once for your business, owned forever. Over 31 feature stages shipped and running live in production: AI-scored lead pipeline, Gmail inbox integration, AI cold email drafting, invoice generation with Stripe payments, Google Calendar two-way sync, client portal with e-signing, and a full financial dashboard. Every stage of the client lifecycle — from first contact to paid invoice — runs from one dashboard.</p>
-          <div class="crm-stats-row">
-            <span class="crm-stat">31+ Feature Stages</span>
-            <span class="crm-stat-divider">·</span>
-            <span class="crm-stat">Production-Ready</span>
-            <span class="crm-stat-divider">·</span>
-            <span class="crm-stat">White-Label Ready</span>
-          </div>
-          <ul class="project-tags">
-            <li>React 18 + Vite</li><li>Node.js</li><li>Supabase</li><li>Stripe</li><li>Claude AI</li><li>TailwindCSS</li>
-          </ul>
-          <p class="tech-stack-note">Built on React, Node.js, Supabase &amp; Stripe — production-ready, white-label optional.</p>
-        </div>
-
-        <div class="crm-features-grid">
-          <div class="crm-feature-item">
-            <span class="crm-feature-icon">&#x1F4CB;</span>
-            <span class="crm-feature-label">Lead &amp; Client Pipeline</span>
-          </div>
-          <div class="crm-feature-item">
-            <span class="crm-feature-icon">&#x2709;&#xFE0F;</span>
-            <span class="crm-feature-label">Gmail + Social Inbox</span>
-          </div>
-          <div class="crm-feature-item">
-            <span class="crm-feature-icon">&#x1F4B3;</span>
-            <span class="crm-feature-label">Invoices &amp; Stripe Payments</span>
-          </div>
-          <div class="crm-feature-item">
-            <span class="crm-feature-icon">&#x1F4C5;</span>
-            <span class="crm-feature-label">Calendar &amp; Booking Page</span>
-          </div>
-          <div class="crm-feature-item">
-            <span class="crm-feature-icon">&#x1F465;</span>
-            <span class="crm-feature-label">Client Portal &amp; E-Sign</span>
-          </div>
-          <div class="crm-feature-item">
-            <span class="crm-feature-icon">&#x1F4CA;</span>
-            <span class="crm-feature-label">Revenue &amp; Reporting</span>
-          </div>
-          <div class="crm-feature-item">
-            <span class="crm-feature-icon">&#x1F916;</span>
-            <span class="crm-feature-label">AI Scoring &amp; Outreach</span>
-          </div>
-          <div class="crm-feature-item">
-            <span class="crm-feature-icon">&#x1F512;</span>
-            <span class="crm-feature-label">Multi-Role Access Control</span>
-          </div>
-        </div>
-
-        <!-- ── CRM Capabilities (Tabbed) ── -->
-        <div class="crm-capabilities-section">
-          <p class="crm-section-eyebrow">What It Can Do Right Now</p>
-
-          <div class="crm-tabs" data-animate="up">
-            <div class="crm-tab-nav" role="tablist">
-              <button class="crm-tab-btn active" role="tab" aria-selected="true" data-tab="leads">&#x1F4CB; Lead Pipeline</button>
-              <button class="crm-tab-btn" role="tab" aria-selected="false" data-tab="finance">&#x1F4B3; Finance</button>
-              <button class="crm-tab-btn" role="tab" aria-selected="false" data-tab="calendar">&#x1F4C5; Calendar &amp; Tasks</button>
-              <button class="crm-tab-btn" role="tab" aria-selected="false" data-tab="ai">&#x1F916; AI &amp; Reporting</button>
-            </div>
-
-            <div class="crm-tab-panels">
-
-              <div class="crm-tab-panel active" data-panel="leads">
-                <div class="crm-tab-grid">
-                  <div class="crm-tab-card">
-                    <p class="crm-cap-title">&#x1F4CB; Lead &amp; Client Management</p>
-                    <ul class="built-list">
-                      <li>Full lead pipeline with <strong>Kanban board</strong> — drag-and-drop by stage</li>
-                      <li><strong>AI-powered lead scoring</strong> with trend history</li>
-                      <li>Lead assignment, follow-up scheduling, and lost reason tracking</li>
-                      <li>Automated <strong>overdue follow-up alerts</strong></li>
-                      <li>"Why We Lose Leads" analytics chart</li>
-                    </ul>
-                  </div>
-                  <div class="crm-tab-card">
-                    <p class="crm-cap-title">&#x2709;&#xFE0F; Communication &amp; Outreach</p>
-                    <ul class="built-list">
-                      <li>Built-in email inbox with <strong>Gmail integration</strong> — send, receive, reply</li>
-                      <li><strong>AI cold email drafting</strong> — personalized outreach sent directly from the CRM</li>
-                      <li>Email open tracking</li>
-                      <li><strong>Facebook &amp; Instagram Messenger</strong> inbox integration</li>
-                      <li>Email marketing campaigns with contact list management</li>
-                      <li>Automated workflow triggers — assign tasks, update statuses automatically</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="crm-tab-panel" data-panel="finance">
-                <div class="crm-tab-grid">
-                  <div class="crm-tab-card">
-                    <p class="crm-cap-title">&#x1F4B3; Sales &amp; Finance</p>
-                    <ul class="built-list">
-                      <li>Estimates and quotes — generate, send, and <strong>convert to invoices</strong></li>
-                      <li>Professional invoices with sequential numbering and <strong>branded templates</strong></li>
-                      <li>Online payments via <strong>Stripe</strong></li>
-                      <li>Bills and accounts payable tracking</li>
-                      <li>Time tracking linked to billable hours</li>
-                      <li>Income and expense bookkeeping with a <strong>full financial dashboard</strong></li>
-                    </ul>
-                  </div>
-                  <div class="crm-tab-card">
-                    <p class="crm-cap-title">&#x1F465; Client-Facing Tools</p>
-                    <ul class="built-list">
-                      <li><strong>Client portal</strong> — clients view invoices, approve estimates, and pay online</li>
-                      <li>Funnel and landing page builder</li>
-                      <li>Surveys and forms builder with public shareable links</li>
-                      <li>Document <strong>e-signing</strong></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="crm-tab-panel" data-panel="calendar">
-                <div class="crm-tab-grid crm-tab-grid--single">
-                  <div class="crm-tab-card">
-                    <p class="crm-cap-title">&#x1F4C5; Scheduling &amp; Task Management</p>
-                    <ul class="built-list">
-                      <li>Calendar with event reminders, conflict detection, and <strong>Google Calendar two-way sync</strong></li>
-                      <li>Public appointment booking page — clients book directly without logging in</li>
-                      <li>Task manager with <strong>Kanban</strong>, subtask checklists, assignment, and comments</li>
-                      <li>Completion tracking and priority flags across all open tasks</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="crm-tab-panel" data-panel="ai">
-                <div class="crm-tab-grid">
-                  <div class="crm-tab-card">
-                    <p class="crm-cap-title">&#x1F4CA; Reporting &amp; Intelligence</p>
-                    <ul class="built-list">
-                      <li>Reporting dashboard with charts across <strong>leads, revenue, tasks, and campaigns</strong></li>
-                      <li>Reputation management dashboard</li>
-                      <li>Outbound webhooks and <strong>Zapier integration</strong> for third-party tools</li>
-                    </ul>
-                  </div>
-                  <div class="crm-tab-card">
-                    <p class="crm-cap-title">&#x1F512; Platform &amp; Security</p>
-                    <ul class="built-list">
-                      <li><strong>Multi-role access control</strong> (CEO, Admin, Staff)</li>
-                      <li><strong>CEO multi-factor authentication</strong></li>
-                      <li>Full audit logging and secrets management</li>
-                      <li>Rate limiting, <strong>CORS protection</strong>, and HSTS headers</li>
-                      <li><strong>Sentry</strong> error monitoring</li>
-                      <li><strong>White-label &amp; multi-tenant ready</strong></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- ── Who Is This For? ── -->
-        <div class="crm-audience-section" id="who-its-for">
-
-          <div class="crm-audience-block">
-            <p class="crm-section-eyebrow">Who Is This For?</p>
-            <p class="crm-audience-lead">
-              This CRM flexes to any business model. If your business has customers, it can manage them.
-            </p>
-            <ul class="crm-audience-grid">
-              <li>&#x1F3A8; Marketing &amp; Creative Agencies</li>
-              <li>&#x1F4BC; Freelancers &amp; Consultants</li>
-              <li>&#x1F3E0; Real Estate Agents &amp; Brokers</li>
-              <li>&#x1F393; Coaches &amp; Educators</li>
-              <li>&#x1FA7A; Clinics &amp; Wellness Providers</li>
-              <li>&#x1F527; Home Service Businesses</li>
-              <li>&#x1F6CD;&#xFE0F; E-Commerce Brands</li>
-              <li>&#x1F4BB; Virtual Assistant Agencies</li>
-              <li>&#x2696;&#xFE0F; Law Firms &amp; Accountants</li>
-              <li>&#x1F465; Any Team Managing Leads + Revenue</li>
-            </ul>
-          </div>
-
-          <div class="crm-custom-callout about-callout">
-            <p class="about-callout-heading">Custom Features on Request</p>
-            <p class="about-callout-body">
-              Every business is different. Custom additions include: custom lead stages and status labels,
-              industry-specific intake forms and booking flows, custom reporting charts and KPIs,
-              role permissions tuned to your team structure, and automated workflows built around your
-              sales process. The CRM is built on a modular codebase — new features slot in cleanly
-              without breaking what's already there.
-            </p>
-          </div>
-
-        </div>
-
+      <!-- CRM Stats -->
+      <div class="crm-stats-bar" data-animate="up">
+        <span class="crm-stat-item">31+ Feature Stages</span>
+        <span class="crm-stat-dot"></span>
+        <span class="crm-stat-item">Production-Ready</span>
+        <span class="crm-stat-dot"></span>
+        <span class="crm-stat-item">White-Label Ready</span>
+        <span class="crm-stat-dot"></span>
+        <span class="crm-stat-item">React 18 + Vite + Supabase + Stripe</span>
       </div>
+
+      <!-- ── Capabilities (Tabbed) ── -->
+      <div class="crm-capabilities-section" data-animate="up">
+        <span class="eyebrow" style="display:block;text-align:center;margin-bottom:1.5rem;">Deep Dive</span>
+
+        <div class="crm-tabs">
+          <div class="crm-tab-nav" role="tablist">
+            <button class="crm-tab-btn active" role="tab" aria-selected="true" data-tab="leads">&#x1F4CB; Lead Pipeline</button>
+            <button class="crm-tab-btn" role="tab" aria-selected="false" data-tab="finance">&#x1F4B3; Finance</button>
+            <button class="crm-tab-btn" role="tab" aria-selected="false" data-tab="calendar">&#x1F4C5; Calendar &amp; Tasks</button>
+            <button class="crm-tab-btn" role="tab" aria-selected="false" data-tab="ai">&#x1F916; AI &amp; Reporting</button>
+          </div>
+
+          <div class="crm-tab-panels">
+
+            <div class="crm-tab-panel active" data-panel="leads">
+              <div class="crm-tab-grid">
+                <div class="crm-tab-card">
+                  <p class="crm-cap-title">&#x1F4CB; Lead &amp; Client Management</p>
+                  <ul class="built-list">
+                    <li>Full lead pipeline with <strong>Kanban board</strong> — drag-and-drop by stage</li>
+                    <li><strong>AI-powered lead scoring</strong> with trend history</li>
+                    <li>Lead assignment, follow-up scheduling, and lost reason tracking</li>
+                    <li>Automated <strong>overdue follow-up alerts</strong></li>
+                    <li>"Why We Lose Leads" analytics chart</li>
+                  </ul>
+                </div>
+                <div class="crm-tab-card">
+                  <p class="crm-cap-title">&#x2709;&#xFE0F; Communication &amp; Outreach</p>
+                  <ul class="built-list">
+                    <li>Built-in email inbox with <strong>Gmail integration</strong> — send, receive, reply</li>
+                    <li><strong>AI cold email drafting</strong> — personalized outreach sent directly from the CRM</li>
+                    <li>Email open tracking</li>
+                    <li><strong>Facebook &amp; Instagram Messenger</strong> inbox integration</li>
+                    <li>Email marketing campaigns with contact list management</li>
+                    <li>Automated workflow triggers — assign tasks, update statuses automatically</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="crm-tab-panel" data-panel="finance">
+              <div class="crm-tab-grid">
+                <div class="crm-tab-card">
+                  <p class="crm-cap-title">&#x1F4B3; Sales &amp; Finance</p>
+                  <ul class="built-list">
+                    <li>Estimates and quotes — generate, send, and <strong>convert to invoices</strong></li>
+                    <li>Professional invoices with sequential numbering and <strong>branded templates</strong></li>
+                    <li>Online payments via <strong>Stripe</strong></li>
+                    <li>Bills and accounts payable tracking</li>
+                    <li>Time tracking linked to billable hours</li>
+                    <li>Income and expense bookkeeping with a <strong>full financial dashboard</strong></li>
+                  </ul>
+                </div>
+                <div class="crm-tab-card">
+                  <p class="crm-cap-title">&#x1F465; Client-Facing Tools</p>
+                  <ul class="built-list">
+                    <li><strong>Client portal</strong> — clients view invoices, approve estimates, and pay online</li>
+                    <li>Funnel and landing page builder</li>
+                    <li>Surveys and forms builder with public shareable links</li>
+                    <li>Document <strong>e-signing</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="crm-tab-panel" data-panel="calendar">
+              <div class="crm-tab-grid crm-tab-grid--single">
+                <div class="crm-tab-card">
+                  <p class="crm-cap-title">&#x1F4C5; Scheduling &amp; Task Management</p>
+                  <ul class="built-list">
+                    <li>Calendar with event reminders, conflict detection, and <strong>Google Calendar two-way sync</strong></li>
+                    <li>Public appointment booking page — clients book directly without logging in</li>
+                    <li>Task manager with <strong>Kanban</strong>, subtask checklists, assignment, and comments</li>
+                    <li>Completion tracking and priority flags across all open tasks</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="crm-tab-panel" data-panel="ai">
+              <div class="crm-tab-grid">
+                <div class="crm-tab-card">
+                  <p class="crm-cap-title">&#x1F4CA; Reporting &amp; Intelligence</p>
+                  <ul class="built-list">
+                    <li>Reporting dashboard with charts across <strong>leads, revenue, tasks, and campaigns</strong></li>
+                    <li>Reputation management dashboard</li>
+                    <li>Outbound webhooks and <strong>Zapier integration</strong> for third-party tools</li>
+                  </ul>
+                </div>
+                <div class="crm-tab-card">
+                  <p class="crm-cap-title">&#x1F512; Platform &amp; Security</p>
+                  <ul class="built-list">
+                    <li><strong>Multi-role access control</strong> (CEO, Admin, Staff)</li>
+                    <li><strong>CEO multi-factor authentication</strong></li>
+                    <li>Full audit logging and secrets management</li>
+                    <li>Rate limiting, <strong>CORS protection</strong>, and HSTS headers</li>
+                    <li><strong>Sentry</strong> error monitoring</li>
+                    <li><strong>White-label &amp; multi-tenant ready</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Who Is This For -->
+      <div class="crm-audience-section" id="who-its-for" data-animate="up">
+        <span class="eyebrow" style="display:block;text-align:center;margin-bottom:1rem;">Who Is This For?</span>
+        <p class="crm-audience-lead">This CRM flexes to any business model. If your business has customers, it can manage them.</p>
+        <ul class="crm-audience-grid">
+          <li>&#x1F3A8; Marketing &amp; Creative Agencies</li>
+          <li>&#x1F4BC; Freelancers &amp; Consultants</li>
+          <li>&#x1F3E0; Real Estate Agents &amp; Brokers</li>
+          <li>&#x1F393; Coaches &amp; Educators</li>
+          <li>&#x1FA7A; Clinics &amp; Wellness Providers</li>
+          <li>&#x1F527; Home Service Businesses</li>
+          <li>&#x1F6CD;&#xFE0F; E-Commerce Brands</li>
+          <li>&#x1F4BB; Virtual Assistant Agencies</li>
+          <li>&#x2696;&#xFE0F; Law Firms &amp; Accountants</li>
+          <li>&#x1F465; Any Team Managing Leads + Revenue</li>
+        </ul>
+
+        <div class="crm-custom-callout" data-animate="up">
+          <p class="about-callout-heading">Custom Features on Request</p>
+          <p class="about-callout-body">
+            Every business is different. Custom additions include: custom lead stages and status labels,
+            industry-specific intake forms and booking flows, custom reporting charts and KPIs,
+            role permissions tuned to your team structure, and automated workflows built around your
+            sales process. The CRM is built on a modular codebase — new features slot in cleanly.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
 
-  <!-- ========== SOCIAL PROOF ========== -->
-  <section id="social-proof">
+  <!-- ========== HOW IT WORKS ========== -->
+  <section id="how-it-works">
     <div class="section-inner">
-      <h2 class="section-title" data-animate="up">Transparent Work. <span class="accent">Not a Template Shop.</span></h2>
 
-      <div class="sp-grid sp-grid--single">
+      <div class="section-header" data-animate="up">
+        <span class="eyebrow">The Process</span>
+        <h2 class="section-title">Go Live in <span class="accent">2–4 Weeks</span></h2>
+        <p class="section-subtitle">From first call to a fully deployed CRM on your domain — here's exactly what happens.</p>
+      </div>
 
-        <!-- Credibility block -->
-        <div class="sp-credibility" data-animate="up">
-          <a href="https://github.com/ajvirtualsolutionsph" target="_blank" rel="noopener noreferrer" class="sp-cred-item">
-            <div class="sp-cred-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            </div>
-            <div>
-              <p class="sp-cred-title">GitHub — Real Code, Public Repos</p>
-              <p class="sp-cred-desc">See the actual projects built. Not Webflow. Not templates. github.com/ajvirtualsolutionsph</p>
-            </div>
-          </a>
-          <a href="https://www.linkedin.com/in/andrei-james-javier/" target="_blank" rel="noopener noreferrer" class="sp-cred-item">
-            <div class="sp-cred-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </div>
-            <div>
-              <p class="sp-cred-title">LinkedIn — Professional Background</p>
-              <p class="sp-cred-desc">AI Automation Specialist. Verifiable experience and work history.</p>
-            </div>
-          </a>
-          <div class="sp-stat-row">
-            <div class="sp-stat">
-              <span class="sp-stat-num accent">31+</span>
-              <span class="sp-stat-label">Feature stages shipped</span>
-            </div>
-            <div class="sp-stat">
-              <span class="sp-stat-num accent">4</span>
-              <span class="sp-stat-label">Core modules</span>
-            </div>
-            <div class="sp-stat">
-              <span class="sp-stat-num accent">100%</span>
-              <span class="sp-stat-label">Code ownership</span>
-            </div>
+      <div class="steps-grid" data-animate="up">
+
+        <div class="step-card">
+          <div class="step-connector" aria-hidden="true"></div>
+          <div class="step-num-wrap">
+            <span class="step-num">01</span>
           </div>
+          <span class="step-icon">&#x1F4DE;</span>
+          <h3 class="step-title">Discovery Call</h3>
+          <p class="step-desc">We discuss your business, your existing workflow, and exactly what you need the CRM to handle. 30 minutes — no fluff, no sales pitch.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-connector" aria-hidden="true"></div>
+          <div class="step-num-wrap">
+            <span class="step-num">02</span>
+          </div>
+          <span class="step-icon">&#x2699;&#xFE0F;</span>
+          <h3 class="step-title">Custom Build</h3>
+          <p class="step-desc">I build your CRM from the ground up — customized to your stages, your terminology, your team structure. Takes 2–4 weeks depending on scope.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-connector" aria-hidden="true"></div>
+          <div class="step-num-wrap">
+            <span class="step-num">03</span>
+          </div>
+          <span class="step-icon">&#x1F680;</span>
+          <h3 class="step-title">Deploy &amp; Onboard</h3>
+          <p class="step-desc">Your CRM goes live on your domain. I walk you and your team through every feature in a full onboarding session. You'll hit the ground running.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-wrap">
+            <span class="step-num">04</span>
+          </div>
+          <span class="step-icon">&#x2705;</span>
+          <h3 class="step-title">You Own It</h3>
+          <p class="step-desc">Source code is yours. No lock-in, no platform dependency. $149/mo covers hosting, support, and updates. Cancel anytime — you keep the code.</p>
         </div>
 
       </div>
+
     </div>
   </section>
+
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about">
+    <div class="section-inner">
+
+      <div class="about-grid">
+        <div class="about-photo-wrap" data-animate="left">
+          <div class="about-photo-frame">
+            <img src="assets/images/profile.png" alt="AJ Javier — Founder of AJ Virtual Solutions" class="about-photo" width="320" height="320" />
+          </div>
+        </div>
+        <div class="about-text" data-animate="right">
+          <span class="eyebrow">About Me</span>
+          <h2 class="section-title" style="text-align:left;margin-bottom:1rem;">Built by a <span class="accent">Real Developer</span></h2>
+          <p>I'm <strong>AJ Javier</strong>, a Filipino CRM developer and founder of AJ Virtual Solutions. I help small business owners stop overpaying for generic SaaS tools and start owning their software instead.</p>
+          <p>After seeing clients waste thousands every year on GoHighLevel and HubSpot subscriptions that never quite fit their workflow, I started building fully custom CRMs — tailored to each business, hosted on their own infrastructure, paid for <em>once</em>.</p>
+          <p>No lock-in. No monthly ransom. Just software that works exactly the way you do.</p>
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="about-stat-number accent">$0</span>
+              <span class="about-stat-label">Monthly Fees</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-number accent">2–4 wks</span>
+              <span class="about-stat-label">Build Time</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-number accent">100%</span>
+              <span class="about-stat-label">Full Ownership</span>
+            </div>
+          </div>
+          <div class="about-cred-links">
+            <a href="https://github.com/ajvirtualsolutionsph" target="_blank" rel="noopener noreferrer" class="cred-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              View GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/andrei-james-javier/" target="_blank" rel="noopener noreferrer" class="cred-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn Profile
+            </a>
+          </div>
+          <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;display:inline-block;">Work With Me</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
   <!-- ========== COST COMPARISON ========== -->
   <section id="comparison">
     <div class="section-inner">
-      <h2 class="section-title" data-animate="up">Less Than GoHighLevel. <span class="accent">Done For You.</span></h2>
-      <p class="pricing-intro">GoHighLevel charges $297/month — forever — and you still have to build it yourself. Here's how AJ's CRM compares over time, with everything included.</p>
+
+      <div class="section-header" data-animate="up">
+        <span class="eyebrow">Cost Comparison</span>
+        <h2 class="section-title">Less Than GoHighLevel. <span class="accent">Done For You.</span></h2>
+        <p class="section-subtitle">GoHighLevel charges $297/month — forever — and you still have to build it yourself. Here's how AJ's CRM compares over time.</p>
+      </div>
 
       <!-- Big callout -->
       <div class="comparison-hero-callout" data-animate="up">
@@ -537,7 +565,7 @@
           <tbody>
             <tr>
               <td>GoHighLevel</td>
-              <td>$297/mo <span class="table-note">(+ SMS/AI usage fees)</span></td>
+              <td>$297/mo <span class="table-note">(+ SMS/AI fees)</span></td>
               <td>$3,564+</td>
               <td>$10,692+</td>
               <td class="table-no">&#x2717; Yes</td>
@@ -577,10 +605,97 @@
     </div>
   </section>
 
+
+  <!-- ========== PRICING ========== -->
+  <section id="pricing">
+    <div class="section-inner">
+
+      <div class="section-header" data-animate="up">
+        <span class="eyebrow">Pricing</span>
+        <h2 class="section-title">Simple, Honest <span class="accent">Pricing</span></h2>
+        <p class="section-subtitle">One product. Simple pricing. No hidden fees, no lock-in, no surprises.</p>
+      </div>
+
+      <!-- ROI Calculator -->
+      <div class="roi-calculator" data-animate="up">
+        <div class="roi-header">
+          <span class="roi-emoji">&#x1F4B0;</span>
+          <div>
+            <h3 class="roi-title">Break-Even Calculator</h3>
+            <p class="roi-subtitle">How much do you pay per month for CRM tools right now?</p>
+          </div>
+        </div>
+        <div class="roi-input-row">
+          <span class="roi-prefix">$</span>
+          <input type="number" id="roi-monthly" value="297" min="50" max="9999" class="roi-input" aria-label="Current monthly CRM cost" />
+          <span class="roi-suffix">/mo</span>
+        </div>
+        <div class="roi-output">
+          <div class="roi-output-item">
+            <span class="roi-output-label">Break-even point</span>
+            <span class="roi-output-val" id="roi-breakeven">8.3 months</span>
+          </div>
+          <div class="roi-output-divider"></div>
+          <div class="roi-output-item">
+            <span class="roi-output-label">3-year savings vs your current tool</span>
+            <span class="roi-output-val roi-savings" id="roi-savings">$3,828</span>
+          </div>
+        </div>
+        <p class="roi-note">Based on $1,500 one-time setup + $149/mo · vs your current $<span id="roi-current-display">297</span>/mo</p>
+      </div>
+
+      <!-- Pricing card -->
+      <div class="pricing-open" data-animate="up">
+
+        <div class="pricing-open-header">
+          <h3 class="pricing-open-title">All-in-One Business CRM</h3>
+          <p class="pricing-open-desc">Everything in the "What's Included" section — delivered, deployed, and customized for your business from day one.</p>
+        </div>
+
+        <div class="pricing-open-prices">
+          <div class="pricing-open-price-item">
+            <span class="pricing-open-amount">$1,500</span>
+            <span class="pricing-open-label">one-time setup</span>
+          </div>
+          <div class="pricing-open-price-divider">+</div>
+          <div class="pricing-open-price-item">
+            <span class="pricing-open-amount accent">$149<span class="pricing-open-mo">/mo</span></span>
+            <span class="pricing-open-label">hosting, support &amp; updates</span>
+          </div>
+          <p class="pricing-free-badge">&#x1F381; Month 1 FREE</p>
+        </div>
+
+        <ul class="pricing-open-includes">
+          <li>Full feature set (31+ stages)</li>
+          <li>Delivered in 2–4 weeks</li>
+          <li>Source code is yours to keep</li>
+          <li>White-label ready</li>
+          <li>Full onboarding walkthrough</li>
+          <li>Hosting, support &amp; updates included</li>
+        </ul>
+
+        <a href="#contact" class="btn btn-primary pricing-open-cta">Book a Demo Call</a>
+
+      </div>
+
+      <div class="pricing-availability-banner" data-animate="up">
+        &#x26A1; Limited availability — I take on a maximum of 3 new CRM builds per month to ensure quality.
+      </div>
+
+    </div>
+  </section>
+
+
   <!-- ========== DEMO VIDEOS ========== -->
   <section id="demos">
     <div class="section-inner">
-      <h2 class="section-title" data-animate="up">Demo <span class="accent">Videos</span></h2>
+
+      <div class="section-header" data-animate="up">
+        <span class="eyebrow">See It In Action</span>
+        <h2 class="section-title">Demo <span class="accent">Videos</span></h2>
+        <p class="section-subtitle">Watch the CRM in a live walkthrough — no fluff, just the real product.</p>
+      </div>
+
       <div class="demos-grid">
 
         <div class="demo-card" data-animate="up" data-delay="1">
@@ -613,87 +728,15 @@
     </div>
   </section>
 
-  <!-- ========== PRICING ========== -->
-  <section id="pricing">
-    <div class="section-inner">
-      <h2 class="section-title" data-animate="up">Simple, Honest <span class="accent">Pricing</span></h2>
-      <p class="pricing-intro">
-        One product. Simple pricing. No hidden fees, no lock-in, no surprises.
-      </p>
-
-      <!-- ROI Calculator -->
-      <div class="roi-calculator" data-animate="up">
-        <div class="roi-header">
-          <span class="roi-emoji">&#x1F4B0;</span>
-          <div>
-            <h3 class="roi-title">Break-Even Calculator</h3>
-            <p class="roi-subtitle">How much do you pay per month for CRM tools right now?</p>
-          </div>
-        </div>
-        <div class="roi-input-row">
-          <span class="roi-prefix">$</span>
-          <input type="number" id="roi-monthly" value="297" min="50" max="9999" class="roi-input" aria-label="Current monthly CRM cost" />
-          <span class="roi-suffix">/mo</span>
-        </div>
-        <div class="roi-output">
-          <div class="roi-output-item">
-            <span class="roi-output-label">Break-even point</span>
-            <span class="roi-output-val" id="roi-breakeven">8.3 months</span>
-          </div>
-          <div class="roi-output-divider"></div>
-          <div class="roi-output-item">
-            <span class="roi-output-label">3-year savings vs your current tool</span>
-            <span class="roi-output-val roi-savings" id="roi-savings">$3,828</span>
-          </div>
-        </div>
-        <p class="roi-note">Based on $1,500 one-time setup + $149/mo · vs your current $<span id="roi-current-display">297</span>/mo</p>
-      </div>
-
-      <!-- Open pricing layout — no card wrapper -->
-      <div class="pricing-open" data-animate="up">
-
-        <div class="pricing-open-header">
-          <h3 class="pricing-open-title">All-in-One Business CRM</h3>
-          <p class="pricing-open-desc">Everything in the "What You Get" section — delivered, deployed, and customized for your business from day one.</p>
-        </div>
-
-        <div class="pricing-open-prices">
-          <div class="pricing-open-price-item">
-            <span class="pricing-open-amount">$1,500</span>
-            <span class="pricing-open-label">one-time setup</span>
-          </div>
-          <div class="pricing-open-price-divider">+</div>
-          <div class="pricing-open-price-item">
-            <span class="pricing-open-amount accent">$149<span class="pricing-open-mo">/mo</span></span>
-            <span class="pricing-open-label">hosting, support &amp; updates</span>
-          </div>
-          <p class="pricing-free-badge">&#x1F381; Month 1 FREE</p>
-        </div>
-
-        <ul class="pricing-open-includes">
-          <li>Full feature set (31+ stages)</li>
-          <li>Delivered in 2–4 weeks</li>
-          <li>Source code is yours to keep</li>
-          <li>White-label ready</li>
-          <li>Full onboarding walkthrough</li>
-          <li>Hosting, support &amp; updates included</li>
-        </ul>
-
-        <a href="#contact" class="btn btn-primary pricing-open-cta">Book a Demo Call</a>
-
-      </div>
-
-      <div class="pricing-availability-banner">
-        &#x26A1; Limited availability — I take on a maximum of 3 new CRM builds per month to ensure quality.
-      </div>
-
-    </div>
-  </section>
 
   <!-- ========== FAQ ========== -->
   <section id="faq">
     <div class="section-inner">
-      <h2 class="section-title" data-animate="up">Frequently Asked <span class="accent">Questions</span></h2>
+
+      <div class="section-header" data-animate="up">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="accent">Questions</span></h2>
+      </div>
 
       <div class="faq-list">
 
@@ -743,7 +786,7 @@
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-answer">
-            <p>GoHighLevel charges $97/month — forever. After 3 years that's $3,492+, and you still own nothing. Our CRM matches GoHighLevel Starter's core features but is <strong>custom-built for your business</strong>, has no per-message or per-user fees, and you own the source code outright. No subscription. No lock-in.</p>
+            <p>GoHighLevel charges $297/month — forever. After 3 years that's $10,692+, and you still own nothing. Our CRM matches GoHighLevel's core features but is <strong>custom-built for your business</strong>, has no per-message or per-user fees, and you own the source code outright. No subscription. No lock-in.</p>
           </div>
         </div>
 
@@ -781,14 +824,19 @@
     </div>
   </section>
 
+
   <!-- ========== CONTACT ========== -->
   <section id="contact">
     <div class="section-inner">
-      <h2 class="section-title" data-animate="up">Book a Free <span class="accent">Demo Call</span></h2>
-      <p class="contact-tagline">Want to see it in action? I'll walk you through a live demo on a 30-minute Zoom call.</p>
+
+      <div class="section-header" data-animate="up">
+        <span class="eyebrow">Get Started</span>
+        <h2 class="section-title">Book a Free <span class="accent">Demo Call</span></h2>
+        <p class="section-subtitle">Want to see it in action? I'll walk you through a live demo on a 30-minute Zoom call — no commitment required.</p>
+      </div>
 
       <!-- Calendly inline widget -->
-      <div class="calendly-cta-wrap">
+      <div class="calendly-cta-wrap" data-animate="up">
         <div class="calendly-inline-widget" data-url="https://calendly.com/aj-virtualsolutionsph/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0f3533&text_color=ffffff&primary_color=c9a240"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         <p class="calendly-note">Can't load the widget? <a href="https://calendly.com/aj-virtualsolutionsph/30min" target="_blank" rel="noopener noreferrer" class="calendly-fallback-link">Book directly on Calendly &#x2197;</a></p>
@@ -833,21 +881,63 @@
     </div>
   </section>
 
+
   <!-- ========== FOOTER ========== -->
   <footer id="site-footer">
     <div class="footer-inner">
-      <p class="footer-copy">&copy; <span id="footer-year"></span> AJ Virtual Solutions. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="mailto:aj.virtualsolutionsph@gmail.com" aria-label="Email" class="footer-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+
+      <div class="footer-brand">
+        <a href="#hero" class="footer-logo">
+          <img src="assets/images/logo.png" alt="AJ Virtual Solutions" width="36" height="36" />
+          <span>AJ Virtual Solutions</span>
         </a>
-        <a href="https://www.linkedin.com/in/andrei-james-javier/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="https://github.com/ajvirtualsolutionsph" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="footer-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        </a>
+        <p class="footer-tagline">Custom CRMs. One-time price.<br />No subscriptions. Built in 2–4 weeks.</p>
+        <div class="footer-social">
+          <a href="mailto:aj.virtualsolutionsph@gmail.com" aria-label="Email" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/andrei-james-javier/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/ajvirtualsolutionsph" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
       </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 class="footer-col-heading">Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#comparison">Compare vs GHL</a></li>
+            <li><a href="#demos">Demo Videos</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-heading">Support</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://calendly.com/aj-virtualsolutionsph/30min" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+            <li><a href="mailto:aj.virtualsolutionsph@gmail.com">Send Email</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-heading">Connect</h4>
+          <ul>
+            <li><a href="https://github.com/ajvirtualsolutionsph" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/andrei-james-javier/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footer-year"></span> AJ Virtual Solutions. All rights reserved.</p>
+      <p class="footer-tagline-bottom">Pay once. Run forever.</p>
     </div>
   </footer>
 
