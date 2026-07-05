@@ -5,6 +5,24 @@ metadata:
   type: project
 ---
 
+## Session: 2026-07-05
+
+**What was done:**
+- Audited actual site state vs. `OVERHAUL_PLAN.md`/`CLAUDE.md`, which had drifted badly out of sync — most of the v1.0 overhaul (tabs, ROI calculator, Calendly inline, screenshot gallery+lightbox) was already live from prior sessions; hero mockup, "See It In Action", and a placeholder testimonial had been built then intentionally reverted (commit `7d1c4c4`) as a credibility risk
+- Performance pass: resized oversized source images (logo.png, profile.png, 4 screenshot thumbnails) and added WebP siblings with `<picture>` fallback across nav logo, footer logo, about photo, featured dashboard image, and screenshot gallery — combined payload for those 8 files dropped ~87% (~3.3MB → ~430KB PNG fallback)
+- Rewrote `CLAUDE.md` Done/Next sections and `OVERHAUL_PLAN.md` status markers to match reality
+- Changes are staged locally, NOT yet committed/pushed — awaiting AJ's review
+
+**What's next:**
+- Real client testimonial — the only asset genuinely blocking Social Proof section
+- Decide whether AJ still wants a real (non-fake) hero dashboard visual
+- Spot-check resized/WebP images on live site after push
+- Purchase custom domain; verify Notion form still receives submissions
+
+**Blockers:** Client testimonial (no first client yet)
+
+---
+
 ## Session: 2026-06-09 (second session)
 
 **What was done:**

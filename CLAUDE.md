@@ -49,33 +49,20 @@ All phases through **Post-Launch Audit** are complete. Site is live at `https://
 
 ### ✅ Done
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Pivoted site from general AI automation portfolio to focused CRM product/service marketing page
-- Rewrote `index.html` top to bottom: removed original About and Services sections; replaced VA salary comparison with SaaS subscription cost comparison
-- Updated nav to: About · Features · Who It's For · Pricing · FAQ · Contact
-- Rewrote hero copy and tags to CRM focus (personal brand kept); updated typewriter roles in `script.js`
-- Renamed `#projects` → `#features` ("What You Get"); kept 7 capability cards and audience pills intact
-- Replaced all 8 FAQ questions with CRM-specific objections; updated contact form select dropdown
-- Updated meta title, description, keywords, OG tags, and JSON-LD structured data to CRM focus
-- Added `#about` section between Hero and Features: two-column layout (profile photo + bio), 3 stat pills, "Work With Me" CTA; added About nav link
-- Changed About stat label from "Your Data" to "Full Ownership"
-- Synced `#comparison` and `#pricing` sections with `CRM_PRICING_COMPARISON.md`:
-  - Updated pricing model to $1,500 one-time + $149/mo (hosting + support + updates), Month 1 FREE
-  - Rewrote hero callout: GoHighLevel now shows $297/mo → $10,692 Y3 vs AJ $3,145 Y1 → $6,721 Y3
-  - Section heading changed to "Less Than GoHighLevel. Done For You."
-  - Updated all 4 competitor rows with correct per-seat pricing (HubSpot $15/seat, Zoho $23/seat, Pipedrive $39/seat)
-  - Renamed table column "You Own It?" → "Hidden Fees?"; updated all values
-  - Replaced fine print with per-seat footnote from MD
-  - Removed $500/mo Support Retainer card from `#pricing`; pricing card now shows $149/mo + Month 1 FREE
-  - Added `.pricing-grid-one` CSS class in `styles.css` for centered single-card layout
+- v1.0 premium overhaul (`OVERHAUL_PLAN.md`) largely executed across prior sessions: glassmorphism dark theme, numbered feature cards, tabbed "Deep Dive" capabilities (Lead Pipeline / Finance / Calendar / AI), ROI break-even calculator, Calendly inline widget on contact, real CRM screenshot gallery with lightbox (dashboard, leads, calendar, tasks, financial)
+- Deliberately reverted the hero CRM dashboard mockup, the standalone "See It In Action" section, and a placeholder testimonial — team judged fake visuals/testimonials a credibility risk before the first real client (see commit `7d1c4c4`)
+- This session: performance pass on `assets/images/` — resized oversized originals (logo.png 1536×1024→300px wide, profile.png 1024×1024→640px wide, CRM screenshot thumbnails 1920×1080→640px wide) and added `.webp` siblings with `<picture>`/`<source>` fallback for logo (nav + footer), profile photo, featured dashboard screenshot, and all 4 screenshot-gallery thumbnails. Combined image payload for these 8 files dropped from ~3.3MB to ~430KB (PNG fallback) / further less on WebP-capable browsers. Lightbox in `script.js` unaffected (reads nested `<img>` via `querySelector`).
+- Reconciled this file's Done/Next log, which had drifted out of sync with several completed sessions
 
 ### 🔲 Next Session
 <!-- Updated automatically by the 123 workflow at end of each session -->
-- Visually review live site at `https://ajvirtualsolutionsph.vercel.app/` — verify comparison section and pricing card render correctly on mobile and desktop; check table horizontal scroll on narrow screens
+- **Blocked on AJ:** real client testimonial (name + quote, photo optional) — add to a new Social Proof section once available; do not re-add a placeholder
+- **Blocked on AJ:** a real/live-looking CRM dashboard visual for the hero, if he still wants one — otherwise leave the current cost-callout hero as final
 - Add a CRM-specific demo video (current demos are AI Executive Assistant + AI Landing Page — not the CRM itself)
-- Review `CRM_PROMO.md` (opened this session but not yet used) — assess if promo copy should be incorporated into the site
 - Purchase and configure custom domain (update `canonical`, `og:url`, JSON-LD, `sitemap.xml`)
-- Verify Notion form integration still receives submissions after contact form select options changed
-- Consider adding a social proof section (testimonials or client logos) above the pricing section
+- Verify Notion form integration still receives submissions
+- Visually spot-check the resized/WebP images on the live site (mobile + desktop) after this session's changes are pushed
+- `OVERHAUL_PLAN.md` and `CRM_PRICING_COMPARISON.md` are untracked in git — decide whether to commit them for history or delete now that they're superseded by this file
 
 ## Deployment
 
