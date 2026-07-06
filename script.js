@@ -376,4 +376,58 @@
   lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
+  // Screenshot carousel
+  const carouselTrack = document.getElementById('crm-carousel-track');
+  const carouselDotsWrap = document.getElementById('crm-carousel-dots');
+  const carouselPrev = document.getElementById('crm-carousel-prev');
+  const carouselNext = document.getElementById('crm-carousel-next');
+
+  if (carouselTrack && carouselDotsWrap) {
+    const slides = Array.from(carouselTrack.children);
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'crm-carousel-dot';
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', () => scrollToSlide(i));
+      carouselDotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(carouselDotsWrap.children);
+
+    function activeIndex() {
+      return Math.round(carouselTrack.scrollLeft / carouselTrack.clientWidth);
+    }
+
+    function updateDots() {
+      const idx = Math.min(activeIndex(), dots.length - 1);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }
+
+    function scrollToSlide(i) {
+      carouselTrack.scrollTo({ left: carouselTrack.clientWidth * i, behavior: 'smooth' });
+    }
+
+    carouselPrev.addEventListener('click', () => scrollToSlide(Math.max(activeIndex() - 1, 0)));
+    carouselNext.addEventListener('click', () => scrollToSlide(Math.min(activeIndex() + 1, slides.length - 1)));
+
+    carouselTrack.addEventListener('scroll', () => window.requestAnimationFrame(updateDots), { passive: true });
+    window.addEventListener('resize', updateDots);
+    updateDots();
+
+    // Autoplay — pauses on hover/touch
+    let autoplayTimer;
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(() => scrollToSlide((activeIndex() + 1) % slides.length), 4500);
+    }
+    function stopAutoplay() { clearInterval(autoplayTimer); }
+
+    const carouselViewport = carouselTrack.closest('.crm-carousel-viewport');
+    carouselViewport.addEventListener('mouseenter', stopAutoplay);
+    carouselViewport.addEventListener('mouseleave', startAutoplay);
+    carouselViewport.addEventListener('touchstart', stopAutoplay, { passive: true });
+
+    startAutoplay();
+  }
+
 })();

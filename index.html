@@ -241,39 +241,60 @@
 
       </div>
 
-      <!-- Screenshot Gallery -->
-      <div class="crm-screenshots-section" data-animate="up">
+      <!-- Screenshot Carousel -->
+      <div class="crm-carousel" data-animate="up">
         <span class="eyebrow" style="display:block;text-align:center;margin-bottom:1.5rem;">A Closer Look</span>
-        <div class="crm-screenshots-grid">
-          <div class="crm-screenshot-card">
-            <picture>
-              <source srcset="assets/images/crm-screen-leads.webp" type="image/webp" />
-              <img src="assets/images/crm-screen-leads.png" alt="CRM Leads — kanban pipeline with AI scoring" loading="lazy" />
-            </picture>
-            <span class="crm-screenshot-label">Leads Pipeline</span>
+
+        <div class="crm-carousel-viewport">
+          <button class="crm-carousel-arrow crm-carousel-prev" id="crm-carousel-prev" aria-label="Previous screenshot">&#10094;</button>
+
+          <div class="crm-carousel-track" id="crm-carousel-track">
+            <div class="crm-carousel-slide crm-screenshot-card">
+              <picture>
+                <source srcset="assets/images/crm-screen-leads.webp" type="image/webp" />
+                <img src="assets/images/crm-screen-leads.png" alt="CRM Leads — kanban pipeline with AI scoring" loading="lazy" />
+              </picture>
+              <div class="crm-carousel-caption">
+                <span class="crm-carousel-title">Leads Pipeline</span>
+                <span class="crm-carousel-desc">Drag-and-drop kanban with AI lead scoring</span>
+              </div>
+            </div>
+            <div class="crm-carousel-slide crm-screenshot-card">
+              <picture>
+                <source srcset="assets/images/crm-screen-calendar.webp" type="image/webp" />
+                <img src="assets/images/crm-screen-calendar.png" alt="CRM Calendar — meetings, appointments, and tasks" loading="lazy" />
+              </picture>
+              <div class="crm-carousel-caption">
+                <span class="crm-carousel-title">Calendar</span>
+                <span class="crm-carousel-desc">Meetings, appointments, and two-way Google sync</span>
+              </div>
+            </div>
+            <div class="crm-carousel-slide crm-screenshot-card">
+              <picture>
+                <source srcset="assets/images/crm-screen-tasks.webp" type="image/webp" />
+                <img src="assets/images/crm-screen-tasks.png" alt="CRM Tasks — task management with priorities and status" loading="lazy" />
+              </picture>
+              <div class="crm-carousel-caption">
+                <span class="crm-carousel-title">Tasks</span>
+                <span class="crm-carousel-desc">Priorities, statuses, and team accountability</span>
+              </div>
+            </div>
+            <div class="crm-carousel-slide crm-screenshot-card">
+              <picture>
+                <source srcset="assets/images/crm-screen-financial.webp" type="image/webp" />
+                <img src="assets/images/crm-screen-financial.png" alt="CRM Financial — income, expenses, and invoice tracking" loading="lazy" />
+              </picture>
+              <div class="crm-carousel-caption">
+                <span class="crm-carousel-title">Financial</span>
+                <span class="crm-carousel-desc">Income, expenses, and invoice tracking in one view</span>
+              </div>
+            </div>
           </div>
-          <div class="crm-screenshot-card">
-            <picture>
-              <source srcset="assets/images/crm-screen-calendar.webp" type="image/webp" />
-              <img src="assets/images/crm-screen-calendar.png" alt="CRM Calendar — meetings, appointments, and tasks" loading="lazy" />
-            </picture>
-            <span class="crm-screenshot-label">Calendar</span>
-          </div>
-          <div class="crm-screenshot-card">
-            <picture>
-              <source srcset="assets/images/crm-screen-tasks.webp" type="image/webp" />
-              <img src="assets/images/crm-screen-tasks.png" alt="CRM Tasks — task management with priorities and status" loading="lazy" />
-            </picture>
-            <span class="crm-screenshot-label">Tasks</span>
-          </div>
-          <div class="crm-screenshot-card">
-            <picture>
-              <source srcset="assets/images/crm-screen-financial.webp" type="image/webp" />
-              <img src="assets/images/crm-screen-financial.png" alt="CRM Financial — income, expenses, and invoice tracking" loading="lazy" />
-            </picture>
-            <span class="crm-screenshot-label">Financial</span>
-          </div>
+
+          <button class="crm-carousel-arrow crm-carousel-next" id="crm-carousel-next" aria-label="Next screenshot">&#10095;</button>
         </div>
+
+        <div class="crm-carousel-dots" id="crm-carousel-dots"></div>
       </div>
 
       <!-- CRM Stats -->
