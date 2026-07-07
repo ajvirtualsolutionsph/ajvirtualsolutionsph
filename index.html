@@ -194,6 +194,11 @@
         </picture>
       </div>
 
+      <div class="crm-demo-cta-wrap" data-animate="up">
+        <button class="crm-demo-cta-btn" id="crm-demo-open-1">🖱️ Try the Live Demo — Click &amp; Drag</button>
+        <span class="crm-demo-cta-hint">Sandbox data, no signup required</span>
+      </div>
+
       <!-- Numbered feature cards -->
       <div class="features-num-grid" data-animate="up">
 
@@ -343,6 +348,7 @@
                     <li>Full contact details — name, phone, email, address, all in one card</li>
                     <li>Anyone on the team can pick up a lead mid-conversation — <strong>zero lost context</strong></li>
                   </ul>
+                  <button class="crm-demo-inline-cta" data-demo-open>▶ Try It Yourself</button>
                 </div>
               </div>
             </div>
@@ -1017,6 +1023,21 @@
     <img id="crm-lightbox-img" src="" alt="" />
   </div>
 
+  <!-- Live CRM Demo Modal (mini Kanban, sandbox data) -->
+  <div class="crm-demo-modal" id="crm-demo-modal" role="dialog" aria-modal="true" aria-labelledby="crm-demo-title">
+    <div class="crm-demo-modal-panel">
+      <header class="crm-demo-modal-header">
+        <h3 id="crm-demo-title">Live Demo — Lead Pipeline (Sandbox Data)</h3>
+        <button class="crm-demo-modal-close" id="crm-demo-close" aria-label="Close demo">&times;</button>
+      </header>
+      <p class="crm-demo-modal-hint">This is a sandbox with fake leads. Drag a card between columns, or use the "Move" button on a card — then click a card to see its history. Changes reset on reload.</p>
+      <div class="crm-demo-board" id="crm-demo-board"></div>
+      <div class="crm-demo-detail" id="crm-demo-detail" hidden></div>
+    </div>
+    <span class="visually-hidden" id="crm-demo-live" aria-live="polite"></span>
+  </div>
+
+  <script src="assets/demo-data.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>

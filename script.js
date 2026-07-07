@@ -430,4 +430,271 @@
     startAutoplay();
   }
 
+  /* ---------- Live CRM Demo (mini Kanban) ---------- */
+  {
+    const demoData     = window.CRM_DEMO_DATA;
+    const demoModal     = document.getElementById('crm-demo-modal');
+    const demoBoard     = document.getElementById('crm-demo-board');
+    const demoDetail    = document.getElementById('crm-demo-detail');
+    const demoLive      = document.getElementById('crm-demo-live');
+    const demoClose     = document.getElementById('crm-demo-close');
+    const canHoverDrag  = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    let demoRendered  = false;
+    let lastFocusedEl = null;
+    let openLeadId    = null;
+
+    function el(tag, className, text) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    }
+
+    function announce(msg) {
+      if (demoLive) demoLive.textContent = msg;
+    }
+
+    function stageLabel(stageId) {
+      const stage = demoData.stages.find(s => s.id === stageId);
+      return stage ? stage.label : stageId;
+    }
+
+    function renderDemoBoard() {
+      demoBoard.textContent = '';
+      demoData.stages.forEach(stage => {
+        const col = el('div', 'crm-demo-column');
+
+        const leadsInStage = demoData.leads.filter(l => l.stage === stage.id);
+        const head = el('div', 'crm-demo-column-head');
+        head.append(
+          el('span', null, stage.label),
+          el('span', 'crm-demo-column-count', String(leadsInStage.length))
+        );
+        col.appendChild(head);
+
+        const cardsWrap = el('div', 'crm-demo-column-cards');
+        cardsWrap.dataset.stage = stage.id;
+        leadsInStage.forEach(lead => cardsWrap.appendChild(renderLeadCard(lead)));
+        col.appendChild(cardsWrap);
+
+        demoBoard.appendChild(col);
+      });
+    }
+
+    function renderLeadCard(lead) {
+      const card = el('div', 'crm-demo-card');
+      card.dataset.leadId = lead.id;
+      card.setAttribute('role', 'group');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', `${lead.name}, ${lead.company}, stage: ${stageLabel(lead.stage)}. Press Enter to view history.`);
+
+      const info = el('div', 'crm-demo-card-info');
+      info.append(
+        el('span', 'crm-demo-card-name', lead.name),
+        el('span', 'crm-demo-card-company', lead.company),
+        el('span', 'crm-demo-card-value', '$' + lead.value.toLocaleString())
+      );
+      card.appendChild(info);
+
+      const moveBtn = document.createElement('button');
+      moveBtn.type = 'button';
+      moveBtn.className = 'crm-demo-move-btn';
+      moveBtn.textContent = 'Move ▾';
+      moveBtn.setAttribute('aria-label', `Move ${lead.name} to a different stage`);
+      moveBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMoveMenu(moveBtn, lead);
+      });
+      card.appendChild(moveBtn);
+
+      card.addEventListener('click', () => openLeadDetail(lead.id));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLeadDetail(lead.id);
+        }
+      });
+
+      if (canHoverDrag) setupPointerDrag(card, lead);
+
+      return card;
+    }
+
+    function toggleMoveMenu(moveBtn, lead) {
+      const existing = demoBoard.querySelector('.crm-demo-move-menu');
+      const reopening = existing && existing.dataset.leadId === lead.id;
+      if (existing) existing.remove();
+      if (reopening) return;
+
+      const menu = el('div', 'crm-demo-move-menu');
+      menu.dataset.leadId = lead.id;
+      demoData.stages.filter(s => s.id !== lead.stage).forEach(stage => {
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.textContent = stage.label;
+        item.addEventListener('click', (e) => {
+          e.stopPropagation();
+          moveLead(lead.id, stage.id);
+          menu.remove();
+        });
+        menu.appendChild(item);
+      });
+      moveBtn.parentElement.appendChild(menu);
+
+      function closeOnOutside(e) {
+        if (!menu.contains(e.target) && e.target !== moveBtn) {
+          menu.remove();
+          document.removeEventListener('click', closeOnOutside);
+        }
+      }
+      setTimeout(() => document.addEventListener('click', closeOnOutside), 0);
+    }
+
+    function moveLead(leadId, newStageId) {
+      const lead = demoData.leads.find(l => l.id === leadId);
+      if (!lead || lead.stage === newStageId) return;
+      lead.stage = newStageId;
+      renderDemoBoard();
+      announce(`Moved ${lead.name} to ${stageLabel(newStageId)}.`);
+      if (openLeadId === leadId) openLeadDetail(leadId);
+    }
+
+    function openLeadDetail(leadId) {
+      const lead = demoData.leads.find(l => l.id === leadId);
+      if (!lead) return;
+      openLeadId = leadId;
+
+      demoDetail.textContent = '';
+
+      const title = el('h4', 'crm-demo-detail-title', `${lead.name} — ${lead.company}`);
+      const meta  = el('p', 'crm-demo-detail-meta',
+        `${lead.phone} · ${lead.email} · $${lead.value.toLocaleString()} · ${stageLabel(lead.stage)}`);
+
+      const historyList = el('ul', 'crm-demo-history-list');
+      lead.history.slice().reverse().forEach(h => {
+        const item = el('li', 'crm-demo-history-item');
+        item.append(
+          el('span', 'crm-demo-history-when', h.when),
+          el('span', 'crm-demo-history-text', h.text)
+        );
+        historyList.appendChild(item);
+      });
+
+      const noteForm = document.createElement('form');
+      noteForm.className = 'crm-demo-note-form';
+      const noteInput = document.createElement('textarea');
+      noteInput.placeholder = 'Add a note about this lead…';
+      noteInput.rows = 2;
+      noteInput.setAttribute('aria-label', 'Add a note');
+      const noteSubmit = document.createElement('button');
+      noteSubmit.type = 'submit';
+      noteSubmit.textContent = 'Add Note';
+      noteForm.append(noteInput, noteSubmit);
+      noteForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const text = noteInput.value.trim();
+        if (!text) return;
+        addDemoNote(lead.id, text);
+      });
+
+      demoDetail.append(title, meta, historyList, noteForm);
+      demoDetail.hidden = false;
+    }
+
+    function addDemoNote(leadId, text) {
+      const lead = demoData.leads.find(l => l.id === leadId);
+      if (!lead) return;
+      lead.history.push({ type: 'note', when: 'just now', text });
+      openLeadDetail(leadId);
+      announce('Note added.');
+    }
+
+    function setupPointerDrag(card, lead) {
+      card.addEventListener('pointerdown', (e) => {
+        if (e.target.closest('.crm-demo-move-btn')) return;
+        const startX = e.clientX;
+        const startY = e.clientY;
+        let dragging = false;
+        card.setPointerCapture(e.pointerId);
+
+        function onMove(ev) {
+          const dx = ev.clientX - startX;
+          const dy = ev.clientY - startY;
+          if (!dragging && Math.hypot(dx, dy) > 6) {
+            dragging = true;
+            card.classList.add('dragging');
+          }
+          if (dragging) card.style.transform = `translate(${dx}px, ${dy}px)`;
+        }
+
+        function onUp(ev) {
+          card.removeEventListener('pointermove', onMove);
+          card.removeEventListener('pointerup', onUp);
+          card.style.transform = '';
+          card.classList.remove('dragging');
+
+          if (dragging) {
+            card.style.visibility = 'hidden';
+            const dropEl = document.elementFromPoint(ev.clientX, ev.clientY);
+            card.style.visibility = '';
+            const column = dropEl && dropEl.closest('.crm-demo-column-cards');
+            if (column) moveLead(lead.id, column.dataset.stage);
+          }
+        }
+
+        card.addEventListener('pointermove', onMove);
+        card.addEventListener('pointerup', onUp);
+      });
+    }
+
+    function trapFocus(e) {
+      if (e.key !== 'Tab') return;
+      const focusables = demoModal.querySelectorAll('button, [href], textarea, input, [tabindex]:not([tabindex="-1"])');
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    function openDemoModal(triggerBtn) {
+      if (!demoRendered) {
+        renderDemoBoard();
+        demoRendered = true;
+      }
+      demoDetail.hidden = true;
+      openLeadId = null;
+      lastFocusedEl = triggerBtn || document.activeElement;
+      demoModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      demoModal.addEventListener('keydown', trapFocus);
+      demoClose.focus();
+    }
+
+    function closeDemoModal() {
+      if (!demoModal.classList.contains('open')) return;
+      demoModal.classList.remove('open');
+      document.body.style.overflow = '';
+      demoModal.removeEventListener('keydown', trapFocus);
+      if (lastFocusedEl) lastFocusedEl.focus();
+    }
+
+    if (demoModal && demoBoard && demoData) {
+      document.querySelectorAll('#crm-demo-open-1, [data-demo-open]').forEach(btn =>
+        btn.addEventListener('click', () => openDemoModal(btn))
+      );
+      demoClose.addEventListener('click', closeDemoModal);
+      demoModal.addEventListener('click', e => { if (e.target === demoModal) closeDemoModal(); });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && demoModal.classList.contains('open')) closeDemoModal();
+      });
+    }
+  }
+
 })();
