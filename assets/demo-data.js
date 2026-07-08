@@ -90,5 +90,39 @@ window.CRM_DEMO_DATA = {
         { type: 'note', when: '1 week ago', text: 'Live and using it daily. Asked about the client portal add-on.' }
       ]
     }
+  ],
+
+  invoices: [
+    { id: 'inv1', number: 'INV-1042', client: 'Santos Realty Group', amount: 1800, status: 'Paid', dueDate: 'Jun 28' },
+    { id: 'inv2', number: 'INV-1043', client: 'Reyes Home Repairs', amount: 650, status: 'Pending', dueDate: 'Jul 10' },
+    { id: 'inv3', number: 'INV-1044', client: 'Cruz & Sons Electrical', amount: 2200, status: 'Overdue', dueDate: 'Jun 30' },
+    { id: 'inv4', number: 'INV-1045', client: 'Torres Auto Detailing', amount: 450, status: 'Pending', dueDate: 'Jul 15' },
+    { id: 'inv5', number: 'INV-1046', client: 'Lim & Co. Bookkeeping', amount: 1200, status: 'Paid', dueDate: 'Jun 20' }
+  ],
+
+  calendarDays: [
+    { id: 'mon', label: 'Mon 14', events: [
+      { time: '9:00 AM', title: 'Site visit — Reyes Home Repairs' }
+    ] },
+    { id: 'tue', label: 'Tue 15', events: [
+      { time: '11:00 AM', title: 'Callback — Priya Fernandez' },
+      { time: '2:00 PM', title: 'Install — Torres Auto Detailing' }
+    ] },
+    { id: 'wed', label: 'Wed 16', events: [] },
+    { id: 'thu', label: 'Thu 17', events: [
+      { time: '10:00 AM', title: 'Proposal review — Bea Santos' }
+    ] },
+    { id: 'fri', label: 'Fri 18', events: [
+      { time: '3:30 PM', title: 'Onboarding call — Angela Lim' }
+    ] }
+  ],
+
+  taskStatuses: ['To Do', 'In Progress', 'Done'],
+
+  tasks: [
+    { id: 't1', title: 'Follow up with Marisol Reyes', assignee: 'Ana', status: 'To Do' },
+    { id: 't2', title: 'Send updated proposal to Bea Santos', assignee: 'Jon', status: 'In Progress' },
+    { id: 't3', title: 'Schedule install for Miguel Torres', assignee: 'Ana', status: 'Done' },
+    { id: 't4', title: 'Confirm panel upgrade quote', assignee: 'Jon', status: 'To Do' }
   ]
 };

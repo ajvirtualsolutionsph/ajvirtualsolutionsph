@@ -314,8 +314,18 @@
       btn.setAttribute('aria-selected', 'true');
       const panel = document.querySelector(`.crm-tab-panel[data-panel="${target}"]`);
       if (panel) panel.classList.add('active');
+
+      document.dispatchEvent(new CustomEvent('crm-tab-change', { detail: { tab: target } }));
     });
   });
+
+  // Jump-to-demo CTA: scroll to the tabs section (Lead Pipeline tab is active by default)
+  const demoJumpBtn = document.getElementById('crm-demo-jump');
+  if (demoJumpBtn) {
+    demoJumpBtn.addEventListener('click', () => {
+      document.getElementById('live-demo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
 
   /* ---------- ROI Calculator ---------- */
   const roiInput = document.getElementById('roi-monthly');
@@ -430,19 +440,11 @@
     startAutoplay();
   }
 
-  /* ---------- Live CRM Demo (mini Kanban) ---------- */
+  /* ---------- Live CRM Demo (Leads Kanban, Finance, Calendar & Tasks) ---------- */
   {
     const demoData     = window.CRM_DEMO_DATA;
-    const demoModal     = document.getElementById('crm-demo-modal');
-    const demoBoard     = document.getElementById('crm-demo-board');
-    const demoDetail    = document.getElementById('crm-demo-detail');
-    const demoLive      = document.getElementById('crm-demo-live');
-    const demoClose     = document.getElementById('crm-demo-close');
-    const canHoverDrag  = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-    let demoRendered  = false;
-    let lastFocusedEl = null;
-    let openLeadId    = null;
+    const demoLive     = document.getElementById('crm-live-announcer');
+    const canHoverDrag = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
     function el(tag, className, text) {
       const node = document.createElement(tag);
@@ -455,13 +457,24 @@
       if (demoLive) demoLive.textContent = msg;
     }
 
+    /* ===== Leads Kanban ===== */
+    let leadsBoard, leadsDetail, openLeadId = null;
+
     function stageLabel(stageId) {
       const stage = demoData.stages.find(s => s.id === stageId);
       return stage ? stage.label : stageId;
     }
 
+    function renderLeadsWidget(mount) {
+      leadsBoard = el('div', 'crm-demo-board');
+      leadsDetail = el('div', 'crm-demo-detail');
+      leadsDetail.hidden = true;
+      mount.append(leadsBoard, leadsDetail);
+      renderDemoBoard();
+    }
+
     function renderDemoBoard() {
-      demoBoard.textContent = '';
+      leadsBoard.textContent = '';
       demoData.stages.forEach(stage => {
         const col = el('div', 'crm-demo-column');
 
@@ -478,7 +491,7 @@
         leadsInStage.forEach(lead => cardsWrap.appendChild(renderLeadCard(lead)));
         col.appendChild(cardsWrap);
 
-        demoBoard.appendChild(col);
+        leadsBoard.appendChild(col);
       });
     }
 
@@ -522,7 +535,7 @@
     }
 
     function toggleMoveMenu(moveBtn, lead) {
-      const existing = demoBoard.querySelector('.crm-demo-move-menu');
+      const existing = leadsBoard.querySelector('.crm-demo-move-menu');
       const reopening = existing && existing.dataset.leadId === lead.id;
       if (existing) existing.remove();
       if (reopening) return;
@@ -565,7 +578,7 @@
       if (!lead) return;
       openLeadId = leadId;
 
-      demoDetail.textContent = '';
+      leadsDetail.textContent = '';
 
       const title = el('h4', 'crm-demo-detail-title', `${lead.name} — ${lead.company}`);
       const meta  = el('p', 'crm-demo-detail-meta',
@@ -598,8 +611,8 @@
         addDemoNote(lead.id, text);
       });
 
-      demoDetail.append(title, meta, historyList, noteForm);
-      demoDetail.hidden = false;
+      leadsDetail.append(title, meta, historyList, noteForm);
+      leadsDetail.hidden = false;
     }
 
     function addDemoNote(leadId, text) {
@@ -648,52 +661,164 @@
       });
     }
 
-    function trapFocus(e) {
-      if (e.key !== 'Tab') return;
-      const focusables = demoModal.querySelectorAll('button, [href], textarea, input, [tabindex]:not([tabindex="-1"])');
-      if (!focusables.length) return;
-      const first = focusables[0];
-      const last = focusables[focusables.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
+    /* ===== Finance (invoices) ===== */
+    let financeSummary, financeList;
+
+    function renderFinanceWidget(mount) {
+      financeSummary = el('div', 'crm-finance-summary');
+      financeList = el('div', 'crm-finance-list');
+      mount.append(financeSummary, financeList);
+      renderFinance();
     }
 
-    function openDemoModal(triggerBtn) {
-      if (!demoRendered) {
-        renderDemoBoard();
-        demoRendered = true;
-      }
-      demoDetail.hidden = true;
-      openLeadId = null;
-      lastFocusedEl = triggerBtn || document.activeElement;
-      demoModal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      demoModal.addEventListener('keydown', trapFocus);
-      demoClose.focus();
+    function renderFinance() {
+      const collected = demoData.invoices.filter(i => i.status === 'Paid').reduce((sum, i) => sum + i.amount, 0);
+      const outstanding = demoData.invoices.filter(i => i.status !== 'Paid').reduce((sum, i) => sum + i.amount, 0);
+
+      financeSummary.textContent = '';
+      const collectedStat = el('div', 'crm-finance-stat');
+      collectedStat.append(el('span', 'crm-finance-stat-label', 'Collected'), el('span', 'crm-finance-stat-value', '$' + collected.toLocaleString()));
+      const outstandingStat = el('div', 'crm-finance-stat');
+      outstandingStat.append(el('span', 'crm-finance-stat-label', 'Outstanding'), el('span', 'crm-finance-stat-value', '$' + outstanding.toLocaleString()));
+      financeSummary.append(collectedStat, outstandingStat);
+
+      financeList.textContent = '';
+      demoData.invoices.forEach(inv => financeList.appendChild(renderInvoiceRow(inv)));
     }
 
-    function closeDemoModal() {
-      if (!demoModal.classList.contains('open')) return;
-      demoModal.classList.remove('open');
-      document.body.style.overflow = '';
-      demoModal.removeEventListener('keydown', trapFocus);
-      if (lastFocusedEl) lastFocusedEl.focus();
-    }
+    function renderInvoiceRow(inv) {
+      const row = el('div', 'crm-invoice-row');
 
-    if (demoModal && demoBoard && demoData) {
-      document.querySelectorAll('#crm-demo-open-1, [data-demo-open]').forEach(btn =>
-        btn.addEventListener('click', () => openDemoModal(btn))
+      const info = el('div', 'crm-invoice-info');
+      info.append(
+        el('span', 'crm-invoice-number', inv.number),
+        el('span', 'crm-invoice-client', inv.client),
+        el('span', 'crm-invoice-due', 'Due ' + inv.dueDate)
       );
-      demoClose.addEventListener('click', closeDemoModal);
-      demoModal.addEventListener('click', e => { if (e.target === demoModal) closeDemoModal(); });
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && demoModal.classList.contains('open')) closeDemoModal();
+      row.appendChild(info);
+
+      row.appendChild(el('span', 'crm-invoice-amount', '$' + inv.amount.toLocaleString()));
+
+      const badge = el('span', 'crm-invoice-badge crm-invoice-badge--' + inv.status.toLowerCase(), inv.status);
+      row.appendChild(badge);
+
+      if (inv.status !== 'Paid') {
+        const payBtn = document.createElement('button');
+        payBtn.type = 'button';
+        payBtn.className = 'crm-invoice-pay-btn';
+        payBtn.textContent = 'Mark Paid';
+        payBtn.addEventListener('click', () => {
+          inv.status = 'Paid';
+          renderFinance();
+          announce(`${inv.number} marked as paid.`);
+        });
+        row.appendChild(payBtn);
+      } else {
+        row.appendChild(el('span', 'crm-invoice-paid-spacer', ''));
+      }
+
+      return row;
+    }
+
+    /* ===== Calendar & Tasks ===== */
+    let calendarDaysWrap, calendarEventsWrap, tasksWrap, activeDayId = null;
+
+    function renderCalendarWidget(mount) {
+      const calendarSection = el('div', 'crm-calendar-section');
+      calendarDaysWrap = el('div', 'crm-calendar-days');
+      calendarEventsWrap = el('div', 'crm-calendar-events');
+      calendarSection.append(calendarDaysWrap, calendarEventsWrap);
+
+      const tasksSection = el('div', 'crm-tasks-section');
+      tasksSection.appendChild(el('p', 'crm-tasks-heading', 'Tasks'));
+      tasksWrap = el('div', 'crm-tasks-list');
+      tasksSection.appendChild(tasksWrap);
+
+      mount.append(calendarSection, tasksSection);
+
+      renderCalendarDays();
+      selectDay(demoData.calendarDays[0].id);
+      renderTasks();
+    }
+
+    function renderCalendarDays() {
+      calendarDaysWrap.textContent = '';
+      demoData.calendarDays.forEach(day => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'crm-calendar-day-btn' + (day.id === activeDayId ? ' active' : '');
+        btn.dataset.dayId = day.id;
+        btn.append(el('span', 'crm-calendar-day-label', day.label));
+        if (day.events.length) btn.append(el('span', 'crm-calendar-day-dot', String(day.events.length)));
+        btn.addEventListener('click', () => selectDay(day.id));
+        calendarDaysWrap.appendChild(btn);
       });
+    }
+
+    function selectDay(dayId) {
+      activeDayId = dayId;
+      renderCalendarDays();
+
+      const day = demoData.calendarDays.find(d => d.id === dayId);
+      calendarEventsWrap.textContent = '';
+      if (!day.events.length) {
+        calendarEventsWrap.appendChild(el('p', 'crm-calendar-empty', 'No appointments scheduled.'));
+        return;
+      }
+      day.events.forEach(ev => {
+        const item = el('div', 'crm-calendar-event');
+        item.append(el('span', 'crm-calendar-event-time', ev.time), el('span', 'crm-calendar-event-title', ev.title));
+        calendarEventsWrap.appendChild(item);
+      });
+    }
+
+    function renderTasks() {
+      tasksWrap.textContent = '';
+      demoData.tasks.forEach(task => tasksWrap.appendChild(renderTaskRow(task)));
+    }
+
+    function renderTaskRow(task) {
+      const row = el('div', 'crm-task-row');
+      const info = el('div', 'crm-task-info');
+      info.append(el('span', 'crm-task-title', task.title), el('span', 'crm-task-assignee', task.assignee));
+      row.appendChild(info);
+
+      const statusBtn = document.createElement('button');
+      statusBtn.type = 'button';
+      statusBtn.className = 'crm-task-status crm-task-status--' + task.status.toLowerCase().replace(/\s+/g, '-');
+      statusBtn.textContent = task.status;
+      statusBtn.setAttribute('aria-label', `${task.title}, status ${task.status}. Click to advance.`);
+      statusBtn.addEventListener('click', () => {
+        const statuses = demoData.taskStatuses;
+        const next = statuses[(statuses.indexOf(task.status) + 1) % statuses.length];
+        task.status = next;
+        renderTasks();
+        announce(`${task.title} moved to ${next}.`);
+      });
+      row.appendChild(statusBtn);
+
+      return row;
+    }
+
+    /* ===== Lazy render per tab ===== */
+    const renderedWidgets = {};
+    const widgetRenderers = {
+      leads: () => renderLeadsWidget(document.getElementById('crm-live-leads')),
+      finance: () => renderFinanceWidget(document.getElementById('crm-live-finance')),
+      calendar: () => renderCalendarWidget(document.getElementById('crm-live-calendar'))
+    };
+
+    function ensureWidgetRendered(tab) {
+      if (renderedWidgets[tab] || !widgetRenderers[tab]) return;
+      const mount = document.getElementById('crm-live-' + tab);
+      if (!mount || !demoData) return;
+      widgetRenderers[tab]();
+      renderedWidgets[tab] = true;
+    }
+
+    if (demoData) {
+      ensureWidgetRendered('leads'); // active tab by default, visible on load
+      document.addEventListener('crm-tab-change', (e) => ensureWidgetRendered(e.detail.tab));
     }
   }
 
