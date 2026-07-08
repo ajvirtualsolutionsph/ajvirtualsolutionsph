@@ -194,9 +194,19 @@
         </picture>
       </div>
 
-      <div class="crm-demo-cta-wrap" data-animate="up">
-        <button class="crm-demo-cta-btn" id="crm-demo-jump">🖱️ Try the Live Demo Below</button>
-        <span class="crm-demo-cta-hint">Sandbox data, no signup required — drag, click, and try it yourself</span>
+      <div class="crm-demo-video-wrap" data-animate="up">
+        <span class="crm-live-badge">&#x1F7E2; Real Screen Recording — Not a Mockup</span>
+        <video
+          class="crm-demo-video"
+          controls
+          muted
+          playsinline
+          preload="metadata"
+          poster="assets/images/crm-demo-poster.jpg"
+        >
+          <source src="assets/videos/crm-demo.mp4" type="video/mp4" />
+        </video>
+        <p class="crm-live-hint">Dashboard, drag-and-drop lead pipeline, calendar, and task board — the actual CRM, not a simulation.</p>
       </div>
 
       <!-- Numbered feature cards -->
@@ -314,8 +324,8 @@
       </div>
 
       <!-- ── Capabilities (Tabbed) ── -->
-      <div class="crm-capabilities-section" data-animate="up" id="live-demo">
-        <span class="eyebrow" style="display:block;text-align:center;margin-bottom:1.5rem;">Deep Dive — Try It Live</span>
+      <div class="crm-capabilities-section" data-animate="up">
+        <span class="eyebrow" style="display:block;text-align:center;margin-bottom:1.5rem;">Deep Dive</span>
 
         <div class="crm-tabs">
           <div class="crm-tab-nav" role="tablist">
@@ -324,16 +334,10 @@
             <button class="crm-tab-btn" role="tab" aria-selected="false" data-tab="calendar">&#x1F4C5; Calendar &amp; Tasks</button>
             <button class="crm-tab-btn" role="tab" aria-selected="false" data-tab="ai">&#x1F916; AI &amp; Reporting</button>
           </div>
-          <span class="visually-hidden" id="crm-live-announcer" aria-live="polite"></span>
 
           <div class="crm-tab-panels">
 
             <div class="crm-tab-panel active" data-panel="leads">
-              <div class="crm-live-widget">
-                <span class="crm-live-badge">&#x1F7E2; Live Demo — Sandbox Data</span>
-                <p class="crm-live-hint">Drag a card between columns, or use "Move ▾". Click a card to see its history and add a note.</p>
-                <div class="crm-live-mount" id="crm-live-leads"></div>
-              </div>
               <div class="crm-tab-grid">
                 <div class="crm-tab-card">
                   <p class="crm-cap-title">&#x1F4CB; Kanban Lead Board</p>
@@ -359,11 +363,6 @@
             </div>
 
             <div class="crm-tab-panel" data-panel="finance">
-              <div class="crm-live-widget">
-                <span class="crm-live-badge">&#x1F7E2; Live Demo — Sandbox Data</span>
-                <p class="crm-live-hint">Click "Mark Paid" on a pending or overdue invoice and watch the summary update.</p>
-                <div class="crm-live-mount" id="crm-live-finance"></div>
-              </div>
               <div class="crm-tab-grid">
                 <div class="crm-tab-card">
                   <p class="crm-cap-title">&#x1F9FE; Invoices &amp; Proposals</p>
@@ -389,11 +388,6 @@
             </div>
 
             <div class="crm-tab-panel" data-panel="calendar">
-              <div class="crm-live-widget">
-                <span class="crm-live-badge">&#x1F7E2; Live Demo — Sandbox Data</span>
-                <p class="crm-live-hint">Click a day to see its appointments. Click a task's status to cycle it forward.</p>
-                <div class="crm-live-mount" id="crm-live-calendar"></div>
-              </div>
               <div class="crm-tab-grid">
                 <div class="crm-tab-card">
                   <p class="crm-cap-title">&#x1F4C5; Shared Team Calendar</p>
@@ -1038,7 +1032,6 @@
     <img id="crm-lightbox-img" src="" alt="" />
   </div>
 
-  <script src="assets/demo-data.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
