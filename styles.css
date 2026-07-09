@@ -1868,57 +1868,6 @@ section {
 }
 
 /* ──────────────────────────────────────────────────────────────
-   DEMO VIDEOS
-────────────────────────────────────────────────────────────── */
-#demos {
-  background: var(--color-surface);
-}
-
-.demos-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-xl);
-}
-
-@media (min-width: 768px) {
-  .demos-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-.demo-card {
-  background: var(--glass-bg);
-  border: var(--glass-border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-}
-.demo-card:hover {
-  border-color: var(--color-border-md);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-teal);
-}
-
-.demo-video-wrap {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-.demo-video-wrap iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.demo-title {
-  padding: var(--space-md) var(--space-lg);
-  font-family: var(--font-heading);
-  font-size: 0.9375rem;
-  font-weight: 700;
-  color: var(--color-text);
-}
-
-/* ──────────────────────────────────────────────────────────────
    FAQ
 ────────────────────────────────────────────────────────────── */
 #faq {
